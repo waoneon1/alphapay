@@ -1,0 +1,22 @@
+
+/* FONT */
+@font-face {
+  font-family: 'SFCompactDisplay-Bold', sans-serif;
+  font-weight: 700;
+  src: url("../fonts/SFCompactDisplay-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'SFCompactDisplay-Light', sans-serif;
+  font-weight: 300;
+  src: url("../fonts/SFCompactDisplay-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'SFCompactDisplay-Regular', sans-serif;
+  font-weight: normal;
+  src: url("../fonts/SFCompactDisplay-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'SFCompactDisplay-Semibold', sans-serif;
+  font-weight: 600;
+  src: url("../fonts/SFCompactDisplay-Semibold.ttf") format("truetype");
+}

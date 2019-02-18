@@ -40,7 +40,7 @@
 			<nav class="navbar navbar-expand-md">
 				<div class="container">
 
-					<a class="navbar-brand" href="#"> 
+					<a class="navbar-brand" href="<?php echo get_site_url() ?>"> 
 						<img src="<?php echo get_template_directory_uri() ?>/assets/img/logo.png" alt="">
 					</a>
 
@@ -56,14 +56,14 @@
 	                    		<?php if(isset($primary[$pparent->ID])) : ?>
 			                        <li class="nav-item dropdown">
 			                            <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-			                                <?php echo strtoupper($pparent->title) ?>
+			                                <?php echo $pparent->title ?>
 			                                <img class="svg" src="<?php echo get_template_directory_uri() ?>/assets/img/ceret.svg" alt="">
 			                            </a>
 			                            <div class="dropdown-menu at-dropdown--menu">
 			  								<?php foreach ($primary[$pparent->ID] as $p): ?>
 												<a class="dropdown-item" href="<?php echo $p->url ?>">
 												    <span class="ic-nav-dropdown">
-												        -
+												        <!-- - -->
 												    </span>
 												   <?php echo $p->title ?>
 												</a>
@@ -73,7 +73,7 @@
 		                        <?php else: ?>
 		                        	 <li class="nav-item">
 	                            		<a href="<?php echo $pparent->url ?>" class="nav-link"> 
-	                            			<?php echo strtoupper($pparent->title) ?>
+	                            			<?php echo $pparent->title ?>
 	                            		</a>
 	                        		</li>
 		                        <?php endif ?>

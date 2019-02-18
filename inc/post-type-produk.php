@@ -36,10 +36,10 @@ function produk_init() {
 		'rewrite'            => array( 'slug' => 'produk' ),
 		'capability_type'    => 'post',
 		'has_archive'        => false,
-		'hierarchical'       => false,
+		'hierarchical'       => true,
 		'menu_position'      => 5,
 		'menu_icon'			 => 'dashicons-format-aside',
-		'supports'           => array( 'title', 'editor')
+		'supports'           => array( 'title', 'editor', 'page-attributes')
 	);
 
 	register_post_type( 'produk', $args );

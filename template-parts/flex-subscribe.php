@@ -7,7 +7,7 @@
 			<div class="alp-subsc--form alp-form">
 				<input type="email" name="email" placeholder="Email Address">
     			<input type="text" name="nohp" placeholder="Nomor handphone Anda">
-    			<a class="alp-btn btn alp-btn-yellow" href="">Daftarkan Saya</a>
+    			<a class="alp-btn btn alp-btn-blue" href="">Daftarkan Saya</a>
 			</div>
 		</div>
 	</div>

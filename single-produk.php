@@ -65,11 +65,11 @@
     		<div class="alp-pcontent--main col-md-8 col-12">
     			<h2><?php the_field('content_title') ?></h2>
     			<?php the_content() ?>
+                <?php include get_template_directory() . '/template-parts/part-table.php' ?>
     		</div>
     	</div>
     </div>
 
 </div>
-
 
 <?php get_footer() ?>

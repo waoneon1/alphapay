@@ -82,3 +82,30 @@ function alpay_layout($section, $full = false, $classes = []) {
 	}
 	echo ($full) ? '</div>' : '';
 }
+
+function alpay_product_theader($product, $pr = true) {
+	$custom_header = $product['custom_header'];
+	$header_setting = $product['header_setting'];
+
+	if ($custom_header) {
+		$data = [
+			$header_setting['header_1'],
+			$header_setting['header_2'],
+			$header_setting['header_3']
+		];
+	} else {
+		$data = ['Produk', 'Harga', 'Keterangan'];
+	}
+
+	if ($pr) {
+		$return = '<tr>';
+			foreach ($data as $key => $value) {
+				$return .= '<th>'.$value.'</th>';
+			}
+		$return .= '</tr>';
+		echo $return;
+	} else {
+		return $data;
+	}
+
+}

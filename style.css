@@ -686,6 +686,9 @@ a:hover, a:active {
 .navbar .nav-item {
 	padding: 0 15px;
 }
+.navbar-toggler-icon {
+    height: 1em;
+}
 /*--------------------------------------------------------------
 ## ASSET - BUTTON
 --------------------------------------------------------------*/
@@ -694,6 +697,18 @@ a:hover,a:focus,a:link {
 }
 .alp-btn {
 	padding: 12px 40px;
+}
+.alp-btn-blue {
+	background-color: #5786e5;
+    color: #fff!important;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(47, 73, 128, 0.5);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(254,225,105,0.67);
+    box-shadow: 0px 2px 5px 0px rgba(47, 73, 128, 0.5);
+}
+.alp-btn-blue:hover {
+	color: #5786e5!important;
+	background-color: #fff;
+	border: 1px solid #5786e5;
 }
 .alp-btn-yellow {
 	background-color: #FEE169;
@@ -829,7 +844,7 @@ textarea {
 	overflow: hidden;
 	margin: 0 15px; 
 	padding: 10px;
-	border: 1px solid #F9F9F9;
+	border: 1px solid #e3e3e3;
 	transition: all 0.5s ease;
 }
 .alp-product--box p {
@@ -855,14 +870,14 @@ textarea {
 	margin-bottom: 25px;
 }
 .alp-product--link {
-	background-color: #F9F9F9;
+	background-color: #e3e3e3;
 	border-radius: 10px;
 	border-top-right-radius: 0;
 	border-top-left-radius: 0;
 	overflow: hidden;
 	margin: 0 15px;
 	padding: 10px;
-	border: 1px solid #F9F9F9;
+	border: 1px solid #e3e3e3;
 	transition: all 0.3s ease;
 }
 .alp-product--link a {
@@ -1026,7 +1041,7 @@ textarea {
 }
 .alp-download .alp-download--content {
 	padding-top: 40px;
-	padding-bottom: 0px;
+	padding-bottom: 0px;	
 }
 .alp-download h2,
 .alp-download h4 {
@@ -1128,6 +1143,12 @@ ul.alp-footer--list {
 .alp-pcontent--side li.alp-pcontent--sidetitle {
 	font-size: 15px;
 }
+.alp-pcontent ul li:first-child {
+	margin-bottom: 15px;
+}
+.alp-pcontent ul li:last-child {
+	margin-bottom: 15px;
+}
 .alp-pcontent--main h2 {
 	margin-bottom: 40px;
 }
@@ -1173,26 +1194,6 @@ ul.alp-footer--list {
 	.alp-title {
 		margin-bottom: 0;
 	}	
-
-	.alp-benefit--item h3:after, 
-	.alp-benefit--item h4:after {
-	    display: block;
-        text-align: center;
-        width: 80%;
-        margin: 0 auto;
-	}
-	.alp-benefit--item h4 {
-	    display: inline-block;
-	}
-	.alp-benefit--item img {
-	    margin: 0 auto;
-	    display: block;
-	}
-
-	.alp-product--box svg {
-	    float: none;
-	    vertical-align: bottom;
-	}
 	.alp-reg--left { 
 		width: 100%; 
 	}
@@ -1221,8 +1222,70 @@ ul.alp-footer--list {
 	}
 }
 
-@media (max-width: 479px) {
+@media (max-width: 575px) {
+	.alp-benefit--item h3:after, 
+	.alp-benefit--item h4:after,
+	.alp-benefit--item:hover h3:after, 
+	.alp-benefit--item:hover h4:after {
+	    width: 0;
+	    height: 0;
+	    display: none;
+	}
+	.alp-benefit--item h4 {
+	    display: inline-block;
+	}
+	.alp-benefit--item img {
+	    margin: 0 auto;
+	    display: block;
+	}
+	.alp-benefit--item {
+	   margin: 0;
+	}
+	.alp-benefit--item:after {
+	    content: '';
+	    display: block;
+	    width: 25%;
+	    height: 1px;
+	    background: #2384DD;
+	    margin: 0 auto;
+	    margin-top: 25px;
+	}
 
+	.alp-product--box svg {
+	    float: none;
+	    vertical-align: bottom;
+	    height: 40px;
+	    width: 40px;
+	    margin-bottom: 15px;
+
+	}
+	.alp-product--link,
+	.alp-product--box p {
+		display: none;
+	}
+	.alp-product--box,
+	.alp-product--box_title {
+		border: none;
+		padding: 0;
+		margin:0;
+	}
+	.alp-product--box h3 {
+		margin: 0;
+		font-size: 11px;
+		display: block;
+	}
+	.alp-product--list:hover .alp-product--box {
+		border: none;
+	}
+	.alp-product--list {
+		padding-right: 15px;
+		padding-left: 15px;
+		padding: 7px 15px;
+		border-radius: 50%;
+	    margin: 10px;
+	    background-color: #cacaca14;
+	    cursor: pointer;
+	}
 }
 
 /* BOOTSTRAP ALTER */

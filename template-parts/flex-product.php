@@ -9,7 +9,7 @@
  			<?php foreach ($section['Items'] as $key => $item): ?>
  					<?php $prod = $item['jenis_produk'] ?>
  					<?php $term_vals = get_term_meta($prod->term_id, 'category-image-id', true) ?>
-	    			<div class="alp-product--list col-lg-3 col-md-4 col-sm-6 col-12 alp-col">
+	    			<div class="alp-product--list col-lg-3 col-md-4 col-sm-6 col-3 alp-col">
 	    				<div class="alp-product--box">
     						<div class="alp-product--box_title">
     							<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/'.$term_vals ?>">

@@ -1,0 +1,46 @@
+{
+    "key": "group_5c6bd6818b4c2",
+    "title": "Option - Archive",
+    "fields": [
+        {
+            "key": "field_5c6bd6931ec6c",
+            "label": "Archive Navigation",
+            "name": "archive_navigation",
+            "type": "taxonomy",
+            "instructions": "Select categories for navigation on archive page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1550571605
+}

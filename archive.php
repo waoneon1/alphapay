@@ -38,24 +38,30 @@ get_header();
             </ol>
             
             <div class =" carousel-inner">
-               <div class = "carousel-item active">
-                  <img class = "d-block w-100" 
-                     src = "https://www.tutorialspoint.com/bootstrap/images/slide1.png" 
-                     alt = "First slide">
-               </div>
-               
-               <div class = "carousel-item">
-                  <img class = "d-block w-100" 
-                     src = "https://www.tutorialspoint.com/bootstrap/images/slide2.png" 
-                     alt = "Second slide">
-               </div>
-               <div class = "carousel-item">
-                  <img class = "d-block w-100" 
-                     src = "https://www.tutorialspoint.com/bootstrap/images/slide3.png" 
-                     alt = "Third slide">
-               </div>
+              <?php
+            	$inner_query = new WP_Query(array(
+            	    'post_type' => 'post',
+            	    'posts_per_page' => 3
+            	));
+            	$i = 1;
+            	while ( $inner_query->have_posts() ) :
+            		$inner_query->the_post(); ?>
+            		<?php $image = get_field('banner_image') ?>
+
+            		<div class = "carousel-item <?php echo ($i == 1) ? 'active' : '' ?>">
+            		      <picture>
+            		      	<source media="(min-width: 1200px)" srcset="<?php alpay_image($image, '1240x540') ?>">
+            		      	<source media="(min-width: 768px)" srcset="<?php alpay_image($image, '991x434') ?>">
+            		      	<source media="(min-width: 0px)" srcset="<?php alpay_image($image, '787x344') ?>">
+            		      	<img class="d-block w-100" src="<?php alpay_image($image, '1240x540') ?>" alt="">
+            		      </picture>
+            		</div>
+            		<?php $i++; ?>
+            	<?php endwhile; // End of the loop.
+            	wp_reset_query();
+            ?>
             </div>
-            
+
             <a class = "carousel-control-prev" href = "#carouselwithIndicators" role = "button" data-slide = "prev">
                <span class = "carousel-control-prev-icon" aria-hidden = "true"></span>
                <span class = "sr-only">Previous</span>
@@ -77,66 +83,29 @@ get_header();
 		<div class="row">
 			<div class="col-md-8 col-12">
 				<div class="row">
-					<div class="col-md-6 col-sm-6 col-12">
-						<div class="alp-card">
-							<img src="<?php echo get_template_directory_uri() . '/assets/img/contentseo1.png' ?>">
-							<div class="alp-card--content">
-								<h2>How to Manage Your Audience in AlphaPay</h2>
-				 				<p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do </p>	
-				 				<a href="#" class="alp-card--btn">Baca Selanjutnya</a>
+					<?php
+						while ( have_posts() ) :
+							the_post(); ?>
+							<?php $image = get_field('thumbnail') ?>
+							<div class="col-md-6 col-sm-6 col-12">
+								<div class="alp-card">
+									<picture class="now_item_picture">
+										<source media="(min-width: 1200px)" srcset="<?php alpay_image($image, '350x263') ?>">
+										<source media="(min-width: 992px)" srcset="<?php alpay_image($image, '290x217') ?>">
+										<source media="(min-width: 768px)" srcset="<?php alpay_image($image, '290x217') ?>">
+										<source media="(min-width: 0px)" srcset="<?php alpay_image($image, '350x263') ?>">
+										<img class="now_item_image" src="<?php alpay_image($image, '350x263') ?>" alt="">
+									</picture>
+									<div class="alp-card--content">
+										<h2><?php the_title() ?></h2>
+						 				<?php alpay_blurb() ?>	
+						 				<a href="<?php echo esc_url( get_permalink() ) ?>" class="alp-card--btn">Baca Selanjutnya</a>
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-12">
-						<div class="alp-card">
-							<img src="<?php echo get_template_directory_uri() . '/assets/img/contentseo1.png' ?>">
-							<div class="alp-card--content">
-								<h2>How to Manage Your Audience in AlphaPay</h2>
-					 			<p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do </p>		
-					 			<a href="#" class="alp-card--btn">Baca Selanjutnya</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-12">
-						<div class="alp-card">
-							<img src="<?php echo get_template_directory_uri() . '/assets/img/contentseo1.png' ?>">
-							<div class="alp-card--content">
-								<h2>How to Manage Your Audience in AlphaPay</h2>
-				 				<p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do </p>	
-				 				<a href="#" class="alp-card--btn">Baca Selanjutnya</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-12">
-						<div class="alp-card">
-							<img src="<?php echo get_template_directory_uri() . '/assets/img/contentseo1.png' ?>">
-							<div class="alp-card--content">
-								<h2>How to Manage Your Audience in AlphaPay</h2>
-					 			<p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do </p>		
-					 			<a href="#" class="alp-card--btn">Baca Selanjutnya</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-12">
-						<div class="alp-card">
-							<img src="<?php echo get_template_directory_uri() . '/assets/img/contentseo1.png' ?>">
-							<div class="alp-card--content">
-								<h2>How to Manage Your Audience in AlphaPay</h2>
-				 				<p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do </p>	
-				 				<a href="#" class="alp-card--btn">Baca Selanjutnya</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-12">
-						<div class="alp-card">
-							<img src="<?php echo get_template_directory_uri() . '/assets/img/contentseo1.png' ?>">
-							<div class="alp-card--content">
-								<h2>How to Manage Your Audience in AlphaPay</h2>
-					 			<p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do </p>		
-					 			<a href="#" class="alp-card--btn">Baca Selanjutnya</a>
-							</div>
-						</div>
-					</div>
+
+						<?php endwhile; // End of the loop.
+					?>
 				</div>
 			</div>
 			<div class="col-md-4 col-12">

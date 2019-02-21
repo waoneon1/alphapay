@@ -46,13 +46,13 @@
                                 <li class="list-group-item active alp-pcontent--sidetitle">Kategori</li>
                                 <?php foreach ($flex['Items'] as $key => $prod_object): ?>
                                     <?php $product = $prod_object['jenis_produk'] ?>
-                                    <?php $product_object = $prod_object['product_object'] ?>
                                     <?php $term_vals = get_term_meta($product->term_id, 'category-image-id', true) ?>
+                                    <?php $prod_id   = get_term_meta($product->term_id, 'product-object-id', true) ?>
                                     <li class="list-group-item">
-                                        <?php echo ($product_object) ? '<a href="'.get_permalink($product_object->ID).'">' : '' ?>
+                                        <?php echo ($prod_id) ? '<a href="'.get_permalink($prod_id).'">' : '' ?>
                                             <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/'.$term_vals ?>">
                                             <span><?php echo $product->name ?></span>   
-                                        <?php echo ($product_object) ? '</a>' : '' ?>
+                                        <?php echo ($prod_id) ? '</a>' : '' ?>
                                     </li>
                                 <?php endforeach ?>
                             </ul>

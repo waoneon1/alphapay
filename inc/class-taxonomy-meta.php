@@ -25,7 +25,7 @@ class CT_TAX_META {
  }
 
 public function load_media() {
- wp_enqueue_media();
+  wp_enqueue_media();
 }
  
  /*
@@ -33,11 +33,34 @@ public function load_media() {
   * @since 1.0.0
  */
  public function add_category_image ( $taxonomy ) { ?>
+
    <div class="form-field term-group">
      <label for="category-image-id"><?php _e('Image SVG URL', 'hero-theme'); ?></label>
      <input type="text" id="category-image-id" name="category-image-id" class="custom_media_url" value="">
    </div>
- <?php
+   <div class="form-field term-group">
+     <label for="product-object-id"><?php _e('Produk Page', 'hero-theme'); ?></label>
+     <select name="product-object-id">
+        <option> - select produk - </option>
+        <?php 
+              $query = new WP_Query(array(
+                  'post_type' => 'produk'
+              ));
+
+              while ($query->have_posts()) :
+                $query->the_post(); ?>
+
+                <option value="<?php the_ID() ?>">
+                  <?php the_title() ?>
+                </option>
+
+
+              <?php endwhile; ?>
+        <?php wp_reset_query(); ?>
+      </select>
+
+   </div>
+  <?php
  }
  
  /*
@@ -45,10 +68,14 @@ public function load_media() {
   * @since 1.0.0 
  */
  public function save_category_image ( $term_id, $tt_id ) {
-   if( isset( $_POST['category-image-id'] ) && '' !== $_POST['category-image-id'] ){
+    if( isset( $_POST['category-image-id'] ) && '' !== $_POST['category-image-id'] ){
      $image = $_POST['category-image-id'];
      add_term_meta( $term_id, 'category-image-id', $image, true );
-   }
+    }
+    if ( isset( $_POST['product-object-id'] ) && '' !== $_POST['product-object-id'] ) {
+     $prod  = $_POST['product-object-id'];
+     add_term_meta( $term_id, 'product-object-id', $prod, true );
+    }
  }
  
  /*
@@ -66,6 +93,31 @@ public function load_media() {
           <p class="description">Input the svg file name. Upload on assets/img/</p>
      </td>
    </tr>
+   <tr class="form-field term-group-wrap">
+     <th scope="row">
+        <label for="product-object-id"><?php _e('Produk Page', 'hero-theme'); ?></label>
+     </th>
+     <td>
+        <?php $prod_id = get_term_meta ( $term -> term_id, 'product-object-id', true ); ?>
+        <select name="product-object-id">
+           <option> - select produk - </option>
+           <?php 
+              $query = new WP_Query(array(
+                 'post_type' => 'produk'
+              ));
+
+              while ($query->have_posts()) :
+               $query->the_post(); ?>
+
+               <option value="<?php the_ID() ?>" <?php echo ($prod_id == $query->post->ID) ? 'selected="selected"' : '' ?>>
+                 <?php the_title() ?>
+               </option>
+
+              <?php endwhile; ?>
+           <?php wp_reset_query(); ?>
+        </select>
+     </td>
+   </tr>
  <?php
  }
 
@@ -79,6 +131,13 @@ public function load_media() {
      update_term_meta ( $term_id, 'category-image-id', $image );
    } else {
      update_term_meta ( $term_id, 'category-image-id', '' );
+   }
+
+   if( isset( $_POST['product-object-id'] ) && '' !== $_POST['product-object-id'] ){
+     $image = $_POST['product-object-id'];
+     update_term_meta ( $term_id, 'product-object-id', $image );
+   } else {
+     update_term_meta ( $term_id, 'product-object-id', '' );
    }
  }
 

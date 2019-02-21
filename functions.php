@@ -192,6 +192,19 @@ require get_template_directory() . '/inc/post-type-produk.php';
 require get_template_directory() . '/inc/class-taxonomy-meta.php';
 
 
+
+/**
+ * Image
+ */
+require get_template_directory() . '/inc/class-image.php';
+
+
+/**
+ * Comments
+ */
+require get_template_directory() . '/inc/class-comments.php';
+
+
 /**
  * Load Jetpack compatibility file.
  */
@@ -208,4 +221,18 @@ function alpay_navigation($nav_id) {
 	return $objects;
 }
 
+// blurb
+function alpay_blurb($trim = 20) {
+	global $post;
 
+	$content = strip_tags($post->post_content);
+
+	if ($content) {
+		$old_arr = array_map('trim', explode(' ', $content));
+		$new_arr = array_slice($old_arr, 0, $trim);
+
+		$content = implode(' ',$new_arr).' ...';
+		echo '<p>'.$content.'</p>';
+	}
+	
+}  

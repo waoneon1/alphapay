@@ -73,7 +73,7 @@ function jenis_produk(){
 		'hierarchical'      => true,
 		'show_ui'           => true,
 		'how_in_nav_menus'  => true,
-		'public'            => true,
+		'public'            => false,
 		'show_admin_column' => true,
 		'query_var'         => true
 	);

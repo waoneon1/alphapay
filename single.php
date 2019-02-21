@@ -28,49 +28,29 @@ get_header();
 </div>
 
 <!-- Banner Carosel -->
-<div class="alp-banner alp-sec-margin">
-	<div class="alp-banner--bg container">
-		
-		<div id = "carouselwithIndicators" class = "carousel slide" data-ride = "carousel">
-            <ol class = "carousel-indicators">
-               <li data-target = "#carouselExampleIndicators" data-slide-to = "0" class = "active"></li>
-               <li data-target = "#carouselExampleIndicators" data-slide-to = "1"></li>
-               <li data-target = "#carouselExampleIndicators" data-slide-to = "2s"></li>
-            </ol>
-            
-            <div class =" carousel-inner">
-               <div class = "carousel-item active">
-                  <img class = "d-block w-100" 
-                     src = "https://www.tutorialspoint.com/bootstrap/images/slide1.png" 
-                     alt = "First slide">
-               </div>
-               
-               <div class = "carousel-item">
-                  <img class = "d-block w-100" 
-                     src = "https://www.tutorialspoint.com/bootstrap/images/slide2.png" 
-                     alt = "Second slide">
-               </div>
-               <div class = "carousel-item">
-                  <img class = "d-block w-100" 
-                     src = "https://www.tutorialspoint.com/bootstrap/images/slide3.png" 
-                     alt = "Third slide">
-               </div>
-            </div>
-            
-            <a class = "carousel-control-prev" href = "#carouselwithIndicators" role = "button" data-slide = "prev">
-               <span class = "carousel-control-prev-icon" aria-hidden = "true"></span>
-               <span class = "sr-only">Previous</span>
-            </a>
-            
-            <a class = "carousel-control-next" href = "#carouselwithIndicators" role = "button" data-slide = "next">
-               <span class = "carousel-control-next-icon" aria-hidden = "true"></span>
-               <span class = "sr-only">Next</span>
-            </a>
-        </div>
-
+<div class="alp-singlebanner">
+	<div class="alp-singlebanner--bg fullwidth-content">
+		<div class="row">
+			<?php $image = get_field('banner_image') ?>
+			<picture>
+				<source media="(min-width: 1200px)" srcset="<?php alpay_image($image, '1240x540') ?>">
+				<source media="(min-width: 768px)" srcset="<?php alpay_image($image, '991x434') ?>">
+				<source media="(min-width: 0px)" srcset="<?php alpay_image($image, '787x344') ?>">
+				<img class="" src="<?php alpay_image($image, '1240x540') ?>" alt="">
+			</picture>
+		</div>
 	</div>
 </div>
 
+<div class="container">
+	<nav aria-label="breadcrumb">
+		<ul class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
+			<li class="breadcrumb-item"><a href="#">Library</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Data</li>
+		</ul>
+	</nav>
+</div>
 
 <div class="alp-wrapper">
 
@@ -84,7 +64,6 @@ get_header();
 
 					get_template_part( 'template-parts/content', get_post_type() );
 
-					the_post_navigation();
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) :
@@ -100,9 +79,43 @@ get_header();
 		</div>
 	</div>
 
+	<div class="alp-related fullwidth-content" style="background-color: #EFF2F7">
+		<div class="container">
+			<div class="row">
+				<?php
+					$inner_query = new WP_Query(array(
+					    'post_type' => 'post',
+					    'posts_per_page' => 3
+					));
+					while ( $inner_query->have_posts() ) :
+						$inner_query->the_post(); ?>
+						<?php $image = get_field('thumbnail') ?>
+						<div class="col-md-4 col-sm-4 col-12">
+							<div class="alp-card">
+								<picture class="now_item_picture">
+									<source media="(min-width: 1200px)" srcset="<?php alpay_image($image, '350x263') ?>">
+									<source media="(min-width: 992px)" srcset="<?php alpay_image($image, '290x217') ?>">
+									<source media="(min-width: 768px)" srcset="<?php alpay_image($image, '290x217') ?>">
+									<source media="(min-width: 0px)" srcset="<?php alpay_image($image, '350x263') ?>">
+									<img class="now_item_image" src="<?php alpay_image($image, '350x263') ?>" alt="">
+								</picture>
+								<div class="alp-card--content">
+									<h2><?php the_title() ?></h2>
+					 				<?php alpay_blurb() ?>	
+					 				<a href="<?php echo esc_url( get_permalink() ) ?>" class="alp-card--btn">Baca Selanjutnya</a>
+								</div>
+							</div>
+						</div>
+
+					<?php endwhile; // End of the loop.
+					wp_reset_query();
+				?>
+			</div>
+		</div>
+	</div>
+
 </div>
 
 <?php
-get_sidebar();
 get_footer();
 

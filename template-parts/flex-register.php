@@ -11,7 +11,7 @@
      </div>
 	</div>
 	<div class="alp-reg--right">
-		<h1><?php echo $section['title'] ?></h1>
+		<h2><?php echo $section['title'] ?></h2>
 		<p>We offer a wide range of products and services that help our clients achieve their ambitions. Get to know our products further.</p>
 		<!-- On PC -->
 		<ul class="alp-reg--lists d-none d-md-block">

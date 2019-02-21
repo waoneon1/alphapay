@@ -231,29 +231,6 @@
                                     "load_terms": 0,
                                     "return_format": "object",
                                     "multiple": 0
-                                },
-                                {
-                                    "key": "field_5c11d9eea4cdb",
-                                    "label": "Product Object",
-                                    "name": "product_object",
-                                    "type": "post_object",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "produk",
-                                        "page"
-                                    ],
-                                    "taxonomy": "",
-                                    "allow_null": 0,
-                                    "multiple": 0,
-                                    "return_format": "object",
-                                    "ui": 1
                                 }
                             ]
                         }
@@ -606,5 +583,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1550482434
+    "modified": 1550646159
 }

@@ -41,7 +41,11 @@
 				<div class="container">
 
 					<a class="navbar-brand" href="<?php echo get_site_url() ?>"> 
-						<img src="<?php echo get_template_directory_uri() ?>/assets/img/logo.png" alt="">
+						<picture>
+						  <img 
+						  	src="<?php echo get_template_directory_uri() ?>/assets/img/logo.png" 
+						  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/logo@2x.png 2x" alt="alphapay">
+						</picture>
 					</a>
 
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">

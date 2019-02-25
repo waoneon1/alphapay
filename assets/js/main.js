@@ -1,4 +1,19 @@
 
+// header search
+( function($) {	
+	$(document).ready(function () {
+		$(".app-container #alp-header-search").on('click', function(e){
+			e.preventDefault();
+			$('.alp-searchwrapper').toggleClass('active');
+		})
+		$(".alp-search #alp-btn-close").on('click', function(e){
+			e.preventDefault();
+			$('.alp-searchwrapper').removeClass('active');
+		})
+	});
+} )(jQuery);
+
+
 // Register page
 ( function($) {	
 	$(document).ready(function () {
@@ -18,6 +33,13 @@
 
 	});
 
+
+	$(document).ready(function () {
+		$( "#kategori" ).change(function() {
+			var kat_val = $(this).val();
+			window.location.href = kat_val;
+		});
+	});
 
 } )(jQuery);
 

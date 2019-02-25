@@ -10,46 +10,99 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="alp-archive--header">
+	<div class="container">
+		<h1>Hasil Pencarian Dari "<?php echo $_GET['s']?>"</h1>
+	</div>
+</div>
 
-		<?php if ( have_posts() ) : ?>
+<!-- Banner Carosel -->
+<div class="alp-banner alp-sec-margin">
+	<div class="alp-banner--bg container">
+		
+		<div id = "carouselwithIndicators" class = "carousel slide" data-ride = "carousel">
+            <div class =" carousel-inner">
+              <?php
+            	$inner_query = new WP_Query(array(
+            	    'post_type' => 'post',
+            	    'posts_per_page' => 1
+            	));
+            	$i = 1;
+            	while ( $inner_query->have_posts() ) :
+            		$inner_query->the_post(); ?>
+            		<?php $image = get_field('banner_image') ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
+            		<div class = "carousel-item <?php echo ($i == 1) ? 'active' : '' ?>">
+            		      <picture>
+            		      	<source media="(min-width: 1200px)" srcset="<?php alpay_image($image, '1240x540') ?>">
+            		      	<source media="(min-width: 768px)" srcset="<?php alpay_image($image, '991x434') ?>">
+            		      	<source media="(min-width: 0px)" srcset="<?php alpay_image($image, '787x344') ?>">
+            		      	<img class="d-block w-100" src="<?php alpay_image($image, '1240x540') ?>" alt="">
+            		      </picture>
+            		</div>
+            		<?php $i++; ?>
+            	<?php endwhile; // End of the loop.
+            	wp_reset_query();
+            ?>
+            </div>
+
+            <a class = "carousel-control-prev" href = "#carouselwithIndicators" role = "button" data-slide = "prev">
+               <span class = "carousel-control-prev-icon" aria-hidden = "true"></span>
+               <span class = "sr-only">Previous</span>
+            </a>
+            
+            <a class = "carousel-control-next" href = "#carouselwithIndicators" role = "button" data-slide = "next">
+               <span class = "carousel-control-next-icon" aria-hidden = "true"></span>
+               <span class = "sr-only">Next</span>
+            </a>
+        </div>
+
+	</div>
+</div>
+
+
+<div class="alp-wrapper">
+
+	<div class="alp-content container">
+		<div class="row">
+			<div class="col-md-8 col-12">
+				<div class="row">
+					<?php if (have_posts()): ?>
 					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'alpay' ), '<span>' . get_search_query() . '</span>' );
+						while ( have_posts() ) :
+							the_post(); ?>
+							<?php $image = get_field('thumbnail') ?>
+							<div class="col-md-6 col-sm-6 col-12">
+								<div class="alp-card">
+									<picture class="now_item_picture">
+										<source media="(min-width: 1200px)" srcset="<?php alpay_image($image, '350x263') ?>">
+										<source media="(min-width: 992px)" srcset="<?php alpay_image($image, '290x217') ?>">
+										<source media="(min-width: 768px)" srcset="<?php alpay_image($image, '290x217') ?>">
+										<source media="(min-width: 0px)" srcset="<?php alpay_image($image, '350x263') ?>">
+										<img class="now_item_image" src="<?php alpay_image($image, '350x263') ?>" alt="">
+									</picture>
+									<div class="alp-card--content">
+										<h2><?php the_title() ?></h2>
+						 				<?php alpay_blurb() ?>	
+						 				<a href="<?php echo esc_url( get_permalink() ) ?>" class="alp-card--btn">Baca Selanjutnya</a>
+									</div>
+								</div>
+							</div>
+
+						<?php endwhile; // End of the loop.
+					else:
+						echo "no post found";
+					endif
 					?>
-				</h1>
-			</header><!-- .page-header -->
+				</div>
+			</div>
+			<div class="col-md-4 col-12">
+				<?php get_sidebar() ?>
+			</div>
+		</div>
+	</div>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+</div>
 
 <?php
-get_sidebar();
 get_footer();

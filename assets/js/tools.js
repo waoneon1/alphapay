@@ -35,5 +35,11 @@ jQuery(document).ready(function ($) {
         }, 'xml');
 
     });
+
+
+    /*
+    * Float Label on FORM
+    */
+
 });
 

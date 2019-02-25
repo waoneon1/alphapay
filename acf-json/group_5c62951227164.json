@@ -22,6 +22,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5c73acbce95f0",
+            "label": "Header Title",
+            "name": "header_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5c62952757cd1",
             "label": "Image",
             "name": "image",
@@ -89,5 +108,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1550482168
+    "modified": 1551084764
 }

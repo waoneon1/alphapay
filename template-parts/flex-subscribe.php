@@ -5,8 +5,17 @@
 			<h2>Mau Info Terbaru dari AlphaPay?</h2>
 			<h3>Daftarkan email dan nomor handphone Anda pada kolom berikut untuk menerima berbagai info, tips bisnis, hingga promo menarik dari AlphaPay.</h3>
 			<div class="alp-subsc--form alp-form">
-				<input type="email" name="email" placeholder="Email Address">
-    			<input type="text" name="nohp" placeholder="Nomor handphone Anda">
+
+				<div class="field">
+					<input type="email" name="email" id="email" placeholder="Email Address">
+					<label for="fullname">Email</label>
+				</div>
+
+				<div class="field">
+					<input type="text" name="nohp" id="nohp" placeholder="Nomer Handphone Anda">
+					<label for="email">No HP</label>
+				</div>
+
     			<a class="alp-btn btn alp-btn-blue" href="">Daftarkan Saya</a>
 			</div>
 		</div>

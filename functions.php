@@ -222,10 +222,14 @@ function alpay_navigation($nav_id) {
 }
 
 // blurb
-function alpay_blurb($trim = 20) {
+function alpay_blurb($trim = 20, $contents = null) {
 	global $post;
 
-	$content = strip_tags($post->post_content);
+	if ($contents) {
+		$content = strip_tags($contents);
+	} else {
+		$content = strip_tags($post->post_content);
+	}
 
 	if ($content) {
 		$old_arr = array_map('trim', explode(' ', $content));

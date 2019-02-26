@@ -514,6 +514,44 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5c7513b51d36d",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c7513be1d36e",
+                            "label": "Description",
+                            "name": "description",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop"
+                        },
+                        {
                             "key": "field_5c5cf53dbfdd6",
                             "label": "Choose post to show",
                             "name": "choose_post",
@@ -583,5 +621,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1550646159
+    "modified": 1551177523
 }

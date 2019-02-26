@@ -56,15 +56,17 @@
 
 					<div class="collapse navbar-collapse" id="navbarResponsive">
 						<ul class="navbar-nav ml-auto">
-							<li>
-								<a href="">
-									<picture class="alp-btn-search" id="alp-header-search">
-									  <img 
-									  	src="<?php echo get_template_directory_uri() ?>/assets/img/search.png" 
-									  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/lsearch@2x.png 2x" alt="search" >
-									</picture>
-								</a>
-							</li>
+							<?php if (is_single() || is_category()): ?>
+								<li>
+									<a href="">
+										<picture class="alp-btn-search" id="alp-header-search">
+										  <img 
+										  	src="<?php echo get_template_directory_uri() ?>/assets/img/search.png" 
+										  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/search@2x.png 2x" alt="search" >
+										</picture>
+									</a>
+								</li>
+							<?php endif ?>
 	                    	<?php foreach ($primary_parent as $key => $pparent): ?>
 	                    		<?php if(isset($primary[$pparent->ID])) : ?>
 			                        <li class="nav-item dropdown">
@@ -97,63 +99,6 @@
 			</nav>
 		</div>
 
-
-		<style type="text/css">
-			.alp-searchwrapper {
-				height: 0;
-				width: 100%;
-				position: fixed; /* Stay in place */
-				z-index: 9999; /* Sit on top */
-				left: 0;
-				top: 0;
-				background-color: rgb(0,0,0); /* Black fallback color */
-				background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-				overflow-x: hidden; /* Disable horizontal scroll */
-				transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay */
-			}
-			.alp-search {
-				padding: 0;
-				transition: all 0.3s ease;
-				background-color: #fff;
-				height: 0;
-				position: fixed;
-				top: 27px;
-				width: 100%;
-				overflow: hidden;
-			}
-			.alp-searchwrapper.active .alp-search {
-				padding: 30px 40px;
-				height: auto;
-				position: fixed;
-				top: 0;
-				width: 100%;
-			}
-			body.admin-bar .alp-searchwrapper.active .alp-search {
-				top: 28px;
-			}
-			.alp-searchwrapper.active {
-				height: 100%;
-			}
-			.alp-searchinner {
-				width: 70%;
-				margin:0 auto;
-				text-align: center;
-			}
-			.alp-search input {
-			    width: 70%;
-			    font-size: 35px;
-			    color: #D9D9D9;
-			    border: 0;
-			    outline: 0;
-			}
-			.alp-search ::-webkit-input-placeholder {
-			  	color: #D9D9D9;
-			}
-			.alp-search .alp-s {
-				position: relative;
-				top: -5px;
-			}
-		</style>
 		<div class="alp-searchwrapper">
 			<div class="alp-search">
 				<div class="alp-searchinner">

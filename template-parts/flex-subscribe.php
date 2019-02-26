@@ -3,7 +3,7 @@
 	<div class="col-md-6 col-12 alp-subsc--left alp-row">
 		<div>
 			<h2>Mau Info Terbaru dari AlphaPay?</h2>
-			<h3>Daftarkan email dan nomor handphone Anda pada kolom berikut untuk menerima berbagai info, tips bisnis, hingga promo menarik dari AlphaPay.</h3>
+			<p>Daftarkan email dan nomor handphone Anda pada kolom berikut untuk menerima berbagai info, tips bisnis, hingga promo menarik dari AlphaPay.</p>
 			<div class="alp-subsc--form alp-form">
 
 				<div class="field">

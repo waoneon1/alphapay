@@ -1,22 +1,20 @@
  <!-- SEO Content Section -->
  <div class="alp-seo container alp-section">
+    <div class="alp-product--title alp-title">
+        <h2><?php echo $section['title']; ?></h2>
+        <?php echo $section['description'] ?>
+    </div>
   	<!-- ON DESKTOP -->
+    
  	<div class="row">
- 		<div class="col-md-4 col-12 alp-seo--item alp-col d-none d-md-block">
- 			<img src="<?php echo get_template_directory_uri() . '/assets/img/contentseo1.png' ?>">
- 			<h2>How to Manage Your Audience in AlphaPay</h2>
- 			<p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do </p>
- 		</div>
- 		<div class="col-md-4 col-12 alp-seo--item alp-col">
- 			<img src="<?php echo get_template_directory_uri() . '/assets/img/contentseo2.png' ?>">
- 			<h2>AlphaPay Has a New Look</h2>
- 			<p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do eiusmod tempor incididunt ut abore</p>
- 		</div>
- 		<div class="col-md-4 col-12 alp-seo--item alp-col">
- 			<img src="<?php echo get_template_directory_uri() . '/assets/img/contentseo3.png' ?>">
- 			<h2>New GDPR Forms, Improved Contact Management, and More</h2>
- 			<p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do eiusmod tempor incididunt ut abore</p>
- 		</div>
+        <?php foreach ($section['choose_post'] as $key => $choose_post): ?>
+            <?php //print_r($choose_post) ?>
+            <div class="col-md-4 col-12 alp-seo--item alp-col">
+                <img src="<?php echo get_template_directory_uri() . '/assets/img/contentseo1.png' ?>">
+                <h2><?php echo $choose_post['post']->post_title ?></h2>
+                <?php echo alpay_blurb(20, $choose_post['post']->post_content) ?>
+            </div>
+        <?php endforeach ?>
  	</div>
  </div>
  <!-- <div class="alp-seo">

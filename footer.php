@@ -25,14 +25,14 @@
 			<div class="row alp-footer--list">
 				<!-- FOOTER 1 -->
 				<div class="col-md-3 alp-footer--col">
-					<h3 class="alp-footer--head">HUBUNGI KAMI MELALUI:</h3> 
+					<h3 class="alp-footer--head">Hubungi Kami Melalui:</h3> 
 					<div class="alp-footer--list">
 						<?php echo $footer['desc'] ?>
 					</div>
 				</div>
 				<!-- FOOTER 2 -->
 				<div class="col-md-3 alp-footer--col">
-					<h3 class="alp-footer--head">TENTANG ALPHAPAY:</h3> 
+					<h3 class="alp-footer--head">Tentang Alphapay:</h3> 
 					<ul class="alp-footer--list">
 						<?php foreach ($footer['nav'] as $key => $nav): ?>
 							<li>
@@ -45,12 +45,28 @@
 				</div>
 				<!-- FOOTER 3 -->
 				<div class="col-md-3 alp-footer--col">
-					<h3 class="alp-footer--head">MEDIA SOSIAL:</h3> 
-					<ul class="alp-footer--list">
+					<h3 class="alp-footer--head">Media Sosial:</h3> 
+					<ul class="alp-footer--list alp-social">
 						<?php foreach ($footer['soc'] as $key => $soc): ?>
 							<li>
 								<a href="<?php echo $soc['link'] ?>">
-									<?php echo $soc['label'] ?>
+									<?php switch ($soc['label']) {
+										case 'facebook':
+											echo '<img src="'.get_template_directory_uri().'/assets/img/fb.png"';
+											break;
+										
+										case 'instagram':
+											echo '<img src="'.get_template_directory_uri().'/assets/img/ig.png"';
+											break;
+										
+										case 'twitter':
+											echo '<img src="'.get_template_directory_uri().'/assets/img/tw.png"';
+											break;
+										
+										default:
+											# code...
+											break;
+									} ?>
 								</a>
 							</li>	
 						<?php endforeach ?>

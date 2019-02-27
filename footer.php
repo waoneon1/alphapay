@@ -84,6 +84,7 @@
 
 		</div>
 	</footer><!-- #colophon -->
+	<div class="alp-searchwrapper"></div>
 </div><!-- #app -->
 
 <?php wp_footer(); ?>

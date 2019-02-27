@@ -185,24 +185,26 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/post-type-produk.php';
 
-
 /**
  * Taxonomy META
  */
 require get_template_directory() . '/inc/class-taxonomy-meta.php';
-
-
 
 /**
  * Image
  */
 require get_template_directory() . '/inc/class-image.php';
 
-
 /**
  * Comments
  */
 require get_template_directory() . '/inc/class-comments.php';
+
+
+/**
+ * Breadcrumb
+ */
+require get_template_directory() . '/inc/class-breadcrumb.php';
 
 
 /**

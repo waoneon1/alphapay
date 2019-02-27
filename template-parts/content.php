@@ -30,8 +30,6 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php alpay_post_thumbnail(); ?>
-
 	<div class="entry-content wysiwyg">
 		<?php the_content() ?>
 	</div><!-- .entry-content -->

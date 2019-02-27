@@ -4,11 +4,13 @@
 	$(document).ready(function () {
 		$(".app-container #alp-header-search").on('click', function(e){
 			e.preventDefault();
-			$('.alp-searchwrapper').toggleClass('active');
+			$('.alp-search').toggleClass('active');
+			$('.alp-searchwrapper').toggle().toggleClass('active')
 		})
 		$(".alp-search #alp-btn-close").on('click', function(e){
 			e.preventDefault();
-			$('.alp-searchwrapper').removeClass('active');
+			$('.alp-search').removeClass('active');
+			$('.alp-searchwrapper').hide().removeClass('active')
 		})
 	});
 } )(jQuery);

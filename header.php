@@ -99,10 +99,9 @@
 			</nav>
 		</div>
 
-		<div class="alp-searchwrapper">
 			<div class="alp-search">
 				<div class="alp-searchinner">
-					<form method="get" action="<?php echo esc_url( home_url( '/' ) ) ?>">
+					<form method="get" action="<?php echo esc_url( home_url( '/' ) ) ?>" autocomplete="off">
 						<picture class="alp-s">
 						  <img 
 						  	src="<?php echo get_template_directory_uri() ?>/assets/img/search.png" 
@@ -117,4 +116,5 @@
 					</form>
 				</div>
 			</div>
-		</div>
+
+

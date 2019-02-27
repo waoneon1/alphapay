@@ -25,6 +25,7 @@ if ( ! function_exists( 'alpay_add_image_size' ) ) :
 		add_image_size('alpay_787x344', 787, 344, true);
 
 		// ---- Content ----
+		add_image_size('alpay_640x400', 640, 400, true);
 		add_image_size('alpay_350x263', 350, 263, true);
 		add_image_size('alpay_290x217', 290, 217, true);
 		add_image_size('alpay_210x158', 210, 158, true);

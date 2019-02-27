@@ -2,9 +2,7 @@
 <div class="alp-reg row alp-section">
 	<div class="alp-reg--left bg-grey alp-col d-none d-md-block">
         <div class="alp-reg--bg">
-            <img class="regbg regbg1" src="<?php echo get_template_directory_uri() . '/assets/img/regbg.png' ?>">
-            <img class="regbg regbg2" src="<?php echo get_template_directory_uri() . '/assets/img/regbg.png' ?>">
-            <img class="regbg regbg3" src="<?php echo get_template_directory_uri() . '/assets/img/regbg.png' ?>">
+           
         </div>
         <div class="alp-reg--cover">
         	<?php foreach ($section['Items'] as $key => $item): ?>
@@ -13,6 +11,9 @@
                 <img class="<?php echo "alp-reg--image$i alp-reg--image $init_img" ?>" 
                 src="<?php echo $item['image']['url'] ?>" />
         	<?php endforeach ?>
+            <img class="regbg regbg1" src="<?php echo get_template_directory_uri() . '/assets/img/regbg.png' ?>">
+            <img class="regbg regbg2" src="<?php echo get_template_directory_uri() . '/assets/img/regbg.png' ?>">
+            <img class="regbg regbg3" src="<?php echo get_template_directory_uri() . '/assets/img/regbg.png' ?>">
         </div>
 	</div>
 	<div class="alp-reg--right">

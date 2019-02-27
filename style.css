@@ -862,7 +862,8 @@ textarea {
 }
 .alp-title p,
 .alp-benefit--title p,
-.alp-subsc--left p {
+.alp-subsc--left p,
+.alp-cta--desc p {
 	color: #19345E;
 	font-size: 20px;
 }
@@ -892,6 +893,9 @@ textarea {
 	text-align: center;
 }
 .alp-benefit--content,
+.alp-product--list a {
+	color: #19345E;
+}
 .alp-product--lists {
 	margin-bottom: 70px;
 }
@@ -980,6 +984,12 @@ textarea {
 .alp-product--list:hover .alp-product--link {
 	color: #fff!important;
 }
+/* roming */
+.alp-product--list:hover .alp-product--box .svg g path.roming_2258, 
+.alp-product--list:hover .alp-product--box .svg #Group_14283 path,
+.alp-product--list:hover .alp-product--box .svg #Group_14282 path {
+	stroke: #2384DD;
+}
 .alp-product--list:hover .alp-product--box .svg path,
 .alp-product--list:hover .alp-product--box .svg rect{
 	fill:#2384DD;
@@ -1012,28 +1022,30 @@ textarea {
 }
 .alp-reg .alp-reg--cover {
 	position: relative;
+    max-width: 400px;
+    margin: auto;
 }
 .alp-reg .regbg {
-	opacity: 
+	z-index: -1;
 }
 .alp-reg .regbg.regbg1 {
 	position: absolute;
-	top: 50px;
-	right: 10px;
+	top: -40px;
+	right: -30px;
 	transform: rotate(-226deg);
 	opacity: 0.05;	
 } 
 .alp-reg .regbg.regbg2 {
 	position: absolute;
-    bottom: 200px;
-    left: 45px;
+    bottom: 50px;
+    left: -25px;
     transform: rotate(-226deg);
     opacity: 0.25; 	
 } 
 .alp-reg .regbg.regbg3 {
 	position: absolute;
-    bottom: 90px;
-    left: 100px;
+    bottom: -40px;
+    left: 35px;
     transform: rotate(-263deg);
     opacity: 0.15; 	
 } 
@@ -1204,6 +1216,7 @@ textarea {
 .alp-footer {
 	font-family: Arial, sans-serif;
 	padding: 60px 0;
+	position: relative;
 }
 .alp-footer .alp-footer--logo {
 	margin-bottom: 55px;
@@ -1351,6 +1364,7 @@ ul.alp-footer--list {
 }
 .alp-card--content p {
 	margin-bottom: 30px;
+	min-height: 130px;
 }
 .alp-card--btn {
 	border: 1px solid #2384DD;
@@ -1373,6 +1387,9 @@ ul.alp-footer--list {
 /*--------------------------------------------------------------
 ## SINGLE
 --------------------------------------------------------------*/
+.alp-content {
+	padding-top: 40px;
+}
 .alp-singlebanner {
 	max-height: 550px; 
 	height: auto;
@@ -1404,9 +1421,16 @@ ul.alp-footer--list {
     padding-left: 35px;
     position: relative;
 }
+.breadcrumb li {
+	font-size: 14px;
+}
 .breadcrumb li a {
 	color: #b7b7b7;
 }
+.breadcrumb-item+.breadcrumb-item::before {
+    color: #b7b7b7;
+}
+.breadcrumb li a:hover,
 .breadcrumb li.active {
 	color: #2384DD;
 }
@@ -1448,35 +1472,47 @@ article h1.entry-title {
 # SEARCH
 --------------------------------------------------------------*/
 .alp-searchwrapper {
-	height: 0;
-	width: 100%;
-	position: fixed; /* Stay in place */
-	z-index: 9999; /* Sit on top */
-	left: 0;
-	top: 0;
-	background-color: rgb(0,0,0); /* Black fallback color */
-	background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-	overflow-x: hidden; /* Disable horizontal scroll */
-	transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay */
+	height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 98;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0);
+    overflow-x: hidden;
+    display: none;
+    opacity: 1;
+    transition: 0.5s;
 }
+.alp-searchwrapper.active {
+	opacity: 0.8;
+}
+#alp-btn-close{
+	cursor: pointer;
+}
+
 .alp-search {
-	padding: 0;
+	padding: 30px 40px;
 	transition: all 0.3s ease;
 	background-color: #fff;
 	height: 0;
 	position: fixed;
-	top: 27px;
+	top: -100px;
 	width: 100%;
 	overflow: hidden;
+	background-color: #fff;
 }
-.alp-searchwrapper.active .alp-search {
+.alp-search.active  {
 	padding: 30px 40px;
 	height: auto;
 	position: fixed;
-	top: 0;
 	width: 100%;
+	z-index: 99;
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(47, 73, 128, 0.5);
+	-moz-box-shadow: 0px 2px 5px 0px rgba(47, 73, 128, 0.5);
+	box-shadow: 0px 2px 5px 0px rgba(47, 73, 128, 0.5);
 }
-body.admin-bar .alp-searchwrapper.active .alp-search {
+body.admin-bar .alp-search.active {
 	top: 28px;
 }
 .alp-searchwrapper.active {
@@ -1561,8 +1597,10 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 }
 .wysiwyg p {
     text-align: justify;
+    font-family: 'SFCompactDisplay', sans-serif;
+    font-size: 14px;
+    color: #3B3B3B;
 }
-
 
 .wysiwyg ul, .wysiwyg ol {
 	margin: 0 0 1.5em 3em;
@@ -1655,7 +1693,6 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 	}
 	.alp-reg--left { 
 		width: 50%; 
-		padding: 40px;
 	}
 	.alp-reg--right { 
 		width: 50%; 
@@ -1765,6 +1802,7 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 	.alp-product--box p {
 		display: none;
 	}
+
 	.alp-product--box,
 	.alp-product--box_title {
 		border: none;

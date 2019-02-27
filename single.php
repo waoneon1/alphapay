@@ -27,36 +27,28 @@ get_header();
 	</div>
 </div>
 
-<!-- Banner Carosel -->
-<div class="alp-singlebanner">
-	<div class="alp-singlebanner--bg fullwidth-content">
-		<div class="row">
-			<?php $image = get_field('banner_image') ?>
-			<picture>
-				<source media="(min-width: 1200px)" srcset="<?php alpay_image($image, '1240x540') ?>">
-				<source media="(min-width: 768px)" srcset="<?php alpay_image($image, '991x434') ?>">
-				<source media="(min-width: 0px)" srcset="<?php alpay_image($image, '787x344') ?>">
-				<img class="" src="<?php alpay_image($image, '1240x540') ?>" alt="">
-			</picture>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<nav aria-label="breadcrumb">
-		<ul class="breadcrumb">
-			<li class="breadcrumb-item"><a href="#">Home</a></li>
-			<li class="breadcrumb-item"><a href="#">Library</a></li>
-			<li class="breadcrumb-item active" aria-current="page">Data</li>
-		</ul>
-	</nav>
-</div>
-
 <div class="alp-wrapper">
 
 	<div class="alp-content container">
 		<div class="row">
 			<div class="col-md-8 col-12">
+
+				<!-- Banner Carosel -->
+				<div class="alp-singlebanner">
+					<div class="alp-singlebanner--bg fullwidth-content">
+						<div class="row">
+							<?php $image = get_the_post_thumbnail_url( $post->IDs, 'alpay_640x400') ?>
+							<picture>
+								<source media="(min-width: 1200px)" srcset="<?php echo $image ?>">
+								<source media="(min-width: 0px)" srcset="<?php echo $image ?>">
+								<img class="" src="<?php echo $image ?>" alt="">
+							</picture>
+						</div>
+					</div>
+				</div>
+
+				<?php alpay_breadcrumb() ?>
+
 				<!-- Content Here -->
 				<?php
 				while ( have_posts() ) :

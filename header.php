@@ -38,7 +38,7 @@
 		
 		<div class="container">
 			<nav class="navbar navbar-expand-md">
-				<div class="container">
+				<div class="container" style="padding: 0;">
 
 					<a class="navbar-brand" href="<?php echo get_site_url() ?>"> 
 						<picture>

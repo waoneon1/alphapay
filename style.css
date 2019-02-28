@@ -139,9 +139,12 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 
+a:link,
+a:hover,
+a:focus,
 a {
-	background-color: transparent;
 	color: inherit;
+	outline: none;
 }
 
 /**
@@ -667,13 +670,17 @@ a:hover, a:active {
 .navbar .nav-item {
 	padding: 0 15px;
 }
+.navbar .nav-item svg {
+	right: -5px;
+	position: relative;
+}
 .navbar-toggler-icon {
     height: 1em;
 }
 .dropdown-item {
     display: block;
     width: 100%;
-    padding: .25rem 1.5rem;
+    padding: 10px 40px 10px 20px;
     clear: both;
     font-weight: 400;
     color: #838383;
@@ -683,6 +690,18 @@ a:hover, a:active {
     border: 0;
     font-family: 'SFCompactDisplay', sans-serif;
     font-size: 13px;
+}
+.dropdown-menu.at-dropdown--menu.show {
+	border-radius: 5px;
+    border: 1px solid rgba(224, 224, 224, 0.16);
+    -webkit-box-shadow: 0px 9px 12px 0px rgba(0, 5, 26, 0.23);
+    -moz-box-shadow: 0px 9px 12px 0px rgba(0, 5, 26, 0.23);
+    box-shadow: 0px 9px 12px 0px rgba(0, 1, 6, 0.16);
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #2384DD;
+    text-decoration: none;
+    background-color: #F1F7FB;
 }
 /*--------------------------------------------------------------
 ## ASSET - BUTTON
@@ -1128,6 +1147,7 @@ textarea {
 }
 .alp-reg--image.active {
 	display: block;
+	width: 225px;
 }
 .alp-reg--image {
     border-top: 33px solid #fff;

@@ -1,5 +1,5 @@
  <!-- Registrasi Section -->
-<div class="alp-reg row alp-section">
+<div class="alp-reg row alp-section" id="alp-register">
 	<div class="alp-reg--left bg-grey alp-col d-none d-md-block">
         <div class="alp-reg--bg">
            
@@ -18,7 +18,7 @@
 	</div>
 	<div class="alp-reg--right">
 		<h2><?php echo $section['title'] ?></h2>
-		<p>We offer a wide range of products and services that help our clients achieve their ambitions. Get to know our products further.</p>
+		<p></p>
 		<!-- On PC -->
 		<ul class="alp-reg--lists d-none d-md-block">
             <?php foreach ($section['Items'] as $key => $item): ?>
@@ -60,11 +60,11 @@
 <script type="text/javascript">
    jQuery(document).ready(function($){
       $('.reg-slider').slick({
-        dots: true,
-        infinite: true,
+        dots: false,
+        infinite: false,
         speed: 300,
         slidesToShow: 1,
-        adaptiveHeight: true
+        adaptiveHeight: false
       });
     });
 </script>

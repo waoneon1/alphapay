@@ -9,9 +9,17 @@
 	    	<div class="alp-cta--desc col-md-5 col-12 alp-col">
 	    		<h1><?php the_field('title') ?></h1>
 	    		<?php print_r(get_field('subtitle')) ?>
-	    		<a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect">
+	    		
+	    		<!-- Mobile -->
+	    		<a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect d-none d-md-block">
 	    			<?php the_field('cta') ?>
 	    		</a>
+
+	    		<!-- PC -->
+	    		<a href="#alp-register" class="alp-btn btn alp-btn-blue btn-effect d-md-none">
+	    			<?php the_field('cta') ?>
+	    		</a>
+
 	    	</div>
 	    	<div class="alp-cta--imgwrap col-md-7 col-12 alp-col">
 	    		<img src="<?php echo get_template_directory_uri() . '/assets/img/homepage.png' ?>" class="alp-cta--image">

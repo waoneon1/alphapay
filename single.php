@@ -79,17 +79,19 @@ get_header();
 					    'post_type' => 'post',
 					    'posts_per_page' => 3
 					));
+
 					while ( $inner_query->have_posts() ) :
 						$inner_query->the_post(); ?>
 						<?php $image = get_field('thumbnail') ?>
+						
 						<div class="col-md-4 col-sm-4 col-12">
 							<div class="alp-card">
 								<picture class="now_item_picture">
-									<source media="(min-width: 1200px)" srcset="<?php alpay_image($image, '350x263') ?>">
-									<source media="(min-width: 992px)" srcset="<?php alpay_image($image, '290x217') ?>">
-									<source media="(min-width: 768px)" srcset="<?php alpay_image($image, '290x217') ?>">
-									<source media="(min-width: 0px)" srcset="<?php alpay_image($image, '350x263') ?>">
-									<img class="now_item_image" src="<?php alpay_image($image, '350x263') ?>" alt="">
+									<source media="(min-width: 1200px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_350x263') ?>">
+									<source media="(min-width: 992px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_290x217') ?>">
+									<source media="(min-width: 768px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_290x217') ?>">
+									<source media="(min-width: 0px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_350x263') ?>">
+									<img class="now_item_image" src="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_350x263') ?>" alt="">
 								</picture>
 								<div class="alp-card--content">
 									<h2><?php the_title() ?></h2>

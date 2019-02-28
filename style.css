@@ -141,6 +141,7 @@ pre {
 
 a {
 	background-color: transparent;
+	color: inherit;
 }
 
 /**
@@ -1168,7 +1169,14 @@ textarea {
 	margin-bottom: 15px;
 	font-size: 16px;
 }
-
+.alp-seo--item a {
+	display: block;
+}
+.alp-seo--item a:hover {
+	-webkit-box-shadow: 0px 9px 12px 0px rgba(0, 5, 26, 0.23);
+	-moz-box-shadow: 0px 9px 12px 0px rgba(0, 5, 26, 0.23);
+	box-shadow: 0px 9px 12px 0px rgba(0, 5, 26, 0.23);
+}
 .alp-download {
 	/*padding-top: 25px;*/
 	max-height: 230px;
@@ -1761,6 +1769,11 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 	}
 	.alp-seo--item img {
 		width: 100%;
+	}
+	.alp-seo--item:hover {
+		-webkit-box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.22);
+	    -moz-box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.22);
+	    box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.22);
 	}
 	.alp-download .alp-download--content {
 		padding-top: 40px;

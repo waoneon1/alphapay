@@ -74,16 +74,41 @@
 			                                <?php echo $pparent->title ?>
 			                                <img class="svg" src="<?php echo get_template_directory_uri() ?>/assets/img/ceret.svg" alt="">
 			                            </a>
-			                            <div class="dropdown-menu at-dropdown--menu">
-			  								<?php foreach ($primary[$pparent->ID] as $p): ?>
-												<a class="dropdown-item" href="<?php echo $p->url ?>">
-												    <span class="ic-nav-dropdown">
-												        <!-- - -->
-												    </span>
-												   <?php echo $p->title ?>
-												</a>
-											<?php endforeach ?>
-			                            </div>
+
+			                            <!-- HARDCODE PRODUCT CHILD -->
+			                            <?php if ($pparent->post_title == 'Produk'): ?>
+
+			                            	<?php 
+			                            	$product_list = get_terms([
+			                            	    'taxonomy' => 'jenis_produk',
+			                            	    'hide_empty' => false,
+			                            	]);
+			                            	?>
+			                            	<div class="dropdown-menu at-dropdown--menu">
+				  								<?php foreach ($product_list as $prod): ?>
+				  									<?php $prod_id = get_term_meta($prod->term_id, 'product-object-id', true) ?>
+													<a class="dropdown-item" href="<?php echo get_permalink($prod_id) ?>">
+													    <span class="ic-nav-dropdown">
+													        <!-- - -->
+													    </span>
+													   <?php echo $prod->name ?>
+													</a>
+												<?php endforeach ?>
+			                            	</div>
+			                            <?php else: ?>
+			                            	<div class="dropdown-menu at-dropdown--menu">
+				  								<?php foreach ($primary[$pparent->ID] as $p): ?>
+													<a class="dropdown-item" href="<?php echo $p->url ?>">
+													    <span class="ic-nav-dropdown">
+													        <!-- - -->
+													    </span>
+													   <?php echo $p->title ?>
+													</a>
+												<?php endforeach ?>
+			                            	</div>
+			                            <?php endif ?>
+			                            <!-- -|-|-|-|-|- -->
+
 			                        </li>
 		                        <?php else: ?>
 		                        	 <li class="nav-item">

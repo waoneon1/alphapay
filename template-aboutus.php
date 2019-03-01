@@ -22,7 +22,7 @@ get_header();
     </div>
     <!-- /End 1. Static Page Title -->
 
-    <div class="container section-static-content">
+    <div class="container section-static-content wysiwyg wysiwyg-nonimg">
        <?php the_content() ?>
     </div>
 </div>

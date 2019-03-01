@@ -1693,15 +1693,19 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 .wysiwyg img {
 	width: 100%;
 }
+.wysiwyg.wysiwyg-nonimg img {
+	width: auto;
+	max-width: 100%;
+}
 .wysiwyg p {
     text-align: justify;
     font-family: 'SFCompactDisplay', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #3B3B3B;
 }
 
 .wysiwyg ul, .wysiwyg ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 0;
 }
 
 .wysiwyg ul {
@@ -1713,7 +1717,7 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 }
 
 .wysiwyg li > ul,
-.wysiwyg 	li > ol {
+.wysiwyg li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }

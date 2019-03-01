@@ -76,7 +76,7 @@
 					</script>
 					<div class="collapse navbar-collapse alp-navbarcollapse" id="navbarResponsive">
 						<ul class="navbar-nav ml-auto">
-							<?php if (is_single() || is_category()): ?>
+							<?php if (is_single('post') || is_category()): ?>
 								<li class="nav-search">
 									<a href="">
 										<picture class="alp-btn-search" id="alp-header-search">

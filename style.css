@@ -1899,12 +1899,20 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 	.alp-pheader h1 {
 		font-size: 35px;
 	}
+	.alp-download {
+	    max-height: none;
+	}
 
 
 	/* +++++++++++++++ */
 	/* NAVBAR MOBILE   */
 	/* NAVBAR MOBILE   */
 	/* +++++++++++++++ */
+	.alp-btn-subscribe {
+		width: 100%;
+		display: block;
+		max-width: none;
+	}
 	.alp-btn-search {
 	    position: relative;
 	}

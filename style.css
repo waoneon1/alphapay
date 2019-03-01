@@ -1190,6 +1190,21 @@ textarea {
     -moz-box-shadow: 0px 9px 12px 0px rgba(0, 5, 26, 0.23);
     box-shadow: 0px 9px 12px 0px rgba(0, 5, 26, 0.23);
 }
+.alp-reg .slick-prev {
+    top: 40%;
+    left: -30px;
+}
+.alp-reg .slick-prev::before {
+    font-size: 24px;
+}
+.alp-reg .slick-next {
+    top: 40%;
+    right: -30px;
+}
+
+.alp-reg .slick-next::before {
+    font-size: 24px;
+}
 .alp-subsc h3 {
 	font-size: 20px;
 	color: #19345E;

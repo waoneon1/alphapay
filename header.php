@@ -59,13 +59,15 @@
 					</button>
 
 					<!-- SEARCH -->
-					<a href="" class="nav-search-m">
-						<picture class="alp-btn-search" id="alp-header-search">
-						  <img 
-						  	src="<?php echo get_template_directory_uri() ?>/assets/img/search.png" 
-						  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/search@2x.png 2x" alt="search" >
-						</picture>
-					</a>
+					<?php if (is_single('post') || is_category() || is_page('blog')): ?>
+						<a href="" class="nav-search-m">
+							<picture class="alp-btn-search" id="alp-header-search">
+							  <img 
+							  	src="<?php echo get_template_directory_uri() ?>/assets/img/search.png" 
+							  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/search@2x.png 2x" alt="search" >
+							</picture>
+						</a>
+					<?php endif ?>
 
 					<script type="text/javascript">
 						jQuery(document).ready(function($){
@@ -76,7 +78,7 @@
 					</script>
 					<div class="collapse navbar-collapse alp-navbarcollapse" id="navbarResponsive">
 						<ul class="navbar-nav ml-auto">
-							<?php if (is_single('post') || is_category()): ?>
+							<?php if (is_single('post') || is_category() || is_page('blog')): ?>
 								<li class="nav-search">
 									<a href="">
 										<picture class="alp-btn-search" id="alp-header-search">

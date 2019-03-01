@@ -16,7 +16,7 @@
 	    		</a>
 
 	    		<!-- PC -->
-	    		<a href="#alp-register" class="alp-btn btn alp-btn-blue btn-effect d-none d-md-block">
+	    		<a href="#alp-register" class="alp-btn btn alp-btn-blue btn-effect d-none d-md-inline-block">
 	    			<?php the_field('cta') ?>
 	    		</a>
 

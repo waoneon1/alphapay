@@ -1705,7 +1705,7 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 }
 
 .wysiwyg ul, .wysiwyg ol {
-	margin: 0 0 1.5em 0;
+	margin: 0 0 1.5em 3em;
 }
 
 .wysiwyg ul {

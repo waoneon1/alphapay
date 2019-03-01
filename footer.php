@@ -25,14 +25,13 @@
 			<div class="row alp-footer--list">
 				<!-- FOOTER 1 -->
 				<div class="col-md-3 alp-footer--col">
-					<h3 class="alp-footer--head">Hubungi Kami Melalui:</h3> 
 					<div class="alp-footer--list">
 						<?php echo $footer['desc'] ?>
 					</div>
 				</div>
 				<!-- FOOTER 2 -->
 				<div class="col-md-3 alp-footer--col">
-					<h3 class="alp-footer--head">Tentang Alphapay:</h3> 
+					<h3 class="alp-footer--head">Tentang Alphapay</h3> 
 					<ul class="alp-footer--list">
 						<?php foreach ($footer['nav'] as $key => $nav): ?>
 							<li>
@@ -45,7 +44,7 @@
 				</div>
 				<!-- FOOTER 3 -->
 				<div class="col-md-3 alp-footer--col">
-					<h3 class="alp-footer--head">Media Sosial:</h3> 
+					<h3 class="alp-footer--head">Media Sosial</h3> 
 					<ul class="alp-footer--list alp-social">
 						<?php foreach ($footer['soc'] as $key => $soc): ?>
 							<li>
@@ -82,6 +81,9 @@
 				</div>
 			</div>
 
+		</div>
+		<div class="alp-footer--bottom">
+			Copyright © <?php echo date("Y"); ?> AlphaPay
 		</div>
 	</footer><!-- #colophon -->
 	<div class="alp-searchwrapper"></div>

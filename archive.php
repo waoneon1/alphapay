@@ -49,12 +49,12 @@ get_header();
             		<?php $image = get_field('banner_image') ?>
 
             		<div class = "carousel-item <?php echo ($i == 1) ? 'active' : '' ?>">
-            		      <picture>
-            		      	<source media="(min-width: 1200px)" srcset="<?php alpay_image($image, '1240x540') ?>">
-            		      	<source media="(min-width: 768px)" srcset="<?php alpay_image($image, '991x434') ?>">
-            		      	<source media="(min-width: 0px)" srcset="<?php alpay_image($image, '787x344') ?>">
-            		      	<img class="d-block w-100" src="<?php alpay_image($image, '1240x540') ?>" alt="">
-            		      </picture>
+						<picture>
+							<source media="(min-width: 1200px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_1240x540') ?>">
+							<source media="(min-width: 768px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_991x434') ?>">
+							<source media="(min-width: 0px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_787x344') ?>">
+							<img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_1240x540') ?>" alt="">
+						</picture>
             		</div>
             		<?php $i++; ?>
             	<?php endwhile; // End of the loop.
@@ -89,12 +89,12 @@ get_header();
 							<?php $image = get_field('thumbnail') ?>
 							<div class="col-md-6 col-sm-6 col-12">
 								<div class="alp-card">
-									<picture class="now_item_picture">
-										<source media="(min-width: 1200px)" srcset="<?php alpay_image($image, '350x263') ?>">
-										<source media="(min-width: 992px)" srcset="<?php alpay_image($image, '290x217') ?>">
-										<source media="(min-width: 768px)" srcset="<?php alpay_image($image, '290x217') ?>">
-										<source media="(min-width: 0px)" srcset="<?php alpay_image($image, '350x263') ?>">
-										<img class="now_item_image" src="<?php alpay_image($image, '350x263') ?>" alt="">
+									<picture>
+										<source media="(min-width: 1200px)" srcset="<?php echo get_the_post_thumbnail_url( $post->ID, 'alpay_350x263') ?>">
+										<source media="(min-width: 992px)" srcset="<?php echo get_the_post_thumbnail_url( $post->ID, 'alpay_290x217') ?>">
+										<source media="(min-width: 768px)" srcset="<?php echo get_the_post_thumbnail_url( $post->ID, 'alpay_290x217') ?>">
+										<source media="(min-width: 0px)" srcset="<?php echo get_the_post_thumbnail_url( $post->ID, 'alpay_350x263') ?>">
+										<img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url( $post->ID, 'alpay_350x263') ?>" alt="">
 									</picture>
 									<div class="alp-card--content">
 										<h2><?php the_title() ?></h2>

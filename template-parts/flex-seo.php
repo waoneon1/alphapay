@@ -5,14 +5,19 @@
         <?php echo $section['description'] ?>
     </div>
   	<!-- ON DESKTOP -->
-    
+   
  	<div class="row">
         <?php foreach ($section['choose_post'] as $key => $choose_post): ?>
             <div class="col-md-4 col-12 alp-seo--item alp-col">
                 <a href="<?php echo get_permalink($choose_post['post']->ID) ?>">
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/contentseo1.png' ?>">
                     <h2><?php echo $choose_post['post']->post_title ?></h2>
-                    <?php echo alpay_blurb(20, $choose_post['post']->post_content) ?>
+
+                    <?php if ($choose_post['post']->post_excerpt): ?>
+                        <p><?php echo $choose_post['post']->post_excerpt ?></p>
+                    <?php else: ?>
+                        <?php echo alpay_blurb(20, $choose_post['post']->post_content) ?>
+                    <?php endif ?>
                  </a>
             </div>
         <?php endforeach ?>

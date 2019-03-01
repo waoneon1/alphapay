@@ -44,7 +44,8 @@ public function load_media() {
         <option> - select produk - </option>
         <?php 
               $query = new WP_Query(array(
-                  'post_type' => 'produk'
+                  'post_type' => 'produk',
+                  'posts_per_page' => -1
               ));
 
               while ($query->have_posts()) :
@@ -103,7 +104,8 @@ public function load_media() {
            <option> - select produk - </option>
            <?php 
               $query = new WP_Query(array(
-                 'post_type' => 'produk'
+                 'post_type' => 'produk',
+                 'posts_per_page' => -1
               ));
 
               while ($query->have_posts()) :

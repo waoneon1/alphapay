@@ -36,7 +36,7 @@
 			<?php endforeach ?>
 		<?php endif ?>
 		
-		<div class="container">
+		<div class="container navbar-w100">
 			<nav class="navbar navbar-expand-md">
 				<div class="container" style="padding: 0;">
 
@@ -48,16 +48,36 @@
 						</picture>
 					</a>
 
+					<!-- BURGER -->
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-						<span class="navbar-toggler-icon">
-			           		<img class="svg" src="<?php echo get_template_directory_uri() ?>/assets/img/burger.svg" alt="">
-						</span>
+						<div id="nav-icon3">
+						  <span></span>
+						  <span></span>
+						  <span></span>
+						  <span></span>
+						</div>
 					</button>
 
-					<div class="collapse navbar-collapse" id="navbarResponsive">
+					<!-- SEARCH -->
+					<a href="" class="nav-search-m">
+						<picture class="alp-btn-search" id="alp-header-search">
+						  <img 
+						  	src="<?php echo get_template_directory_uri() ?>/assets/img/search.png" 
+						  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/search@2x.png 2x" alt="search" >
+						</picture>
+					</a>
+
+					<script type="text/javascript">
+						jQuery(document).ready(function($){
+							$('#nav-icon3').click(function(){
+								$(this).toggleClass('open');
+							});
+						});
+					</script>
+					<div class="collapse navbar-collapse alp-navbarcollapse" id="navbarResponsive">
 						<ul class="navbar-nav ml-auto">
 							<?php if (is_single() || is_category()): ?>
-								<li>
+								<li class="nav-search">
 									<a href="">
 										<picture class="alp-btn-search" id="alp-header-search">
 										  <img 

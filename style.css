@@ -749,6 +749,11 @@ a:hover,a:focus,a:link {
     -moz-box-shadow: 0px 2px 5px 0px rgba(47, 73, 128, 0.5);
     box-shadow: 0px 2px 5px 0px rgba(47, 73, 128, 0.5);
 }
+.alp-btn-subscribe:hover {
+	color: #2384DD!important;
+	background-color: #fff;
+	border: 1px solid #2384DD;
+}
 div.wpcf7-response-output {
     margin: 0;
 } 
@@ -1891,6 +1896,9 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 	    margin: 0 auto;
 	    margin-top: 25px;
 	}
+	.alp-pheader h1 {
+		font-size: 35px;
+	}
 
 
 	/* +++++++++++++++ */
@@ -2102,7 +2110,7 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 /* ------- desktop (page product) -------- */
 
 .alp-pcontent--side li {
-    font-size: 12px;
+    font-size: 15px;
     border: none;
     padding-top: 20px;
     padding-bottom: 20px;

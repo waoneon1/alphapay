@@ -17,23 +17,13 @@ get_header();
     <!-- 1. Static Page Title -->
     <div class="container-fluid d-flex section-static-title">
         <div class="row align-self-center m-auto">
-            <h1>Tentang Kami</h1>
+            <h1><?php the_title() ?></h1>
         </div>
     </div>
     <!-- /End 1. Static Page Title -->
 
     <div class="container section-static-content">
-        <h2>AlphaPay berdiri pada tahun 2018</h2>
-        <p>Menawarkan cara yang modern dengan berbagai kelebihan kepada agen yang ingin mengembangkan bisnisnya dalam berjualan pulsa dan pembayaran online lainnya, hanya dengan melalui aplikasi AlphaPay yang tersedia gratis di Google PlayStore dan App Store.</p>
-
-        <h2>Keuntungan</h2>
-        <p>AlphaPay memberikan keuntungan bagi Anda yang bergabung menjadi agen AlphaPay, seperti pendaftaran yang tidak dipungut biaya alias gratis, harga yang murah sehingga memaksimalkan keuntungan Anda, serta proses transaksi yang cepat di aplikasi AlphaPay.</p>
-
-        <h2>Maksimalkan Keuntungan</h2>
-        <p>Pengguna AlphaPay dibagi menjadi dua yaitu, agen reguler dan agen premium. Dengan menjadi agen premium AlphaPay, Anda bisa lebih memaksimalkan keuntungan yang didapat.</p>
-
-        <h2>Perluas Jangkauan</h2>
-        <p>Program Agen premium AlphaPay memungkinkan para agennya memperluas jaringan bisnis dengan mencantumkan kode referral yang bisa memberikan Anda kesempatan untuk meraih keuntungan yang berlipat-ganda. Download aplikasi AlphaPay secara gratis sekarang, dan mulai dapatkan keuntungan setiap harinya bersama kami!</p>
+       <?php the_content() ?>
     </div>
 </div>
 

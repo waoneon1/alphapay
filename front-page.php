@@ -11,12 +11,12 @@
 	    		<?php print_r(get_field('subtitle')) ?>
 	    		
 	    		<!-- Mobile -->
-	    		<a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect d-none d-md-block">
+	    		<a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect d-md-none">
 	    			<?php the_field('cta') ?>
 	    		</a>
 
 	    		<!-- PC -->
-	    		<a href="#alp-register" class="alp-btn btn alp-btn-blue btn-effect d-md-none">
+	    		<a href="#alp-register" class="alp-btn btn alp-btn-blue btn-effect d-none d-md-block">
 	    			<?php the_field('cta') ?>
 	    		</a>
 

@@ -1,5 +1,5 @@
 <!-- Benefit Section -->
-<div class="alp-benefit container alp-section">
+<div class="alp-benefit container alp-section" id="benefit">
 	<div class="alp-benefit--title">
 		<h2><?php echo $section['title'] ?></h2>
 		<?php echo $section['description'] ?>

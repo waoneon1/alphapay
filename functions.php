@@ -242,3 +242,22 @@ function alpay_blurb($trim = 20, $contents = null) {
 	}
 	
 }  
+
+
+/**
+ * ALTER BLOG
+ */
+add_action( 'pre_get_posts', 'alpay_alter_blog' );
+function alpay_alter_blog( $query ) {
+ 
+    if ( ! is_admin() && $query->is_main_query() ) {
+        // Not a query for an admin page.
+        // It's the main query for a front end page of your site.
+        if (@is_page('blog')){
+            // It's the main query for a category archive.
+            // Let's change the query for category archives.
+            $query->set( 'cat', 0 );
+        }
+    }
+}
+

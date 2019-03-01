@@ -10,7 +10,13 @@
         <?php foreach ($section['choose_post'] as $key => $choose_post): ?>
             <div class="col-md-4 col-12 alp-seo--item alp-col">
                 <a href="<?php echo get_permalink($choose_post['post']->ID) ?>">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/contentseo1.png' ?>">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="<?php echo get_the_post_thumbnail_url( $choose_post['post']->ID, 'alpay_350x263') ?>">
+                        <source media="(min-width: 992px)" srcset="<?php echo get_the_post_thumbnail_url( $choose_post['post']->ID, 'alpay_210x158') ?>">
+                        <source media="(min-width: 768px)" srcset="<?php echo get_the_post_thumbnail_url( $choose_post['post']->ID, 'alpay_350x263') ?>">
+                        <source media="(min-width: 0px)" srcset="<?php echo get_the_post_thumbnail_url( $choose_post['post']->ID, 'alpay_350x263') ?>">
+                        <img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url( $choose_post['post']->ID, 'alpay_350x263') ?>" alt="">
+                    </picture>
                     <h2><?php echo $choose_post['post']->post_title ?></h2>
 
                     <?php if ($choose_post['post']->post_excerpt): ?>

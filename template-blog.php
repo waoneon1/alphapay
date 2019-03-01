@@ -1,5 +1,6 @@
 <?php 
 
+/* Template Name: Blog */
 /**
  * The template for displaying archive pages
  *
@@ -84,8 +85,12 @@ get_header();
 			<div class="col-md-8 col-12">
 				<div class="row">
 					<?php
-						while ( have_posts() ) :
-							the_post(); ?>
+						$blog_query = new WP_Query(array(
+						    'post_type' => 'post',
+						));
+
+						while ( $blog_query->have_posts() ) :
+							$blog_query->the_post(); ?>
 							<?php $image = get_field('thumbnail') ?>
 							<div class="col-md-6 col-sm-6 col-12">
 								<div class="alp-card">

@@ -47,7 +47,8 @@ get_header();
 					</div>
 				</div>
 
-				<?php alpay_breadcrumb() ?>
+				<?php //alpay_breadcrumb() ?>
+				<?php yoast_breadcrumb( '<nav aria-label="breadcrumb" class="alp-breadcrump">','</nav>' ); ?>
 
 				<!-- Content Here -->
 				<?php

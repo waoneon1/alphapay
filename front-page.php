@@ -12,7 +12,7 @@
 	    		
 	    		<!-- Mobile -->
 	    		<a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect d-md-none">
-	    			Download
+	    			<?php the_field('cta') ?>
 	    		</a>
 
 	    		<!-- PC -->

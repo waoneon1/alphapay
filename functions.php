@@ -203,7 +203,7 @@ require get_template_directory() . '/inc/class-comments.php';
 /**
  * Breadcrumb
  */
-require get_template_directory() . '/inc/class-breadcrumb.php';
+// require get_template_directory() . '/inc/class-breadcrumb.php';
 
 
 /**
@@ -242,6 +242,7 @@ function alpay_blurb($trim = 20, $contents = null) {
 	
 }  
 
+
 /**
  * ALTER BLOG
  */
@@ -258,4 +259,4 @@ function alpay_alter_blog( $query ) {
         }
     }
 }
-?>
+

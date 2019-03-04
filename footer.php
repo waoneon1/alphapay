@@ -48,7 +48,7 @@
 					<ul class="alp-footer--list alp-social">
 						<?php foreach ($footer['soc'] as $key => $soc): ?>
 							<li>
-								<a href="<?php echo $soc['link'] ?>">
+								<a href="<?php echo $soc['link'] ?>" target="_blank">
 									<?php switch ($soc['label']) {
 										case 'facebook':
 											alpay_retina('fb');

@@ -12,12 +12,12 @@
 	    		
 	    		<!-- Mobile -->
 	    		<a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect d-md-none">
-	    			<?php the_field('cta') ?>
+	    			Download
 	    		</a>
 
 	    		<!-- PC -->
 	    		<a href="#alp-register" class="alp-btn btn alp-btn-blue btn-effect d-none d-md-inline-block">
-	    			<?php the_field('cta') ?>
+	    			Cara Jadi Agen
 	    		</a>
 
 	    	</div>

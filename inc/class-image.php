@@ -43,3 +43,14 @@ function alpay_image($field, $size,  $echo = true, $type = 'acf') {
 		}
 	}
 }
+
+//Image RETINA
+function alpay_retina($image) {
+	?>
+	<picture>
+	  <img 
+	  	src="<?php echo get_template_directory_uri() ?>/assets/img/<?php echo $image ?>.png" 
+	  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/<?php echo $image ?>@2x.png 2x" alt="alphapay">
+	</picture>
+	<?php
+}

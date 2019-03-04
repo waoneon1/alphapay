@@ -20,7 +20,7 @@
 	<footer id="colophon" class="alp-footer">
 		<div class="container">
 			<a class="alp-footer--logo" href="index.html"> 
-				<img src="<?php echo get_template_directory_uri() ?>/assets/img/logo-w.png" alt="">
+				<?php alpay_retina('logo-w') ?>
 			</a>
 			<div class="row alp-footer--list">
 				<!-- FOOTER 1 -->
@@ -51,15 +51,15 @@
 								<a href="<?php echo $soc['link'] ?>">
 									<?php switch ($soc['label']) {
 										case 'facebook':
-											echo '<img src="'.get_template_directory_uri().'/assets/img/fb.png"';
+											alpay_retina('fb');
 											break;
 										
 										case 'instagram':
-											echo '<img src="'.get_template_directory_uri().'/assets/img/ig.png"';
+											alpay_retina('ig');
 											break;
 										
 										case 'twitter':
-											echo '<img src="'.get_template_directory_uri().'/assets/img/tw.png"';
+											alpay_retina('tw');
 											break;
 										
 										default:

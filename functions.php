@@ -242,7 +242,6 @@ function alpay_blurb($trim = 20, $contents = null) {
 	
 }  
 
-
 /**
  * ALTER BLOG
  */
@@ -259,4 +258,4 @@ function alpay_alter_blog( $query ) {
         }
     }
 }
-
+?>

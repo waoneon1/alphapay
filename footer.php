@@ -75,7 +75,7 @@
 				<div class="col-md-3 alp-footer--col">
 					<?php foreach ($footer['link'] as $key => $link): ?>
 						<h3 class="alp-footer--head">
-							<a href="#"><?php echo $link['label'] ?></a>
+							<a href="<?php echo $link['link'] ?>"><?php echo $link['label'] ?></a>
 						</h3> 
 					<?php endforeach ?>
 				</div>

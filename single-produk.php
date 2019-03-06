@@ -18,8 +18,8 @@
     <div class="alp-pheader container alp-section">
     	<div class="row">
 	    	<div class="alp-pheader--desc col-md-5 col-12 alp-col">
-	    		<h2><?php echo (get_field('subtitle')) ? get_field('subtitle') : '' ?></h2>
-	    		<h1><?php echo (get_field('header_title')) ? get_field('header_title') : '' ?></h1>
+	    		<?php echo (get_field('subtitle')) ? '<h2>'.get_field('subtitle').'</h2>' : '' ?>
+	    		<?php echo (get_field('header_title')) ? '<h1>'.get_field('header_title').'</h1>' : '' ?>
 	    	</div>
 	    	<div class="alp-pheader--imgwrap col-md-7 col-12 alp-col">
                 <img src="<?php echo get_field('image')['url'] ?>" class="alp-cta--image">

@@ -65,6 +65,7 @@ get_header();
 
 				endwhile; // End of the loop.
 				?>
+
 			</div>
 			<div class="col-md-4 col-12">
 				<?php get_sidebar() ?>
@@ -110,6 +111,8 @@ get_header();
 	</div>
 
 </div>
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
 
 <?php
 get_footer();

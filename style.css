@@ -494,7 +494,7 @@ h1 {
 	font-size: 30px;
 }
 p {
-	font-size: 15px;
+	font-size: 16px;
 	color: #7E7E7E;
 }
 @media (max-width: 991px) {
@@ -1881,6 +1881,7 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 	}
 	.alp-subsc--left {
 		padding-left: 15px;
+		padding-top: 0;
 	}
 	.alp-subsc--form {
 	    padding-left: 20px;

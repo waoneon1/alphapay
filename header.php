@@ -168,7 +168,7 @@
 						  	src="<?php echo get_template_directory_uri() ?>/assets/img/search.png" 
 						  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/search@2x.png 2x" alt="search" >
 						</picture>
-						<input type="text" class="alp-search--input" placeholder="Search" name="s" />
+						<input type="text" class="alp-search--input" placeholder="Search" name="s" id="alp-search--input"/>
 						<picture class="alp-s" id="alp-btn-close">
 						  <img 
 						  	src="<?php echo get_template_directory_uri() ?>/assets/img/cross.png" 

@@ -5,7 +5,8 @@
 		$(".app-container #alp-header-search").on('click', function(e){
 			e.preventDefault();
 			$('.alp-search').toggleClass('active');
-			$('.alp-searchwrapper').toggle().toggleClass('active')
+			$('.alp-searchwrapper').toggle().toggleClass('active');
+			document.getElementById("alp-search--input").focus();
 		})
 		$(".alp-search #alp-btn-close").on('click', function(e){
 			e.preventDefault();

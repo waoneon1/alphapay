@@ -2109,6 +2109,9 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 	    margin: 10px;
 	    cursor: pointer;
 	}
+	.alp-reg--simg {
+		padding: 20px;
+	}
 }
 
 /* BOOTSTRAP ALTER */

@@ -131,6 +131,8 @@ if( function_exists('acf_add_options_page') ) {
  */
 function alpay_scripts() {
 
+	wp_enqueue_style( 'dashicons' );
+	
 	wp_enqueue_style( 'alpay-boostrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );	
 
 	wp_enqueue_style( 'alpay-main', get_template_directory_uri() . '/assets/css/main.css' );

@@ -55,6 +55,11 @@
             <?php endforeach ?>
 		</ul>
 
+        <a href="<?php the_field('cta_link') ?>" class="cta-download">
+            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/android.svg' ?>">
+            Download Sekarang
+        </a>
+
 	</div>
 </div>
 <script type="text/javascript">

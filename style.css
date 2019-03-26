@@ -760,6 +760,24 @@ div.wpcf7-response-output {
 .wpcf7-form p {
 	margin: 0;
 }
+.cta-download {
+	border: 1px solid #fff;
+	border-radius: 5px;
+	padding: 16px 20px 17px 70px;
+	display: inline-block;
+	position: relative;
+	margin-left: 50px;
+}
+.cta-download:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+	-webkit-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.cta-download .svg {
+	position: absolute;
+	left: 25px;
+}
 /*--------------------------------------------------------------
 ## ASSET - INPUT
 --------------------------------------------------------------*/
@@ -1201,7 +1219,6 @@ textarea {
     top: 40%;
     right: -30px;
 }
-
 .alp-reg .slick-next::before {
     font-size: 24px;
 }
@@ -1878,6 +1895,13 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 	} 
 	.alp-reg--content {
 		margin-top: 20px;
+	}
+	.cta-download {
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+	.cta-download {
+		display: none;
 	}
 	.alp-subsc--left {
 		padding-left: 15px;

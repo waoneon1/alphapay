@@ -1373,6 +1373,10 @@ ul.alp-footer--list {
 .alp-pheader h2 {
 	font-size: 25px;
 }
+.alp-pheader--android {
+	margin: 25px 0;
+	display: inline-block;
+}
 .alp-pcontent {
 	font-family: 'SFCompactDisplay', sans-serif;
 }

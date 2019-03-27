@@ -10,6 +10,9 @@
 	    'hide_empty' => false,
 	]);
     $current_id = $post->ID;
+
+    $flex_content_front = get_field('flexible_section', get_option('page_on_front'));
+    $flex_content       = get_field('flexible_section');
 ?>
 
 <div class="alp-wrapper">
@@ -20,6 +23,34 @@
 	    	<div class="alp-pheader--desc col-md-5 col-12 alp-col">
 	    		<?php echo (get_field('subtitle')) ? '<h2>'.get_field('subtitle').'</h2>' : '' ?>
 	    		<?php echo (get_field('header_title')) ? '<h1>'.get_field('header_title').'</h1>' : '' ?>
+
+                <?php 
+                    foreach ($flex_content_front as $key => $sec) {
+                        if ($sec['acf_fc_layout'] == 'download_section') {
+                            $section['title'] = $sec['title'];
+                            $section['subtitle'] = $sec['subtitle'];
+                            $section['android_url'] = $sec['android_url'];
+                            $section['iphone_url'] = $sec['iphone_url'];
+                        }
+                    }     
+                    foreach ($flex_content as $key => $sec) {
+                        if ($sec['acf_fc_layout'] == 'download_section') {
+                            $section['title'] = $sec['title'] ? $sec['title'] : $section['title'];
+                            $section['subtitle'] = $sec['subtitle'] ? $sec['subtitle'] : $section['subtitle'];
+                            $section['android_url'] = $sec['android_url'] ? $sec['android_url'] : $section['android_url'];
+                            $section['iphone_url'] = $sec['iphone_url'] ? $sec['iphone_url'] : $section['iphone_url'];
+                        }
+                    }
+                ?>
+
+                <a href="<?php echo $section['android_url'] ?>" target="_blank">
+                    <picture class="alp-pheader--android">
+                        <img 
+                        src="<?php echo get_template_directory_uri() ?>/assets/img/google-play-badge.png" 
+                        srcset="<?php echo get_template_directory_uri() ?>/assets/img/google-play-badge@2x.png 2x" alt="download alphapay">
+                    </picture>
+                </a>
+
 	    	</div>
 	    	<div class="alp-pheader--imgwrap col-md-7 col-12 alp-col">
                 <img src="<?php echo get_field('image')['url'] ?>" class="alp-cta--image">
@@ -91,6 +122,12 @@
     		</div>
     	</div>
     </div>
+
+    <?php 
+        echo '<div class="fullwidth-content bg-grey">';
+            include get_template_directory() . '/template-parts/flex-download.php';
+        echo '</div>';  
+    ?>
 
 </div>
 

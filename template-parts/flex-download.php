@@ -17,16 +17,14 @@
 				<a href="<?php echo $section['android_url'] ?>" target="_blank">
 					<picture>
 					  <img 
-					  	src="<?php echo get_template_directory_uri() ?>/assets/img/google-play-badge.png" 
-					  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/google-play-badge@2x.png 2x" alt="download alphapay">
+					  	src="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge.png" 
+					  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge@2x.png 2x" alt="download alphapay">
 					</picture>
 				</a>
 			<?php endif ?>
 
 			<?php if ($section['iphone_url']): ?>
-				<a href="<?php echo $section['iphone_url'] ?>">
-					<img src="<?php echo get_template_directory_uri() . '/assets/img/google-play-badge.png' ?>">
-				</a>
+				
 			<?php endif ?>
 		</div>
 	</div>	

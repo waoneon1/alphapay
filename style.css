@@ -805,8 +805,13 @@ textarea {
     border: 1px solid #e8e8e8;
 }
 .alp-form input,
+.alp-form select,
 .alp-form a.alp-btn {
 	margin:12px 0;
+}
+
+.alp-form select {
+    height: 60px!important;
 }
 /**
 * Make the field a flex-container, reverse the order so label is on top.
@@ -833,6 +838,7 @@ textarea {
   outline: 0;
 }
 
+
 .alp-form label {
  	display: inline-block;
  	margin-bottom: .5rem;
@@ -841,6 +847,16 @@ textarea {
  	left: 15px;
  	background-color: #fff;
  	padding: 0 10px;
+}
+.alp-form label {
+    top:30px;
+    font-size: 17px;
+    color: #7E7E7E;
+}
+.alp-form label.focus {
+	top:0;
+	font-size: 15px;
+	color: #19345E;
 }
 /**
 * Translate down and scale the label up to cover the placeholder,
@@ -1810,6 +1826,65 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 .widget ul li:last-child {
 	border-bottom: none;
 }
+
+
+/*--------------------------------------------------------------
+## FACEBOOK LANDING PAGE
+--------------------------------------------------------------*/
+.alp-fb-landing .alp-pheader--desc h1 {
+    font-size: 35px;
+}
+.alp-fb-landing .alp-pheader--desc p {
+    font-size: 17px;
+}
+.alp-fb-landing .alp-pheader a {
+    display: inline-block;
+}
+.alp-fb-landing .alp-fb-blue {
+    padding: 20px 0 100px;
+    background-color: rgba(27, 117, 187, 0.06);
+}
+.alp-fb-landing .alp-pheader--desc a {
+    display: block;
+}
+.alp-boxnshadow {
+    border-radius: 10px;
+    border: 1px solid #F9F9F9;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+}
+.alp-boxnshadow {
+    text-align: center;
+    padding: 20px 15px;
+    background-color: #fff;
+}
+.alp-boxnshadow h4 {
+    font-size: 17px;
+}
+.alp-boxnshadow p {
+    font-size: 14px;
+}
+.alp-boxnshadow .alp-form-wrap {
+    padding: 0 30px;
+}
+.alp-boxnshadow img {
+    margin: 15px 0 20px;
+}
+.alp-boxnshadow p.alp-loc {
+    font-size: 17px;
+    color: #18345e;
+    padding: 0 25px;
+}
+.alp-subloc .alp-boxnshadow  {
+    margin-top: -40px;
+    margin-bottom: 100px;
+    min-height: 450px;
+}
+.alp-boxnshadow .alp-loc {
+    display: none;
+}
+
 /*--------------------------------------------------------------
 ## RESPONSIVE
 --------------------------------------------------------------*/

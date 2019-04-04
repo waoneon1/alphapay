@@ -72,3 +72,31 @@
 	}
 
 } )(jQuery);
+
+// Floating label on alp-form
+( function($) {
+	$(document).ready(function () {
+		$('.alp-form input').focusin(function() {
+			var lab = $(this).parent().parent().find('label');
+			if (!lab.hasClass('focus')) {
+				lab.addClass('focus');
+			}
+		})
+		$('.alp-form input').focusout(function() {
+			$(this).parent().parent().find('label').removeClass('focus');
+			var lab = $(this).parent().parent().find('label');
+			if ($(this).val() != '') {
+				lab.addClass('focus');
+			}
+		})
+	})
+
+		// Select
+	$(document).ready(function () {
+		$('#alp-city').change(function(){
+			$('.alp-loc').hide();
+			$('#' + $(this).val()).show();
+		});
+	})
+	
+} )(jQuery);

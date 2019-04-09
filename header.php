@@ -87,7 +87,7 @@
 					</button>
 
 					<!-- SEARCH -->
-					<?php if (is_single() || is_category() || is_page('blog')): ?>
+					<?php if (is_singular('post') || is_category() || is_page('blog')): ?>
 						<a href="" class="nav-search-m">
 							<picture class="alp-btn-search" id="alp-header-search">
 							  <img 
@@ -106,7 +106,7 @@
 					</script>
 					<div class="collapse navbar-collapse alp-navbarcollapse" id="navbarResponsive">
 						<ul class="navbar-nav ml-auto">
-							<?php if (is_single() || is_category() || is_page('blog')): ?>
+							<?php if (is_singular('post') || is_category() || is_page('blog')): ?>
 								<li class="nav-search">
 									<a href="">
 										<picture class="alp-btn-search" id="alp-header-search">

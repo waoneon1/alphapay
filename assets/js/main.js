@@ -47,43 +47,43 @@
 } )(jQuery);
 
 // Tes
-( function($) {
+// ( function($) {
 
-	// When the user scrolls the page, execute myFunction 
-	window.onscroll = function() {scroll_func()};
-	// Get the navbar
-	var navbar = document.getElementById("navbar");
-	// Get the offset position of the navbar
-	var sticky = navbar.offsetTop;
-	var position = navbar.offsetTop;
-	// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-	function scroll_func() {
-	  var scroll = $(window).scrollTop();
-	  console.log(window.pageYOffset);
-	  console.log(sticky);
+// 	// When the user scrolls the page, execute myFunction 
+// 	window.onscroll = function() {scroll_func()};
+// 	// Get the navbar
+// 	var navbar = document.getElementById("navbar");
+// 	// Get the offset position of the navbar
+// 	var sticky = navbar.offsetTop;
+// 	var position = navbar.offsetTop;
+// 	// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// 	function scroll_func() {
+// 	  var scroll = $(window).scrollTop();
+// 	  console.log(window.pageYOffset);
+// 	  console.log(sticky);
 
-	  if (window.pageYOffset != sticky) {
-	    navbar.classList.add("sticky");
-	    // navbarm.classList.add("sticky");
-	    if(scroll < position) {
-	    	navbar.classList.remove("sticky-down");
-	    	navbar.classList.add("sticky-up");
-	    } else {
-	    	navbar.classList.remove("sticky-up");
-	    	navbar.classList.add("sticky-down");
-	    }
-	  } else {
-	    navbar.classList.remove("sticky");
-	    navbar.classList.remove("sticky-up");
-	    navbar.classList.remove("sticky-down");
-	    // navbarm.classList.remove("sticky");
-	  }
+// 	  if (window.pageYOffset != sticky) {
+// 	    navbar.classList.add("sticky");
+// 	    // navbarm.classList.add("sticky");
+// 	    if(scroll < position) {
+// 	    	navbar.classList.remove("sticky-down");
+// 	    	navbar.classList.add("sticky-up");
+// 	    } else {
+// 	    	navbar.classList.remove("sticky-up");
+// 	    	navbar.classList.add("sticky-down");
+// 	    }
+// 	  } else {
+// 	    navbar.classList.remove("sticky");
+// 	    navbar.classList.remove("sticky-up");
+// 	    navbar.classList.remove("sticky-down");
+// 	    // navbarm.classList.remove("sticky");
+// 	  }
 
 		
-		position = scroll;
+// 		position = scroll;
 
-	}
-} )(jQuery);
+// 	}
+// } )(jQuery);
 
 // Floating label on alp-form
 ( function($) {

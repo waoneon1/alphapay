@@ -137,23 +137,23 @@ function alpay_scripts() {
 
 	wp_enqueue_style( 'alpay-main', get_template_directory_uri() . '/assets/css/main.css' );
 	
-	wp_enqueue_style( 'alt-slick', get_template_directory_uri() . '/assets/slick/slick.css' );	
+	wp_enqueue_style( 'alpay-slick', get_template_directory_uri() . '/assets/slick/slick.css' );	
 
-	wp_enqueue_style( 'alt-slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css' );	
+	wp_enqueue_style( 'alpay-slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css' );	
 
-	wp_enqueue_style( 'alpay-style', get_stylesheet_uri(), array(), '2.7'  );
+	wp_enqueue_style( 'alpay-style', get_stylesheet_uri(), array(), '2.8'  );
 
 	wp_enqueue_script( 'alpay-boostrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '20190101', true );
 
-	wp_enqueue_script( 'alpay-tools', get_template_directory_uri() . '/assets/js/tools.js', array('jquery'));
+	wp_enqueue_script( 'alpay-tools', get_template_directory_uri() . '/assets/js/tools.js', array('jquery'), '', true);
 
-	wp_enqueue_script( 'alpay-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'));
+	wp_enqueue_script( 'alpay-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '', true);
 
 	wp_enqueue_script( 'alpay-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'alpay-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'alt-slick', get_template_directory_uri() .'/assets/slick/slick.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'alpay-slick', get_template_directory_uri() .'/assets/slick/slick.min.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -200,6 +200,11 @@ require get_template_directory() . '/inc/class-image.php';
  * Comments
  */
 require get_template_directory() . '/inc/class-comments.php';
+
+/**
+ * Ads
+ */
+require get_template_directory() . '/inc/class-ads.php';
 
 
 /**

@@ -87,7 +87,7 @@
 					</button>
 
 					<!-- SEARCH -->
-					<?php if (is_single('post') || is_category() || is_page('blog')): ?>
+					<?php if (is_single() || is_category() || is_page('blog')): ?>
 						<a href="" class="nav-search-m">
 							<picture class="alp-btn-search" id="alp-header-search">
 							  <img 
@@ -106,7 +106,7 @@
 					</script>
 					<div class="collapse navbar-collapse alp-navbarcollapse" id="navbarResponsive">
 						<ul class="navbar-nav ml-auto">
-							<?php if (is_single('post') || is_category() || is_page('blog')): ?>
+							<?php if (is_single() || is_category() || is_page('blog')): ?>
 								<li class="nav-search">
 									<a href="">
 										<picture class="alp-btn-search" id="alp-header-search">
@@ -174,22 +174,22 @@
 			</nav>
 		</div>
 
-			<div class="alp-search">
-				<div class="alp-searchinner">
-					<form method="get" action="<?php echo esc_url( home_url( '/' ) ) ?>" autocomplete="off">
-						<picture class="alp-s">
-						  <img 
-						  	src="<?php echo get_template_directory_uri() ?>/assets/img/search.png" 
-						  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/search@2x.png 2x" alt="search" >
-						</picture>
-						<input type="text" class="alp-search--input" placeholder="Search" name="s" id="alp-search--input"/>
-						<picture class="alp-s" id="alp-btn-close">
-						  <img 
-						  	src="<?php echo get_template_directory_uri() ?>/assets/img/cross.png" 
-						  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/cross@2x.png 2x" alt="search" >
-						</picture>
-					</form>
-				</div>
+		<div class="alp-search">
+			<div class="alp-searchinner">
+				<form method="get" action="<?php echo esc_url( home_url( '/' ) ) ?>" autocomplete="off">
+					<picture class="alp-s">
+					  <img 
+					  	src="<?php echo get_template_directory_uri() ?>/assets/img/search.png" 
+					  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/search@2x.png 2x" alt="search" >
+					</picture>
+					<input type="text" class="alp-search--input" placeholder="Search" name="s" id="alp-search--input"/>
+					<picture class="alp-s" id="alp-btn-close">
+					  <img 
+					  	src="<?php echo get_template_directory_uri() ?>/assets/img/cross.png" 
+					  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/cross@2x.png 2x" alt="search" >
+					</picture>
+				</form>
 			</div>
+		</div>
 
 

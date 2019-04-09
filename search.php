@@ -20,42 +20,7 @@ get_header();
 <div class="alp-banner alp-sec-margin">
 	<div class="alp-banner--bg container">
 		
-		<div id = "carouselwithIndicators" class = "carousel slide" data-ride = "carousel">
-            <div class =" carousel-inner">
-              <?php
-            	$inner_query = new WP_Query(array(
-            	    'post_type' => 'post',
-            	    'posts_per_page' => 1
-            	));
-            	$i = 1;
-            	while ( $inner_query->have_posts() ) :
-            		$inner_query->the_post(); ?>
-            		<?php $image = get_field('banner_image') ?>
 
-            		<div class = "carousel-item <?php echo ($i == 1) ? 'active' : '' ?>">
-            		      <picture>
-            		      	<source media="(min-width: 1200px)" srcset="<?php alpay_image($image, '1240x540') ?>">
-            		      	<source media="(min-width: 768px)" srcset="<?php alpay_image($image, '991x434') ?>">
-            		      	<source media="(min-width: 0px)" srcset="<?php alpay_image($image, '787x344') ?>">
-            		      	<img class="d-block w-100" src="<?php alpay_image($image, '1240x540') ?>" alt="">
-            		      </picture>
-            		</div>
-            		<?php $i++; ?>
-            	<?php endwhile; // End of the loop.
-            	wp_reset_query();
-            ?>
-            </div>
-
-            <a class = "carousel-control-prev" href = "#carouselwithIndicators" role = "button" data-slide = "prev">
-               <span class = "carousel-control-prev-icon" aria-hidden = "true"></span>
-               <span class = "sr-only">Previous</span>
-            </a>
-            
-            <a class = "carousel-control-next" href = "#carouselwithIndicators" role = "button" data-slide = "next">
-               <span class = "carousel-control-next-icon" aria-hidden = "true"></span>
-               <span class = "sr-only">Next</span>
-            </a>
-        </div>
 
 	</div>
 </div>

@@ -169,7 +169,7 @@
 
 													foreach ($all_cat as $key => $cat): ?>
 														<div class="col-md-3 col-6">
-															<a class="dropdown-item" href="<?php echo get_permalink($cat->term_id) ?>">
+															<a class="dropdown-item" href="<?php echo get_category_link($cat) ?>">
 															    <span class="ic-nav-dropdown">
 															     	<?php echo $cat->name ?>
 															    </span>

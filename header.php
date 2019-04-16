@@ -162,8 +162,12 @@
 			                            <?php elseif($pparent->title == 'Blog') : ?>
 			                            	<div class="dropdown-menu at-dropdown--menu <?php echo "$megamenu" ?>">
 												<div class="row">
-													<?php $all_cat = get_categories() ?>
-													<?php foreach ($all_cat as $key => $cat): ?>
+													<?php $all_cat = get_categories(array(
+													  'orderby' => 'name',
+													  'parent' => 0
+													));
+
+													foreach ($all_cat as $key => $cat): ?>
 														<div class="col-md-3 col-6">
 															<a class="dropdown-item" href="<?php echo get_permalink($cat->term_id) ?>">
 															    <span class="ic-nav-dropdown">

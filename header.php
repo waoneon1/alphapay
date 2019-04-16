@@ -104,6 +104,19 @@
 							});
 						});
 					</script>
+					<style type="text/css">
+						.navbar-nav {
+							position: relative;
+						}
+						.wrap-nav-megamenu {
+							position: unset;
+						}
+						.nav-megamenu {
+							width: 100%;
+							padding-left: 10px;
+							padding-right: 10px;	
+						}
+					</style>
 					<div class="collapse navbar-collapse alp-navbarcollapse" id="navbarResponsive">
 						<ul class="navbar-nav ml-auto">
 							<?php if (is_singular('post') || is_category() || is_page('blog')): ?>
@@ -118,8 +131,9 @@
 								</li>
 							<?php endif ?>
 	                    	<?php foreach ($primary_parent as $key => $pparent): ?>
-	                    		<?php if(isset($primary[$pparent->ID])) : ?>
-			                        <li class="nav-item dropdown">
+	                    		<?php if(isset($primary[$pparent->ID]) || $pparent->title == 'Blog') : ?>
+	                    			<?php $megamenu = ($pparent->title == 'Blog') ? 'nav-megamenu' : '' ?>
+			                        <li class="nav-item dropdown <?php echo "wrap-$megamenu" ?>">
 			                            <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 			                                <?php echo $pparent->title ?>
 			                                <img class="svg" src="<?php echo get_template_directory_uri() ?>/assets/img/ceret.svg" alt="">
@@ -145,7 +159,22 @@
 													</a>
 												<?php endforeach ?>
 			                            	</div>
-			                            <?php else: ?>
+			                            <?php elseif($pparent->title == 'Blog') : ?>
+			                            	<div class="dropdown-menu at-dropdown--menu <?php echo "$megamenu" ?>">
+												<div class="row">
+													<?php $all_cat = get_categories() ?>
+													<?php foreach ($all_cat as $key => $cat): ?>
+														<div class="col-md-3 col-6">
+															<a class="dropdown-item" href="<?php echo get_permalink($cat->term_id) ?>">
+															    <span class="ic-nav-dropdown">
+															     	<?php echo $cat->name ?>
+															    </span>
+															</a>
+														</div>
+													<?php endforeach ?>
+												</div>
+			                            	</div>
+			                            <?php else : ?>
 			                            	<div class="dropdown-menu at-dropdown--menu">
 				  								<?php foreach ($primary[$pparent->ID] as $p): ?>
 													<a class="dropdown-item" href="<?php echo $p->url ?>">

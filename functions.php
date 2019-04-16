@@ -191,11 +191,11 @@ require get_template_directory() . '/inc/post-type-produk.php';
 /**
  * How to
  */
-require get_template_directory() . '/inc/post-type-cara.php';
+// require get_template_directory() . '/inc/post-type-cara.php';
 
 /**
  * Taxonomy META
- */
+ */ 
 require get_template_directory() . '/inc/class-taxonomy-meta.php';
 
 /**

@@ -1431,16 +1431,62 @@ ul.alp-footer--list {
 --------------------------------------------------------------*/
 .bluebox {
 	position: relative;
-	padding-top: 30px;
+	padding: 0;
+	background-color: #F7F8FC;
+	margin-bottom: 60px;
 }
-.bluebox32 {
-    background-color: #F7F8FC;
-    content: '';
-    width: 100%;
-    height: 80%;
-    display: block;
+.alp-howto p {
+	color: #19345E;
+}
+.alp-reg--number.large {
+	top: unset;
+}
+.alp-reg--number.large span {
     position: absolute;
-    z-index: -1;
+    left: 0;
+    font-family: Source Sans Pro;
+    font-size: 35px;
+    font-weight: 700;
+}
+.alp-reg--number.large img {
+    width: 60px;
+    left: -20px;	
+    top: unset;
+}
+.alp-cara-howto-loop {
+	margin-bottom: 50px;
+}
+.alp-cara-howto-content {
+	padding-top: 35px;
+}
+.alp-tabs {
+	text-align: center;
+	position: relative;
+	padding: 25px 0;
+	border-bottom: 5px solid transparent;
+}
+.alp-tabs.active,
+.alp-tabs:hover {
+	border-bottom: 5px solid #2384dd;
+}
+.alp-tabs h4 {
+	font-size: 20px;
+	color: #BBBBBC
+}
+.alp-tabs.active h4 {
+	color: #19345E;
+}
+/*.alp-tabs.active {	
+	content: '';
+    display: block;
+    height: 4px;
+    position: relative;
+    bottom: -19px;
+    width: 100%;
+    background-color: #2384DD;
+}*/
+.alp-tabs:hover h4 {
+	color: #19345E;
 }
 /*--------------------------------------------------------------
 ## PRODUCT PAGE
@@ -1494,7 +1540,14 @@ ul.alp-footer--list {
 .alp-pcontent--cat {
 	margin-bottom: 40px;
 }
-
+.alp-cara-nav p {
+	color: #18345e;
+	font-size: 17px;
+}
+.alp-cara-howto p {
+	color: #18345e;
+	font-size: 20px;
+}
 /*--------------------------------------------------------------
 ## ARCHIVE
 --------------------------------------------------------------*/
@@ -1923,7 +1976,8 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
     border-radius: 10px;
     border: 1px solid #E8E8E8;
 }
-.alp-boxnshadow:hover {
+.alp-boxnshadow:hover,
+.alp-boxnshadow.active {
 	-webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
 	-moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
 	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);

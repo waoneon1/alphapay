@@ -141,7 +141,7 @@ function alpay_scripts() {
 
 	wp_enqueue_style( 'alpay-slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css' );	
 
-	wp_enqueue_style( 'alpay-style', get_stylesheet_uri(), array(), '2.9'  );
+	wp_enqueue_style( 'alpay-style', get_stylesheet_uri(), array(), '2.10'  );
 
 	wp_enqueue_script( 'alpay-boostrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '20190101', true );
 
@@ -191,7 +191,7 @@ require get_template_directory() . '/inc/post-type-produk.php';
 /**
  * How to
  */
-// require get_template_directory() . '/inc/post-type-cara.php';
+require get_template_directory() . '/inc/post-type-cara.php';
 
 /**
  * Taxonomy META

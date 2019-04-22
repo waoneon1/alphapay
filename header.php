@@ -131,7 +131,10 @@
 								</li>
 							<?php endif ?>
 	                    	<?php foreach ($primary_parent as $key => $pparent): ?>
-	                    		<?php if(isset($primary[$pparent->ID]) || $pparent->title == 'Blog') : ?>
+	                    		<?php if(isset($primary[$pparent->ID]) 
+	                    		|| $pparent->title == 'Panduan'
+	                    		|| $pparent->title == 'Blog') : ?>
+
 	                    			<?php $megamenu = ($pparent->title == 'Blog') ? 'nav-megamenu' : '' ?>
 			                        <li class="nav-item dropdown <?php echo "wrap-$megamenu" ?>">
 			                            <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -141,12 +144,11 @@
 
 			                            <!-- HARDCODE PRODUCT CHILD -->
 			                            <?php if ($pparent->post_title == 'Produk'): ?>
-
 			                            	<?php 
-			                            	$product_list = get_terms([
-			                            	    'taxonomy' => 'jenis_produk',
-			                            	    'hide_empty' => false,
-			                            	]);
+				                            	$product_list = get_terms([
+				                            	    'taxonomy' => 'jenis_produk',
+				                            	    'hide_empty' => false,
+				                            	]);
 			                            	?>
 			                            	<div class="dropdown-menu at-dropdown--menu">
 				  								<?php foreach ($product_list as $prod): ?>
@@ -156,6 +158,28 @@
 													        <!-- - -->
 													    </span>
 													   <?php echo $prod->name ?>
+													</a>
+												<?php endforeach ?>
+			                            	</div>
+			                            <?php elseif ($pparent->post_title == 'Panduan'): ?>
+			                            	<?php 
+				                            	$args = array(
+				                            	    'post_parent' => 0,
+				                            	    'post_type'   => 'cara', 
+				                            	    'numberposts' => -1,
+				                            	    'order'       => 'ASC',
+				                            	    'orderby'     => 'menu_order',
+				                            	    'post_status' => 'publish'
+				                            	);
+				                            	$parents = get_children( $args );
+			                            	?>
+			                            	<div class="dropdown-menu at-dropdown--menu">
+				  								<?php foreach ($parents as $parent): ?>
+													<a class="dropdown-item" href="<?php echo get_permalink($parent->ID) ?>">
+													    <span class="ic-nav-dropdown">
+													        <!-- - -->
+													    </span>
+													   <?php echo $parent->post_title ?>
 													</a>
 												<?php endforeach ?>
 			                            	</div>

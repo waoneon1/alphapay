@@ -36,8 +36,8 @@
     <div class="alp-pheader container alp-section">
     	<div class="row">
 	    	<div class="alp-pheader--desc col-md-6 col-12 alp-col">
-                <h2><?php echo $titleH1 ?></h2>
-                <h1><?php echo $titleH2 ?></h1>
+                <h1><?php echo $titleH1 ?></h1>
+                <p><?php echo $titleH2 ?></p>
 	    	</div>
 	    	<div class="alp-pheader--imgwrap col-md-6 col-12 alp-col">
                 <picture>
@@ -110,7 +110,7 @@
                         </div>
                         <div class="double-column-meet">
                             <div class="deskrip-alterran">
-                                <h5><?php echo $how['title'] ?></h5>
+                                <h3><?php echo $how['title'] ?></h3>
                                 <?php echo $how['desc'] ?>
                             </div>
                         </div>

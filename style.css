@@ -563,6 +563,29 @@ table {
 }
 
 /*--------------------------------------------------------------
+# ANIMATION COMPONENT
+--------------------------------------------------------------*/
+.animate-arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-7px);
+  }
+}
+/*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
 input:-webkit-autofill,
@@ -1479,6 +1502,9 @@ ul.alp-footer--list {
 .alp-tabs:hover h4 {
 	color: #19345E;
 }
+.alp-arrow {
+	display: none;
+}
 /*--------------------------------------------------------------
 ## PRODUCT PAGE
 --------------------------------------------------------------*/
@@ -2283,15 +2309,14 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 	 margin-bottom: 5px;
 	 margin-top: 30px;
 	}
-
-	.alp-cara-howto-loop:after {
-		font-family: 'dashicons';
-		content: "\f347";
+	.alp-arrow {
+		margin: 30px auto 0;
 		display: block;
-		margin: 30px auto -60px;
+	}
+	.alp-arrow .dashicons-arrow-down-alt2:before {
 		font-size: 30px;
 	}	
-	.alp-cara-howto-loop:last-child:after {
+	.alp-arrow .dashicons-arrow-down-alt2:last-child:after {
 		display: none;
 	}
 

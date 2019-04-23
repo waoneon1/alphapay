@@ -116,6 +116,12 @@
                         </div>
                     </div>
                 </div>
+
+                <?php if ($num != count($hows)): ?>
+                    <div class="animate-arrow bounce alp-arrow">
+                        <span class="dashicons dashicons-arrow-down-alt2"></span>
+                    </div>
+                <?php endif ?>
             <?php endforeach ?>
         <?php endif ?>
         <?php wp_reset_query() ?>

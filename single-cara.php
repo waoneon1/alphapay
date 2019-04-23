@@ -62,8 +62,8 @@
                     <?php $active = ($post->ID == $current_active->ID) ? 'active' : '' ?>
 
                     <?php if ($post): ?>
-                        <div class="col-md-3 col-12">
-                            <a href="<?php the_permalink() ?>">
+                        <div class="col-md-3 col-12 alp-col-tabs">
+                            <a href="<?php the_permalink() ?>#howto">
                                 <div class="alp-tabs <?php echo $active ?>">
                                     <h4><?php the_title() ?></h4>
                                 </div>
@@ -77,7 +77,7 @@
     </div>
 
 
-    <div class="alp-pcontent container alp-section">
+    <div class="alp-pcontent container alp-section" id="howto" style="max-width: 900px">
         <div class="row">
             <div class="col-md-12 col-12 alp-cara-howto" style="text-align: center;">
                 <?php echo get_field('howto_title') ? '<h2>'.get_field('howto_title').'</h2>' : '' ?>
@@ -92,18 +92,7 @@
             <?php foreach ($hows as $key => $how): ?>
                 <?php $num = $key + 1; ?>
                 <div class="row alp-cara-howto-loop">
-                    <div class="col-md-4 <?php echo ($key%2) ? 'order-md-2' : '' ?>">
-                        <div class="double-column-meet">
-                            <div class="img-alterran">
-                                <picture>
-                                    <img src="<?php echo $how['image']['url'] ?>" 
-                                         alt="<?php echo $how['image']['alt'] ?>">
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-7 alp-cara-howto-content">
+                    <div class="col-md-6 alp-cara-howto-content <?php echo ($key%2) ? 'order-md-last' : '' ?>">
                         <div class="alp-reg--number large <?php echo "reg-type1" ?>">
                             <span><?php echo $num ?></span>
                             <img src="<?php echo get_template_directory_uri() . '/assets/img/btn-howto@2x.png' ?>">
@@ -112,6 +101,17 @@
                             <div class="deskrip-alterran">
                                 <h3><?php echo $how['title'] ?></h3>
                                 <?php echo $how['desc'] ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 <?php echo ($key%2) ? '' : 'order-md-first' ?>"></div>
+                    <div class="col-md-5 <?php echo ($key%2) ? 'order-md-first' : 'order-md-last' ?>">
+                        <div class="double-column-meet">
+                            <div class="img-alterran">
+                                <picture>
+                                    <img src="<?php echo $how['image']['url'] ?>" 
+                                         alt="<?php echo $how['image']['alt'] ?>">
+                                </picture>
                             </div>
                         </div>
                     </div>

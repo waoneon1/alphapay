@@ -1476,15 +1476,6 @@ ul.alp-footer--list {
 .alp-tabs.active h4 {
 	color: #19345E;
 }
-/*.alp-tabs.active {	
-	content: '';
-    display: block;
-    height: 4px;
-    position: relative;
-    bottom: -19px;
-    width: 100%;
-    background-color: #2384DD;
-}*/
 .alp-tabs:hover h4 {
 	color: #19345E;
 }

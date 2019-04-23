@@ -53,7 +53,7 @@
     <!-- Content Section -->
     <div class="bluebox">
         <div class="alp-pcontent container">
-            <div class="row">
+            <div class="row justify-content-md-center">
                 <?php $i = 0 ?>
                 <?php foreach ($childrens as $key => $post): ?>
 

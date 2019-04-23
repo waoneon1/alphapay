@@ -2284,6 +2284,17 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 	 margin-top: 30px;
 	}
 
+	.alp-cara-howto-loop:after {
+		font-family: 'dashicons';
+		content: "\f347";
+		display: block;
+		margin: 30px auto -60px;
+		font-size: 30px;
+	}	
+	.alp-cara-howto-loop:last-child:after {
+		display: none;
+	}
+
 }
 
 @media (max-width: 575px) {

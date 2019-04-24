@@ -846,6 +846,16 @@ div.wpcf7-response-output {
 	position: absolute;
 	left: 25px;
 }
+.alp-btn-trans {
+	border: 1px solid #2384DD;
+	border-radius: 5px;
+	padding: 10px 90px;
+}
+.alp-btn-trans:hover {
+	border: 1px solid #2384DD;
+	background-color: #2384DD;
+	color: #fff;
+}
 /*--------------------------------------------------------------
 ## ASSET - INPUT
 --------------------------------------------------------------*/
@@ -1458,7 +1468,8 @@ ul.alp-footer--list {
 	background-color: #F7F8FC;
 	margin-bottom: 60px;
 }
-.alp-howto p {
+.alp-howto p,
+.alp-about p {
 	color: #19345E;
 }
 .alp-reg--number.large {

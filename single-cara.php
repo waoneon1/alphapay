@@ -52,7 +52,7 @@
 
     <!-- Content Section -->
     <div class="bluebox">
-        <div class="alp-pcontent container">
+        <div class="alp-pcontent container-flued">
             <div class="row justify-content-md-center">
                 <?php $i = 0 ?>
                 <?php foreach ($childrens as $key => $post): ?>
@@ -62,7 +62,7 @@
                     <?php $active = ($post->ID == $current_active->ID) ? 'active' : '' ?>
 
                     <?php if ($post): ?>
-                        <div class="col-md-3 col-12 alp-col-tabs">
+                        <div class="col-md-2 col-6 alp-col-tabs">
                             <a href="<?php the_permalink() ?>#howto">
                                 <div class="alp-tabs <?php echo $active ?>">
                                     <h4><?php the_title() ?></h4>

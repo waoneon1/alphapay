@@ -1494,17 +1494,19 @@ ul.alp-footer--list {
 	padding-top: 35px;
 }
 .alp-tabs {
+	min-height: 80px;
 	text-align: center;
 	position: relative;
-	padding: 25px 0;
+	padding: 15px 0 10px;
 	border-bottom: 5px solid transparent;
 }
 .alp-tabs.active,
 .alp-tabs:hover {
+	
 	border-bottom: 5px solid #2384dd;
 }
 .alp-tabs h4 {
-	font-size: 20px;
+	font-size: 18px;
 	color: #BBBBBC
 }
 .alp-tabs.active h4 {

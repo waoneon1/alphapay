@@ -88,13 +88,14 @@
 // Floating label on alp-form
 ( function($) {
 	$(document).ready(function () {
-		$('.alp-form input').focusin(function() {
+		$('.alp-form input, .alp-form textarea').focusin(function() {
 			var lab = $(this).parent().parent().find('label');
 			if (!lab.hasClass('focus')) {
 				lab.addClass('focus');
 			}
 		})
-		$('.alp-form input').focusout(function() {
+		$('.alp-form textarea').parent().parent().find('label').addClass('textarea-label');
+		$('.alp-form input, .alp-form textarea').focusout(function() {
 			$(this).parent().parent().find('label').removeClass('focus');
 			var lab = $(this).parent().parent().find('label');
 			if ($(this).val() != '') {

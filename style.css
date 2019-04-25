@@ -508,6 +508,9 @@ p {
 		font-size: 30px;
 	}
 }
+.alp-padding {
+	padding:25px 0 15px;
+}
 
 /*--------------------------------------------------------------
 # Elements
@@ -882,6 +885,9 @@ textarea {
     color: #19345E;
     border: 1px solid #e8e8e8;
 }
+textarea {
+	height: unset;
+}
 .alp-form input,
 .alp-form select,
 .alp-form a.alp-btn {
@@ -912,7 +918,8 @@ textarea {
 }
 
 
-.alp-form input:focus {
+.alp-form input:focus,
+.alp-form textarea:focus {
   outline: 0;
 }
 
@@ -935,6 +942,9 @@ textarea {
 	top:0;
 	font-size: 15px;
 	color: #19345E;
+}
+.alp-form label.focus.textarea-label {
+	top:-10px;
 }
 /**
 * Translate down and scale the label up to cover the placeholder,
@@ -1469,7 +1479,8 @@ ul.alp-footer--list {
 	margin-bottom: 60px;
 }
 .alp-howto p,
-.alp-about p {
+.alp-about p,
+.alp-contactus p {
 	color: #19345E;
 }
 .alp-reg--number.large {
@@ -1529,7 +1540,7 @@ ul.alp-footer--list {
 	font-family: dashicons;
 	display: block;
 	font-size: 16px;
-	opacity: 0.3;
+	opacity: 0.2;
 	position: absolute;
 	top: 0px;
 	left: -5px;
@@ -1538,12 +1549,33 @@ ul.alp-footer--list {
 	top: unset;
 	left: unset;
 	bottom: 0;
-	right: -6px;
+	right: -0px;
 	-ms-transform: rotate(180deg); /* IE 9 */
 	-webkit-transform: rotate(180deg); /* Safari 3-8 */
 	transform: rotate(180deg);
 }
 
+/*--------------------------------------------------------------
+## ABOUT US
+--------------------------------------------------------------*/
+.alp-bluebg--title {
+	padding-top: 60px;
+}
+/*--------------------------------------------------------------
+## CONTACT US
+--------------------------------------------------------------*/
+.alp-follow--right {
+	background-image: url('assets/img/follow@2x.png');
+    background-size: cover;
+	padding-left: 0;
+	padding-right: 0;
+}
+.alp-follow .alp-boxnshadow {
+	text-align: left;
+	padding: 12px 25px;
+	margin: 10px;
+	background-color: #fff;
+}
 /*--------------------------------------------------------------
 ## PRODUCT PAGE
 --------------------------------------------------------------*/
@@ -2068,7 +2100,31 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 .alp-boxnshadow .alp-loc {
     display: none;
 }
-
+.alp-roundshadow {
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	border-radius: 50%;
+	background-color: #F8F8F8;
+	-webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+	-moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+}
+.alp-roundshadow.icon-fb svg {
+    position: relative;
+    top: 8px;
+    left: 15px;
+}
+.alp-roundshadow.icon-ig svg {
+	position: relative;
+    top: 12px;
+    left: 12px;
+}
+.alp-roundshadow.icon-gm svg {
+	position: relative;
+    top: 13px;
+    left: 11px;
+}
 /*--------------------------------------------------------------
 ## RESPONSIVE
 --------------------------------------------------------------*/
@@ -2109,6 +2165,9 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 	}
 	.alp-download {
 		max-height: 163px;
+	}
+	.alp-bluebg--title {
+		padding-top: 0;
 	}
 }
 

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.783" height="32.561" viewBox="0 0 17.783 32.561">
+  <defs>
+    <clipPath id="fb-clip-path">
+      <rect id="SVGID" width="17.783" height="32.561" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_14461" data-name="Group 14461" transform="translate(-206 -1201.393)">
+    <g id="Group_14460" data-name="Group 14460">
+      <g id="Group_13084" data-name="Group 13084" transform="translate(-223 789.393)">
+        <g id="Group_13082" data-name="Group 13082" transform="translate(429 412)">
+          <g id="Group_13081" data-name="Group 13081" clip-path="url(#fb-clip-path)">
+            <path id="Path_21995" data-name="Path 21995" d="M445.942,411.908l-4.223-.006c-4.743,0-7.81,3.146-7.81,8.013v3.7h-4.246a.663.663,0,0,0-.663.663v5.354a.664.664,0,0,0,.663.663h4.246V443.8a.664.664,0,0,0,.665.663h5.537a.664.664,0,0,0,.665-.663V430.29h4.964a.663.663,0,0,0,.663-.663l0-5.354a.67.67,0,0,0-.2-.47.663.663,0,0,0-.47-.193h-4.965v-3.132c0-1.505.359-2.27,2.319-2.27l2.845,0a.663.663,0,0,0,.663-.663v-4.97a.664.664,0,0,0-.661-.665Zm0,0" transform="translate(-429 -411.943)" fill="#3b3b3b"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

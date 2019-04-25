@@ -158,12 +158,16 @@ get_header
     <!-- PRODUCT ALPHAPAY -->
     <div class="alp-bluebg container-flued">
     	<div class="row">
-    		<div class="col-md-4"></div>
-    		<div class="col-md-4 text-center">
+    		<div class="col-md-4">
+    			<img src="<?php echo get_template_directory_uri() ?>/assets/img/prod-about-1.svg" />
+    		</div>
+    		<div class="col-md-4 text-center alp-bluebg--title">
     			<h2>Produk di AlphaPay</h2>
     			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     		</div>
-    		<div class="col-md-4"></div>
+    		<div class="col-md-4">
+    			<img class="svg" src="<?php echo get_template_directory_uri() ?>/assets/img/prod-about-2.svg" />
+    		</div>
     	</div>
     </div>
 

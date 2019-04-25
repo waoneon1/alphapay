@@ -20,11 +20,11 @@ get_header();
 				<div class="alp-singlebanner">
 					<div class="alp-singlebanner--bg fullwidth-content">
 						<div class="row">
-							<?php $image = get_the_post_thumbnail_url( $post->IDs, 'alpay_640x400') ?>
 							<picture>
-								<source media="(min-width: 1200px)" srcset="<?php echo $image ?>">
-								<source media="(min-width: 0px)" srcset="<?php echo $image ?>">
-								<img class="" src="<?php echo $image ?>" alt="">
+								<source media="(min-width: 1200px)" srcset="<?php echo get_field('banner')['sizes']['alpay_1240x540'] ?>">
+								<source media="(min-width: 768px)" srcset="<?php echo get_field('banner')['sizes']['alpay_991x434'] ?>">
+								<source media="(min-width: 0px)" srcset="<?php echo get_field('banner')['sizes']['alpay_787x344'] ?>">
+								<img class="d-block w-100" src="<?php echo get_field('banner')['sizes']['alpay_1240x540'] ?>" alt="">
 							</picture>
 						</div>
 					</div>
@@ -33,6 +33,11 @@ get_header();
 				<?php yoast_breadcrumb( '<nav aria-label="breadcrumb" class="alp-breadcrump">','</nav>' ); ?>
 
 				<h1 class="promo-h1"><?php the_title() ?></h1>
+				
+				<div class="wysiwyg">
+					<?php echo get_field('wysiwyg') ?>
+				</div>
+
 				<!-- Content Here -->
 				<div id="primary" class="content-area">
 					<main id="main" class="site-main">

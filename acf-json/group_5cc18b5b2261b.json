@@ -22,6 +22,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5cc1db71dd8d2",
+            "label": "Wysiwyg",
+            "name": "wysiwyg",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_5cc18b632974b",
             "label": "Banner",
             "name": "banner",
@@ -185,5 +204,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1556198117
+    "modified": 1556208556
 }

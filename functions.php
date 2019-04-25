@@ -148,8 +148,8 @@ function alpay_scripts() {
 	wp_enqueue_script( 'alpay-tools', get_template_directory_uri() . '/assets/js/tools.js', array('jquery'), '', true);
 
 	wp_enqueue_script( 'alpay-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.1', true);
-	//wp_enqueue_script( 'alpay-bodymovin', get_template_directory_uri() . '/assets/js/bodymovin.min.js', array('jquery'), '1.1', true);
-	//wp_enqueue_script( 'alpay-anim-icon', get_template_directory_uri() . '/assets/js/anim-icon.js', array('jquery'), '1.1', true);
+	wp_enqueue_script( 'alpay-bodymovin', get_template_directory_uri() . '/assets/js/bodymovin.min.js', array('jquery'), '1.1', true);
+	wp_enqueue_script( 'alpay-anim-icon', get_template_directory_uri() . '/assets/js/anim-icon.js', array('jquery'), '1.1', true);
 
 	wp_enqueue_script( 'alpay-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

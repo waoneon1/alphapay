@@ -20,7 +20,7 @@ get_header();
     	<div class="row">
 	    	<div class="alp-pheader--desc col-md-6 col-12 alp-col">
                 <h1>Hubungi Kami</h1>
-                <p>Lorem Ipsum dolor do amet</p>
+               <!--  <p>Lorem Ipsum dolor do amet</p> -->
 	    	</div>
 	    	<div class="alp-pheader--imgwrap col-md-6 col-12 alp-col">
                 <picture>
@@ -48,32 +48,26 @@ get_header();
     	<div class="bgbluebox"></div>
     	<div class="container alp-padding">
 	    	<div class="text-center">
-	    		<h2>Our Journey thus far</h2>
-	    		<p>We offer a wide range of products and services that help our clients achieve their ambitions. Get to know our products further.</p>
+	    		<h2>Layanan Pelanggan</h2>
+	    		<p>Jika Anda mengalami kendala terkait transaksi di AlphaPay, Anda bisa langsung menghubungi layanan pelanggan (Customer Service) kami melalui:  </p>
 	    	</div>
 	        <div class="row">
-	           <div class="col-md-3 col-12">
+	           <div class="col-md-4 col-12">
 	               <div class="alp-boxnshadow">
-	                    <h4>Berlangganan Newsletter AlphaPay</h4>
-	                    <p>Jadilah yang pertama untuk mengetahui info terkini bisnis pulsa dan PPOB dari AlphaPay dengan berlangganan newsletter secara GRATIS.</p>
+	                    <h4>Jam Operational</h4>
+	                    <p>07.00 - 23.00 WIB</p>
 	               </div>
 	           </div>
-	           <div class="col-md-3 col-12">
+	           <div class="col-md-4 col-12">
 	               <div class="alp-boxnshadow">
-	                    <h4>Berlangganan Newsletter AlphaPay</h4>
-	                    <p>Jadilah yang pertama untuk mengetahui info terkini bisnis pulsa dan PPOB dari AlphaPay dengan berlangganan newsletter secara GRATIS.</p>
+	                    <h4>Email</h4>
+	                    <p>info@alphapay.id</p>
 	               </div>
 	           </div>
-	           <div class="col-md-3 col-12">
+	           <div class="col-md-4 col-12">
 	               <div class="alp-boxnshadow">
-	                    <h4>Berlangganan Newsletter AlphaPay</h4>
-	                    <p>Jadilah yang pertama untuk mengetahui info terkini bisnis pulsa dan PPOB dari AlphaPay dengan berlangganan newsletter secara GRATIS.</p>
-	               </div>
-	           </div>
-	           <div class="col-md-3 col-12">
-	               <div class="alp-boxnshadow">
-	                    <h4>Berlangganan Newsletter AlphaPay</h4>
-	                    <p>Jadilah yang pertama untuk mengetahui info terkini bisnis pulsa dan PPOB dari AlphaPay dengan berlangganan newsletter secara GRATIS.</p>
+	                    <h4>Live Chat</h4>
+	                    <p>Tersedia di aplikasi.</p>
 	               </div>
 	           </div>
 	        </div>
@@ -134,7 +128,7 @@ get_header();
         <div class="row">
         	<div class="col-md-5">
         		<h2>Kirim Pesan untuk Tim Kami</h2>
-	    		<p>Sedang mencari jawaban, ingin mendapatkan solusi atau hanya sekedar memberikan masukan atas kinerja kami? Silakan hubungi kami melaluilayanan Live Chat atau Email. Semua saran dan kritik yang Anda berikan sangat berharga untuk kami</p>
+	    		<p>Jika Anda memiliki kritik, saran, atau penawaran kerja sama dengan AlphaPay, silakan kirimkan pesan untuk kami melalui form di samping.</p>
         	</div>
         	<div class="col-md-1"></div>
         	<div class="col-md-6">

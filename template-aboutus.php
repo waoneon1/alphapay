@@ -9,8 +9,7 @@
  * @package Alphapay
  */
 
-get_header
-();
+get_header();
 ?>
 <style type="text/css">
 	.alp-timeline {

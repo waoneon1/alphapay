@@ -1577,6 +1577,61 @@ ul.alp-footer--list {
 	background-color: #fff;
 }
 /*--------------------------------------------------------------
+## PROMO
+--------------------------------------------------------------*/
+.alp-promo.alp-banner {
+	margin-top: 0;
+}
+.alp-promo .alp-card2 {
+	background-color: #fff;
+	border: 1px solid #e8e8e8;
+}
+.alp-promo .alp-card2 { font-family: 'SFCompactDisplay', sans-serif }
+.alp-promo .alp-card2 h2 {
+	font-family: 'SFCompactDisplay', sans-serif;
+	font-size: 14px;
+}
+.alp-promo .alp-btn-blue {
+	font-family: 'SFCompactDisplay', sans-serif;
+	-webkit-box-shadow: none; 
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.alp-promo--periode,
+.alp-promo--code {
+	font-size: 14px;
+	border: 1px solid #E8E8E8;
+	border-radius: 5px;
+	height: 40px;
+	padding: 9px 20px;
+	margin: 20px 0;
+}
+.alp-promo--code {
+	font-size: 14px;
+	font-family: 'SFCompactDisplay-Bold', sans-serif;
+	color: #2384DD;
+}
+.alp-single-promo .promo-h1 {
+	border-bottom: 1px solid #e3e3e3;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+
+}
+.infopromo {
+	border: 1px solid #e8e8e8;
+	background-color: #F7F8FC;
+	text-align: center;
+	padding: 25px 10px;
+	border-radius: 5px;
+}
+.infopromo .iftitle {
+	border-bottom: 1px solid #e8e8e8;
+	padding-bottom: 20px;
+}
+.infopromo img {
+	max-width: 70%;
+}
+/*--------------------------------------------------------------
 ## PRODUCT PAGE
 --------------------------------------------------------------*/
 .alp-pheader--desc {

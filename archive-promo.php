@@ -29,7 +29,7 @@ get_header();
 				<div class="col-md-4">
 					<div class="alp-card alp-card2">
 						<picture>
-							<img class="d-block w-100" src="http://localhost:8888/alphapay-wp/wp-content/uploads/2019/02/nathan-dumlao-1147766-unsplash@2x-1-350x263.png" alt="">
+							<img class="d-block w-100" src="<?php echo get_field('thumbnail')['url'] ?>" alt="">
 						</picture>
 						<div class="alp-card--content">
 							<h2><?php the_title() ?></h2>

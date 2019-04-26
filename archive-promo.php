@@ -11,14 +11,13 @@
 get_header();
 ?>
 
-
 <!-- Banner Carosel -->
 <div class="alp-promo alp-banner alp-sec-margin">
 	<picture>
 		<source media="(min-width: 1200px)" srcset="<?php echo get_field('promo_banner_image', 'option')['sizes']['alpay_1240x540'] ?>">
 		<source media="(min-width: 768px)" srcset="<?php echo get_field('promo_banner_image', 'option')['sizes']['alpay_991x434'] ?>">
 		<source media="(min-width: 0px)" srcset="<?php echo get_field('promo_banner_image', 'option')['sizes']['alpay_787x344'] ?>">
-		<img class="d-block w-100" src="<?php echo get_field('promo_banner_image', 'option')['sizes']['alpay_1240x540'] ?>" alt="">
+		<img class="d-block w-100" src="<?php echo get_field('promo_banner_image', 'option')['url'] ?>" alt="">
 	</picture>
 </div>
 

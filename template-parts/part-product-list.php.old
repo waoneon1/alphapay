@@ -1,0 +1,47 @@
+<div class="alp-product--lists">
+	<div class="row justify-content-center">
+	
+<!-- 
+		<div style="width:80px;" id="bpjs"></div>
+		<div style="width:80px;" id="cicilan"></div>
+		<div style="width:80px;" id="game"></div>
+		<div style="width:80px;" id="paketData"></div>
+		<div style="width:80px;" id="pdam"></div>
+		<div style="width:80px;" id="pln"></div>
+		<div style="width:80px;" id="pulsa"></div>
+		<div style="width:80px;" id="tagihan"></div>
+		<div style="width:80px;" id="telkom"></div>
+		<div style="width:80px;" id="roaming"></div> -->
+
+
+		<?php foreach ($section['Items'] as $key => $item): ?>
+			<?php $prod 		= $item['jenis_produk'] ?>
+			<?php $term_vals 	= get_term_meta($prod->term_id, 'category-image-id', true) ?>
+			<?php $prod_id 		= get_term_meta($prod->term_id, 'product-object-id', true) ?>
+			<div class="alp-product--list animated col-lg-3 col-md-4 col-sm-6 col-3 alp-col">
+				
+				<a href="<?php echo get_permalink($prod_id) ?>">
+					<div class="alp-product--box">
+						<div class="alp-product--box_title">
+							<div class="alp-prod-animation" id="<?php echo $term_vals ?>"></div>
+							<h3><?php echo $prod->name ?></h3>
+						</div>
+						<p><?php echo $prod->description ?></p>
+					</div>
+				</a>
+
+				<div class="alp-product--link"> 
+					<?php if ($prod_id): ?>
+						<a href="<?php echo get_permalink($prod_id) ?>">
+							Lihat Lebih Lanjut 
+							<span class="dashicons dashicons-arrow-right-alt"></span> 
+						</a>
+					<?php else:	 ?>
+						Lihat Lebih Lanjut 
+						<span class="dashicons dashicons-arrow-right-alt"></span> 
+					<?php endif ?>
+				</div>
+			</div>
+		<?php endforeach ?>
+	</div>
+</div>

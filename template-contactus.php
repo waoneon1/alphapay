@@ -54,19 +54,28 @@ get_header();
 	        <div class="row">
 	           <div class="col-md-4 col-12">
 	               <div class="alp-boxnshadow">
-	                    <h4>Jam Operational</h4>
+	                    <h4>
+	                    	<span class="dashicons alp-icon alp-icon-24"></span>
+	                    	Jam Operational
+	                	</h4>
 	                    <p>07.00 - 23.00 WIB</p>
 	               </div>
 	           </div>
 	           <div class="col-md-4 col-12">
 	               <div class="alp-boxnshadow">
-	                    <h4>Email</h4>
+	                    <h4>
+	                    	<span class="dashicons alp-icon alp-icon-email"></span>
+	                    	Email
+	                	</h4>
 	                    <p>info@alphapay.id</p>
 	               </div>
 	           </div>
 	           <div class="col-md-4 col-12">
 	               <div class="alp-boxnshadow">
-	                    <h4>Live Chat</h4>
+	                    <h4>
+	                    	<span class="dashicons alp-icon alp-icon-chat"></span>
+	                    	Live Chat
+	                	</h4>
 	                    <p>Tersedia di aplikasi.</p>
 	               </div>
 	           </div>

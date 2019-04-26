@@ -1576,6 +1576,16 @@ ul.alp-footer--list {
 	margin: 10px;
 	background-color: #fff;
 }
+.alp-icon {
+	width: 35px;
+	height: 30px;
+}
+.alp-icon-24:before { content: url('assets/img/icon-24.svg') }
+.alp-icon-email:before { content: url('assets/img/icon-email.svg') }
+.alp-icon-chat:before { content: url('assets/img/icon-chat.svg') }
+.alp-boxnshadow p {
+	margin-bottom: 0px;
+}
 /*--------------------------------------------------------------
 ## PROMO
 --------------------------------------------------------------*/
@@ -1630,6 +1640,31 @@ ul.alp-footer--list {
 }
 .infopromo img {
 	max-width: 70%;
+}
+/*--------------------------------------------------------------
+## FAQ
+--------------------------------------------------------------*/
+.alp-faq .btn-link {
+	color: inherit;
+}
+.alp-faq .carat {
+	float: right;
+	line-height: 38px;
+}
+.alp-faq .card.collapsed .dashicons:before {
+	content: "\f347";
+}
+.alp-faq .card .dashicons:before {
+	content: "\f343";
+}
+.alp-faq #accordion {
+	margin-bottom: 50px;
+}
+.alp-faq .card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #f3f7fb; 
+    border-bottom: 1px solid rgba(0,0,0,.125);
 }
 /*--------------------------------------------------------------
 ## PRODUCT PAGE

@@ -7,7 +7,7 @@
     <div class="alp-pheader container alp-section">
         <div class="row">
             <div class="alp-pheader--desc col-md-6 col-12 alp-col">
-                <h1>Pertanyaan yang sering diajukan</h1>
+                <h1>Pertanyaan yang Paling Sering Diajukan</h1>
                <!--  <p>Lorem Ipsum dolor do amet</p> -->
             </div>
             <div class="alp-pheader--imgwrap col-md-6 col-12 alp-col">

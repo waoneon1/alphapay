@@ -6,7 +6,7 @@
 <?php 
     $args = array(
         'orderby' => 'date',
-        'order'   => 'DESC',
+        'order'   => 'ASC',
         'post_type' => 'faq',
         'posts_per_page' => -1
     );

@@ -202,6 +202,17 @@ require get_template_directory() . '/inc/post-type-promo.php';
  * FAQ
  */
 require get_template_directory() . '/inc/post-type-faq.php';
+function alp_post_type_faq( $query ) {
+    if ($query->is_main_query() ) {
+    	var_dump(is_post_type_archive( 'faq' ));
+    	if (is_post_type_archive( 'faq' )) {
+    		$query->set( 'orderby', 'date' );
+    		$query->set( 'order', 'ASC' );
+    	}
+       
+    }
+}
+add_filter( 'pre_get_posts', 'alp_post_type_faq' );
 
 /**
  * Taxonomy META

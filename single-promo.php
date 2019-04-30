@@ -10,9 +10,12 @@
 get_header();
 ?>	
 
+<?php $frontpage_id = get_option( 'page_on_front' ); ?>
+<?php $gplay = get_field( "cta_link", $frontpage_id ) ?>
+
 <div class="alp-wrapper alp-single-promo">
 
-	<div class="alp-content container">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-9 col-12">
 
@@ -30,22 +33,24 @@ get_header();
 					</div>
 				</div>
 
-				<?php yoast_breadcrumb( '<nav aria-label="breadcrumb" class="alp-breadcrump">','</nav>' ); ?>
+				<div class="inner-content">
+					<?php yoast_breadcrumb( '<nav aria-label="breadcrumb" class="alp-breadcrump">','</nav>' ); ?>
 
-				<h1 class="promo-h1"><?php the_title() ?></h1>
-				
-				<div class="wysiwyg">
-					<?php echo get_field('wysiwyg') ?>
-				</div>
+					<h1 class="promo-h1"><?php the_title() ?></h1>
+					
+					<div class="wysiwyg">
+						<?php echo get_field('wysiwyg') ?>
+					</div>
 
-				<!-- Content Here -->
-				<div id="primary" class="content-area">
-					<main id="main" class="site-main">
-						<h4>Syarat dan Ketentuan</h4>
-						<div class="wysiwyg">
-							<?php echo get_field('syarat_dan_ketentuan') ?>
-						</div>
-					</main>
+					<!-- Content Here -->
+					<div id="primary" class="content-area">
+						<main id="main" class="site-main">
+							<h4>Syarat dan Ketentuan</h4>
+							<div class="wysiwyg">
+								<?php echo get_field('syarat_dan_ketentuan') ?>
+							</div>
+						</main>
+					</div>
 				</div>
 
 			</div>

@@ -1549,7 +1549,7 @@ ul.alp-footer--list {
 	top: unset;
 	left: unset;
 	bottom: 0;
-	right: -4px;
+	right: -7px;
 	-ms-transform: rotate(180deg); /* IE 9 */
 	-webkit-transform: rotate(180deg); /* Safari 3-8 */
 	transform: rotate(180deg);

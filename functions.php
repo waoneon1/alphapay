@@ -141,7 +141,7 @@ function alpay_scripts() {
 
 	wp_enqueue_style( 'alpay-slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css' );	
 
-	wp_enqueue_style( 'alpay-style', get_stylesheet_uri(), array(), '2.20'  );
+	wp_enqueue_style( 'alpay-style', get_stylesheet_uri(), array(), '2.21'  );
 
 	wp_enqueue_script( 'alpay-boostrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '20190101', true );
 
@@ -247,6 +247,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 // FUNCTION
+// search only post type 
+function alp_search_filter($query) {
+    if ($query->is_search) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+}
+add_filter('pre_get_posts','alp_search_filter');
 
 // navigation
 function alpay_navigation($nav_id) {

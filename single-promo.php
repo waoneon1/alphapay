@@ -49,23 +49,25 @@ get_header();
 				</div>
 
 			</div>
-			<div class="col-md-3 col-12">
-				<div class="infopromo">
-					<div class="iftitle">
-						Info Promo
+			<div class="col-md-3 col-12" id="sidebar-container">
+				<div class="sidebar-sticky">
+					<div class="infopromo">
+						<div class="iftitle">
+							Info Promo
+						</div>
+						<div class="alp-promo--periode">
+							<?php the_field('temporary_promo') ?>
+						</div>
+						Download Aplikasi AlphaPay
+						<p>Nikmati kemudahan bertransaksi hanya dari Smartphonemu</p>
+						<a href="#" target="_blank">
+							<picture>
+							  <img 
+							  	src="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge.png" 
+							  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge@2x.png 2x" alt="download alphapay">
+							</picture>
+						</a>
 					</div>
-					<div class="alp-promo--periode">
-						<?php the_field('temporary_promo') ?>
-					</div>
-					Download Aplikasi AlphaPay
-					<p>Nikmati kemudahan bertransaksi hanya dari Smartphonemu</p>
-					<a href="#" target="_blank">
-						<picture>
-						  <img 
-						  	src="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge.png" 
-						  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge@2x.png 2x" alt="download alphapay">
-						</picture>
-					</a>
 				</div>
 			</div>
 		</div>
@@ -123,7 +125,21 @@ get_header();
 
 </div>
 
-<script async src="https://static.addtoany.com/menu/page.js"></script>
+<script type="text/javascript">
+	console.log('dsfjkdsa');
+	jQuery(document).ready(function ($) {
+		var a = new StickySidebar('.sidebar-sticky', {
+			topSpacing: 50,
+			bottomSpacing: 20,
+			containerSelector: '#sidebar-container',
+			innerWrapperSelector: '.infopromo',
+			resizeSensor: true
+
+		});
+	});
+
+</script>
+<!-- <script async src="https://static.addtoany.com/menu/page.js"></script> -->
 
 <?php
 get_footer();

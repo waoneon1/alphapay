@@ -31,10 +31,10 @@ function alpay_public_scripts() {
 
 // Enqueue fontawesome
 
-add_action('wp_enqueue_scripts', 'alpay_public_styles');
+// add_action('wp_enqueue_scripts', 'alpay_public_styles');
 
-function alpay_public_styles() {
-        wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0', 'all');
-}
+// function alpay_public_styles() {
+//         wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0', 'all');
+// }
 
     

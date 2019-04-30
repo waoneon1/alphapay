@@ -1822,12 +1822,15 @@ ul.alp-footer--list {
 .alp-content {
 	padding-top: 40px;
 }
+.alp-promobanner,
 .alp-singlebanner {
 	max-height: 550px; 
 	height: auto;
 	width: 100%;
 	overflow: hidden;
 }
+.alp-promobanner img,
+.alp-promobanner picture,
 .alp-singlebanner img,
 .alp-singlebanner picture {
 	width: 100%;

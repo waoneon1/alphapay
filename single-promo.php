@@ -17,7 +17,7 @@ get_header();
 			<div class="col-md-9 col-12">
 
 				<!-- Banner Carosel -->
-				<div class="alp-singlebanner">
+				<div class="alp-promobanner">
 					<div class="alp-singlebanner--bg fullwidth-content">
 						<div class="row">
 							<picture>

@@ -11,8 +11,8 @@ get_header();
 ?>
 
 <div class="alp-archive--header">
-	<div class="container">
-		<h1>Hasil Pencarian Dari "<?php echo $_GET['s']?>"</h1>
+	<div class="container deskrip-alterran">
+		<h1>Hasil Pencarian Dari <quote><?php echo $_GET['s']?></quote></h1>
 	</div>
 </div>
 
@@ -36,15 +36,14 @@ get_header();
 					<?php
 						while ( have_posts() ) :
 							the_post(); ?>
-							<?php $image = get_field('thumbnail') ?>
 							<div class="col-md-6 col-sm-6 col-12">
 								<div class="alp-card">
 									<picture class="now_item_picture">
-										<source media="(min-width: 1200px)" srcset="<?php alpay_image($image, '350x263') ?>">
-										<source media="(min-width: 992px)" srcset="<?php alpay_image($image, '290x217') ?>">
-										<source media="(min-width: 768px)" srcset="<?php alpay_image($image, '290x217') ?>">
-										<source media="(min-width: 0px)" srcset="<?php alpay_image($image, '350x263') ?>">
-										<img class="now_item_image" src="<?php alpay_image($image, '350x263') ?>" alt="">
+										<source media="(min-width: 1200px)" srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'alpay_350x263') ?>">
+										<source media="(min-width: 992px)" srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'alpay_290x217') ?>">
+										<source media="(min-width: 768px)" srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'alpay_290x217') ?>">
+										<source media="(min-width: 0px)" srcset="<?php echo get_the_post_thumbnail_url($post->ID, 'alpay_350x263') ?>">
+										<img class="now_item_image" src="<?php echo get_the_post_thumbnail_url($post->ID, 'alpay_350x263') ?>" alt="">
 									</picture>
 									<div class="alp-card--content">
 										<h2><?php the_title() ?></h2>

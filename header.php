@@ -139,7 +139,7 @@
 			                        <li class="nav-item dropdown <?php echo "wrap-$megamenu" ?>">
 			                            <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 			                                <?php echo $pparent->title ?>
-			                                <img class="svg" src="<?php echo get_template_directory_uri() ?>/assets/img/ceret.svg" alt="">
+			                                <span class="carat dashicons dashicons-arrow-down-alt2"></span>  
 			                            </a>
 
 			                            <!-- HARDCODE PRODUCT CHILD -->

@@ -1,7 +1,7 @@
 /*!
 Theme Name: Alphapay
 Theme URI: http://underscores.me/
-Author: sepulsa.com
+Author: Dharmawan Sukma
 Author URI: http://sepulsa.com
 Description: Description
 Version: 1.0.0
@@ -1549,7 +1549,7 @@ ul.alp-footer--list {
 	top: unset;
 	left: unset;
 	bottom: 0;
-	right: -0px;
+	right: -4px;
 	-ms-transform: rotate(180deg); /* IE 9 */
 	-webkit-transform: rotate(180deg); /* Safari 3-8 */
 	transform: rotate(180deg);
@@ -1651,9 +1651,11 @@ ul.alp-footer--list {
 	float: right;
 	line-height: 38px;
 }
+.nav-item .dashicons:before,
 .alp-faq .card.collapsed .dashicons:before {
 	content: "\f347";
 }
+.nav-item.show .dashicons:before,
 .alp-faq .card .dashicons:before {
 	content: "\f343";
 }
@@ -1661,9 +1663,9 @@ ul.alp-footer--list {
 	margin-bottom: 50px;
 }
 .alp-faq .card-header {
-    padding: .75rem 1.25rem;
+	padding: 5px 20px;
     margin-bottom: -1px;
-    background-color: #f3f7fb; 
+    background-color: #f3f7fb;
     border-bottom: 1px solid rgba(0,0,0,.125);
 }
 /*--------------------------------------------------------------
@@ -2081,7 +2083,12 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
-
+.wysiwyg img.alignright { float: right; margin: 0 0 1em 1em; }
+.wysiwyg img.alignleft { float: left; margin: 0 1em 1em 0; }
+.wysiwyg img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.wysiwyg .alignright { float: right; }
+.wysiwyg .alignleft { float: left; }
+.wysiwyg .aligncenter { display: block; margin-left: auto; margin-right: auto; }
 /*--------------------------------------------------------------
 # WIDGET
 --------------------------------------------------------------*/

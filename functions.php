@@ -141,7 +141,7 @@ function alpay_scripts() {
 
 	wp_enqueue_style( 'alpay-slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css' );	
 
-	wp_enqueue_style( 'alpay-style', get_stylesheet_uri(), array(), '2.19'  );
+	wp_enqueue_style( 'alpay-style', get_stylesheet_uri(), array(), '2.20'  );
 
 	wp_enqueue_script( 'alpay-boostrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '20190101', true );
 
@@ -204,12 +204,10 @@ require get_template_directory() . '/inc/post-type-promo.php';
 require get_template_directory() . '/inc/post-type-faq.php';
 function alp_post_type_faq( $query ) {
     if ($query->is_main_query() ) {
-    	var_dump(is_post_type_archive( 'faq' ));
     	if (is_post_type_archive( 'faq' )) {
     		$query->set( 'orderby', 'date' );
     		$query->set( 'order', 'ASC' );
     	}
-       
     }
 }
 add_filter( 'pre_get_posts', 'alp_post_type_faq' );

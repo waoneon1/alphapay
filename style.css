@@ -17,3 +17,21 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+	.alp-subsc--right {
+		background-image: none;
+	}
+}
+
+@media (max-width: 575px) {
+  
+}

@@ -17,21 +17,30 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
-
+.alp-padding-top {
+	padding-top: 25px;
+}
+.alp-margin-bot {
+	margin-bottom: 15px;
+}
+.alp-follow .alp-boxnshadow {
+	margin-right:0; 
+	margin-left:0;
+}
 @media (max-width: 1199px) {
 
 }
-
 @media (max-width: 991px) {
 
 }
-
 @media (max-width: 767px) {
 	.alp-subsc--right {
 		background-image: none;
 	}
+	.fullwidth-content.alp-follow-wrap {
+		max-width: 540px;
+  	}
 }
-
 @media (max-width: 575px) {
-  
+
 }

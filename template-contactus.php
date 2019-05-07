@@ -73,7 +73,7 @@ get_header();
 	           <div class="col-md-4 col-12">
 	               <div class="alp-boxnshadow alp-margin-bot">
 	                    <h4>
-	                    	<span class="dashicons alp-icon alp-icon-24"></span>
+	                    	<span class="dashicons alp-icon alp-icon-24-hours"></span>
 	                    	Jam Operational
 	                	</h4>
 	                    <p>07.00 - 23.00 WIB</p>
@@ -93,7 +93,7 @@ get_header();
     				<div class="row">
     					<div class="col-md-10 col-12">
 
-    						<a href="https://www.facebook.com/alphapay.id/" terget="_blank">
+    						<a href="https://www.facebook.com/alphapay.id/" target="_blank">
 	    						<div class="alp-boxnshadow">
 			    					<div class="row">
 			    						<div class="col-4">
@@ -106,7 +106,7 @@ get_header();
 		    					</div>
 	    					</a>
 
-	    					<a href="https://www.instagram.com/alphapay.id/" terget="_blank">
+	    					<a href="https://www.instagram.com/alphapay.id/" target="_blank">
 			    				<div class="alp-boxnshadow">
 			    					<div class="row">
 			    						<div class="col-4">
@@ -119,7 +119,7 @@ get_header();
 			    				</div>
 			    			</a>
 
-			    			<a href="https://www.youtube.com/channel/UCwCI3-8ctmn14i_3TUTvd2w" terget="_blank">
+			    			<a href="https://www.youtube.com/channel/UCwCI3-8ctmn14i_3TUTvd2w" target="_blank">
 			    				<div class="alp-boxnshadow">
 			    					<div class="row">
 			    						<div class="col-4">

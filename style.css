@@ -27,6 +27,9 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	margin-right:0; 
 	margin-left:0;
 }
+.alp-icon-24-hours:before {
+    content: url(assets/img/icon-24-hours.svg);
+}
 @media (max-width: 1199px) {
 
 }

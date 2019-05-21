@@ -1,5 +1,7 @@
 <!-- Download Section -->
-
+<?php if (is_front_page()) {
+	$cta_class = 'cta-download-homepage-bawah';
+} ?>
 <div class="alp-download container alp-section alp-last-section">
 	<div class="row">
 		<div class="col-md-5 col-12 alp-download--phone alp-col d-none d-md-block">
@@ -17,6 +19,7 @@
 				<a href="<?php echo $section['android_url'] ?>" target="_blank">
 					<picture>
 					  <img 
+					  	class="<?php echo $cta_class ?>"
 					  	src="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge.png" 
 					  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge@2x.png 2x" alt="download alphapay">
 					</picture>

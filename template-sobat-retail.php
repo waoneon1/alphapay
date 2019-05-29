@@ -26,7 +26,15 @@
         <!-- Product Header Section -->
         <div class="alp-pheader container">
             <div class="row">
-                <div class="alp-pheader--desc col-md-7 col-12 alp-col">
+                <div class="alp-pheader--imgwrap col-md-5 col-12 alp-col">
+                    <picture>
+                        <img 
+                        src="<?php echo get_template_directory_uri() ?>/assets/img/howto.png" 
+                        srcset="<?php echo get_template_directory_uri() ?>/assets/img/howto@2x.png 2x" alt="alphapay"
+                        class="alp-cta--image">
+                    </picture>
+                </div>
+                <div class="alp-pheader--desc col-md-7 order-md-first col-12 alp-col">
                     <h1><?php the_field('title') ?></h1>
                     <?php the_field('subtitle') ?>
                     <a href="<?php the_field('cta_download') ?>" target="_blank" 
@@ -37,14 +45,6 @@
                             srcset="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge@2x.png 2x" alt="download alphapay">
                         </picture>
                     </a>
-                </div>
-                <div class="alp-pheader--imgwrap col-md-5 col-12 alp-col">
-                    <picture>
-                        <img 
-                        src="<?php echo get_template_directory_uri() ?>/assets/img/howto.png" 
-                        srcset="<?php echo get_template_directory_uri() ?>/assets/img/howto@2x.png 2x" alt="alphapay"
-                        class="alp-cta--image">
-                    </picture>
                 </div>
             </div>
         </div>

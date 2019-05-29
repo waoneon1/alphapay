@@ -38,7 +38,7 @@
                         </picture>
                     </a>
                 </div>
-                <div class="alp-pheader--imgwrap col-md-5 order-sm-first col-12 alp-col">
+                <div class="alp-pheader--imgwrap col-md-5 col-12 alp-col">
                     <picture>
                         <img 
                         src="<?php echo get_template_directory_uri() ?>/assets/img/howto.png" 

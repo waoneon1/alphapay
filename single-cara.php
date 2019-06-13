@@ -42,8 +42,8 @@
 	    	<div class="alp-pheader--imgwrap col-md-6 col-12 alp-col">
                 <picture>
                     <img 
-                    src="<?php echo get_template_directory_uri() ?>/assets/img/howto.png" 
-                    srcset="<?php echo get_template_directory_uri() ?>/assets/img/howto@2x.png 2x" alt="alphapay"
+                    src="<?php echo get_template_directory_uri() ?>/assets/img/cara-daftar.png" 
+                    srcset="<?php echo get_template_directory_uri() ?>/assets/img/cara-daftar@2x.png 2x" alt="alphapay"
                     class="alp-cta--image">
                 </picture>
 	    	</div>

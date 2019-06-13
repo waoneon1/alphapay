@@ -21,18 +21,23 @@
 <div class="alp-wrapper alp-howto">
     <!-- Product Header Section -->
 
-    <div class="alp-fb-blue" style="padding: 20px 0 100px;
+    <div class="alp-fb-blue" style="padding: 50px 0 100px;
     background-color: rgba(27,117,187,.06);">
         <!-- Product Header Section -->
         <div class="alp-pheader container">
             <div class="row">
                 <div class="alp-pheader--imgwrap col-md-5 col-12 alp-col">
-                    <picture>
-                        <img 
-                        src="<?php echo get_template_directory_uri() ?>/assets/img/howto.png" 
-                        srcset="<?php echo get_template_directory_uri() ?>/assets/img/howto@2x.png 2x" alt="alphapay"
-                        class="alp-cta--image">
-                    </picture>
+                    <?php if (has_post_thumbnail()): ?>
+                        <?php the_post_thumbnail(); ?>
+                    <?php else: ?>
+                        <picture>
+                            <img 
+                            src="<?php echo get_template_directory_uri() ?>/assets/img/sobat-retail.png"
+                            srcset="<?php echo get_template_directory_uri() ?>/assets/img/sobat-retail@2x.png 2x"
+                            alt="alphapay"
+                            class="alp-cta--image">
+                        </picture>
+                    <?php endif ?>
                 </div>
                 <div class="alp-pheader--desc col-md-7 order-md-first col-12 alp-col">
                     <h1><?php the_field('title') ?></h1>
@@ -42,7 +47,7 @@
                         <picture class="alp-pheader--android">
                             <img 
                             src="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge.png" 
-                            srcset="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge@2x.png 2x" alt="download alphapay">
+                            srcset="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge@2x.png 2x"alt="download alphapay">
                         </picture>
                     </a>
                 </div>

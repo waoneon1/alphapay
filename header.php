@@ -40,6 +40,16 @@
 
 	<!-- mailchimp -->
 	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/8eda164af89fe159f3143f721/662e507cf31202bbc94ac2ad4.js");</script>
+
+	<!--script untuk Google Adsense-->
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({
+	          google_ad_client: "ca-pub-2156334577724467",
+	          enable_page_level_ads: true
+	     });
+	</script>
+	<!--selesai google Adsense-->
 </head>
 
 <body <?php body_class(); ?>>

@@ -618,6 +618,13 @@
                 "operator": "==",
                 "value": "produk"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "template-frontpage.php"
+            }
         ]
     ],
     "menu_order": 1,
@@ -628,5 +635,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1553656909
+    "modified": 1560928973
 }

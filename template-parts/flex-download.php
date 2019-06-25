@@ -7,8 +7,8 @@
 		<div class="col-md-5 col-12 alp-download--phone alp-col d-none d-md-block">
 			<picture>
 			  <img 
-			  	src="<?php echo get_template_directory_uri() ?>/assets/img/phone.png" 
-			  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/phone@2x.png 2x" alt="download alphapay">
+			  	src="<?php echo get_template_directory_uri() ?>/assets/img/phone.jpg" 
+			  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/phone@2x.jpg 2x" alt="download alphapay">
 			</picture>
 		</div>
 		<div class="col-md-7 col-12 alp-download--content">

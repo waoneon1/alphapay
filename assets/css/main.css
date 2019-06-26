@@ -1329,7 +1329,7 @@ textarea {
   padding-left: 160px;
 }
 .alp-subsc--right {
-  background-image: url('assets/img/alpsub.png');
+  background-image: url('../img/alpsub.png');
     background-size: cover;
   padding-left: 0;
   padding-right: 0;
@@ -1554,7 +1554,7 @@ ul.alp-footer--list {
 ## CONTACT US
 --------------------------------------------------------------*/
 .alp-follow--right {
-  background-image: url('assets/img/follow@2x.png');
+  background-image: url('../img/follow@2x.png');
     background-size: cover;
   padding-left: 0;
   padding-right: 0;
@@ -1569,9 +1569,9 @@ ul.alp-footer--list {
   width: 35px;
   height: 30px;
 }
-.alp-icon-24:before { content: url('assets/img/icon-24.svg') }
-.alp-icon-email:before { content: url('assets/img/icon-email.svg') }
-.alp-icon-chat:before { content: url('assets/img/icon-chat.svg') }
+.alp-icon-24:before { content: url('../img/icon-24.svg') }
+.alp-icon-email:before { content: url('../img/icon-email.svg') }
+.alp-icon-chat:before { content: url('../img/icon-chat.svg') }
 .alp-boxnshadow p {
   margin-bottom: 0px;
 }

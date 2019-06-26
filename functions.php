@@ -139,7 +139,7 @@ function alpay_scripts() {
 
 	wp_enqueue_style( 'alpay-slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css' );	
 
-	wp_enqueue_style( 'alpay-main', get_template_directory_uri() . '/assets/css/main.css', array(), '1.2'   );
+	wp_enqueue_style( 'alpay-main', get_template_directory_uri() . '/assets/css/main.css', array(), '1.3'   );
 
 	wp_enqueue_style( 'alpay-style', get_stylesheet_uri(), array(), '2.29'  );
 

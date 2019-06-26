@@ -2,33 +2,37 @@
 /* FONT */
 @font-face {
   font-family: 'SFCompactDisplay-Bold';
+  font-display: auto;
   font-weight: 700;
   src: url("../fonts/SFCompactDisplay-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: 'SFCompactDisplay-Light';
+  font-display: auto;
   font-weight: 300;
   src: url("../fonts/SFCompactDisplay-Light.ttf") format("truetype");
 }
 @font-face {
   font-family: 'SFCompactDisplay';
+  font-display: auto;
   font-weight: normal;
   src: url("../fonts/SFCompactDisplay-Regular.ttf") format("truetype");
 }
-@font-face {
+/*@font-face {
   font-family: 'SFCompactDisplay-Semibold';
   font-weight: 600;
   src: url("../fonts/SFCompactDisplay-Semibold.ttf") format("truetype");
-}
+}*/
 
-@font-face {
+/*@font-face {
   font-family: 'SourceSansPro-Regular';
   font-weight: normal;
   src: url("../fonts/SourceSansPro-Regular.ttf") format("truetype");
-}
+}*/
 
 @font-face {
   font-family: 'SourceSansPro-SemiBold';
+  font-display: auto;
   font-weight: 600;
   src: url("../fonts/SourceSansPro-SemiBold.ttf") format("truetype");
 }

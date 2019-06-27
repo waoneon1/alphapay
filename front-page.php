@@ -22,7 +22,12 @@
 
 	    	</div>
 	    	<div class="alp-cta--imgwrap col-md-7 col-12 alp-col">
-	    		<img src="<?php echo get_template_directory_uri() . '/assets/img/homepage.jpg' ?>" class="alp-cta--image">
+	    		<?php $img_homepage = get_template_directory_uri() . '/assets/img/homepage' ?>
+	    		<picture>
+	    		  <source srcset="<?php echo $img_homepage ?>.webp" type="image/webp">
+	    		  <source srcset="<?php echo $img_homepage ?>.png" type="image/png"> 
+	    		  <img src="<?php echo $img_homepage ?>.png" class="alp-cta--image" alt="homepage image">
+	    		</picture>
 	    	</div>
     	</div>
     </div>

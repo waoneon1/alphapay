@@ -5,10 +5,11 @@
 <div class="alp-download container alp-section alp-last-section">
 	<div class="row">
 		<div class="col-md-5 col-12 alp-download--phone alp-col d-none d-md-block">
+			<?php $img_phone = get_template_directory_uri() .'/assets/img/phone' ?>
 			<picture>
-			  <img 
-			  	src="<?php echo get_template_directory_uri() ?>/assets/img/phone.png" 
-			  	srcset="<?php echo get_template_directory_uri() ?>/assets/img/phone@2x.png 2x" alt="download alphapay">
+				<source srcset="<?php echo $img_phone ?>.webp" type="image/webp">
+				<source srcset="<?php echo $img_phone ?>.png" type="image/png"> 
+			  	<img src="<?php echo $img_phone ?>.png" alt="download alphapay">
 			</picture>
 		</div>
 		<div class="col-md-7 col-12 alp-download--content">

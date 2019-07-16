@@ -143,9 +143,16 @@
                 "operator": "==",
                 "value": "template-sobat-retail.php"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "template-regional-page.php"
+            }
         ]
     ],
-    "menu_order": 1,
+    "menu_order": 3,
     "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
@@ -155,5 +162,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1559103374
+    "modified": 1563272123
 }

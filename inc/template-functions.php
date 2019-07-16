@@ -76,6 +76,20 @@ function alpay_layout($section, $full = false, $classes = []) {
 			echo '</div>';
 			break;
 
+		case 'count_section':
+			echo '<div class="fullwidth-content bg-blue">';
+				include get_template_directory() . '/template-parts/flex-count.php';
+			echo '</div>';
+			break;
+
+		case 'testimonial_section':
+			include get_template_directory() . '/template-parts/flex-testimonial.php';
+			break;
+
+		case 'banner_section':
+			include get_template_directory() . '/template-parts/flex-banner.php';
+			break;
+
 		default:
 			# code...
 			break;

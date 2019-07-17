@@ -1,6 +1,17 @@
  <!-- Registrasi Section -->
-<div class="alp-reg row alp-section" id="alp-register">
-	<div class="alp-reg--left bg-grey alp-col d-none d-md-block">
+
+
+<?php  
+    if ($section['theme'] == 2) {
+        $theme['num_img']   = 'regbg@2x.png';
+        $theme['cta']       = false;
+    } else {
+        $theme['num_img']   = 'btn-reg1@2x.png';
+        $theme['cta']       = true;
+    }
+?> 
+<div class="alp-reg row alp-section align-items-center <?php echo 'alp-theme-'.$section['theme'] ?> bg-grey" id="alp-register">
+	<div class="alp-reg--left alp-col d-none d-md-block">
         <div class="alp-reg--bg">
            
         </div>
@@ -18,7 +29,9 @@
 	</div>
 	<div class="alp-reg--right">
 		<h2><?php echo $section['title'] ?></h2>
-		<p></p>
+		<?php if ($section['description']): ?>
+            <span><?php echo $section['description'] ?></span>
+        <?php endif ?>
 		<!-- On PC -->
 		<ul class="alp-reg--lists d-none d-md-block">
             <?php foreach ($section['Items'] as $key => $item): ?>
@@ -27,7 +40,7 @@
                 <li class="<?php echo $init_list ?>" data-image="<?php echo "alp-reg--image$i" ?>">
                     <div class="alp-reg--number <?php echo "reg-type$i" ?>">
                         <span><?php echo $i ?></span>
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/btn-reg1@2x.png' ?>">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/img/'.$theme['num_img'] ?>">
                     </div>
                     <h3><?php echo $item['title'] ?></h3>
                     <?php echo $item['description'] ?>
@@ -55,13 +68,46 @@
             <?php endforeach ?>
 		</ul>
 
-        <a href="<?php the_field('cta_link') ?>" class="cta-download cta-download-homepage-desktop-tengah">
-            <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/android.svg' ?>">
-            Download Sekarang
-        </a>
+        <?php if ($theme['cta']): ?> 
+            <a href="<?php the_field('cta_link') ?>" class="cta-download cta-download-homepage-desktop-tengah">
+                <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/android.svg' ?>">
+                Download Sekarang
+            </a>
+        <?php endif ?>
 
 	</div>
 </div>
+
+<style type="text/css">
+    .alp-theme-2 .alp-reg--right,
+    .alp-theme-2.bg-grey {
+        background-color: transparent;
+        background: transparent;
+    }
+    .alp-theme-2 h1,
+    .alp-theme-2 h2,
+    .alp-theme-2 h3,
+    .alp-theme-2 span,
+    .alp-theme-2 p {
+        color: #19345E;
+        z-index: 1;
+    }
+    .alp-theme-2 .alp-reg--number span {
+        color: #2384DD;
+    }
+    .alp-theme-2 .alp-reg--number img {
+        opacity: 0.22;
+    }
+    .alp-theme-2 .alp-reg--image {
+        border: 0;
+        border-radius: none;
+        box-shadow: none;
+    }
+    .alp-theme-2 .alp-reg--image.active {
+        width: auto;
+    }
+</style>
+
 <script type="text/javascript">
    jQuery(document).ready(function($){
       $('.reg-slider').slick({

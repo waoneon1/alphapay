@@ -473,8 +473,8 @@
                         },
                         {
                             "key": "field_5c11e549541c6",
-                            "label": "Content",
-                            "name": "content",
+                            "label": "Wysiwyg",
+                            "name": "wysiwyg",
                             "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
@@ -1150,5 +1150,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1563349386
+    "modified": 1563354998
 }

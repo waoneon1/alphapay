@@ -403,6 +403,44 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5d2f5c3f43222",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5d2f5cb743223",
+                            "label": "Description",
+                            "name": "description",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
+                        },
+                        {
                             "key": "field_5c5cf284867e5",
                             "label": "Contact Form 7",
                             "name": "contact_form_7",
@@ -1196,5 +1234,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1563381191
+    "modified": 1563385056
 }

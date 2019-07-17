@@ -32,10 +32,9 @@
 
 		<?php if ($section['description']): ?>
             <span><?php echo $section['description'] ?></span>
-        <?php else: ?>
             <p></p>
         <?php endif ?>
-        
+
 		<!-- On PC -->
 		<ul class="alp-reg--lists d-none d-md-block">
             <?php foreach ($section['Items'] as $key => $item): ?>

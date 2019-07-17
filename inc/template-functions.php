@@ -90,6 +90,16 @@ function alpay_layout($section, $full = false, $classes = []) {
 			include get_template_directory() . '/template-parts/flex-banner.php';
 			break;
 
+		case 'video_section':
+			include get_template_directory() . '/template-parts/flex-video.php';
+			break;
+
+		case 'button_section':
+			echo '<div class="fullwidth-content bg-grey">';
+				include get_template_directory() . '/template-parts/flex-button.php';
+			echo '</div>';
+			break;
+
 		default:
 			# code...
 			break;

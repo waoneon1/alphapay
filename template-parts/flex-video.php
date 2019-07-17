@@ -6,7 +6,8 @@
 	        <p><?php echo $section['description'] ?></p> 
 	    <?php endif ?>
 	</div>
-	<img src="<?php echo $section['image']['url'] ?>">
+	<?php echo $section['video']; ?>
 </div>
+
 
 <style type="text/css"></style>

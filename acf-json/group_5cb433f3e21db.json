@@ -143,13 +143,6 @@
                 "operator": "==",
                 "value": "template-sobat-retail.php"
             }
-        ],
-        [
-            {
-                "param": "post_template",
-                "operator": "==",
-                "value": "template-regional-page.php"
-            }
         ]
     ],
     "menu_order": 3,
@@ -162,5 +155,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563272123
+    "modified": 1563344165
 }

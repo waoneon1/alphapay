@@ -1,6 +1,6 @@
  <!-- Count Section -->
 <div class="alp-count container">
-	<div class="row">
+	<div class="row align-items-center">
 		<div class="col-md-6 col-12">
 			<div>
 				<h2><?php echo $section['title'] ?></h2>

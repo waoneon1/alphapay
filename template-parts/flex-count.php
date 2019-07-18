@@ -5,7 +5,7 @@
 			<div class="alp-count--box bg-grey">
 				<div class="alp-counter">
 					<img src="<?php echo get_template_directory_uri() . '/assets/img/snack-booth.png' ?>">
-					<span><?php echo $section['counter'] ?></span>
+					<span class="count"><?php echo $section['counter'] ?></span>
 				</div>
 				<img class="alp-count--dot" src="<?php echo get_template_directory_uri() . '/assets/img/doted.png' ?>">
 			</div>
@@ -19,7 +19,6 @@
 </div>
 
 <style type="text/css">
-
 	.alp-count--box {
 		position: relative;
     	padding: 25px;
@@ -47,3 +46,17 @@
 	    margin-bottom: 130px;
 	}
 </style>
+
+<script type="text/javascript">
+	jQuery('.count').each(function () {
+	    jQuery(this).prop('Counter',0).animate({
+	        Counter: jQuery(this).text()
+	    }, {
+	        duration: 4000,
+	        easing: 'swing',
+	        step: function (now) {
+	            jQuery(this).text(Math.ceil(now));
+	        }
+	    });
+	});
+</script>

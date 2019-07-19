@@ -5,7 +5,7 @@
      
         <div class="testimonial-slider">
             <?php foreach ($section['testimonial'] as $key => $testimonial): ?>     
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-6">
                         <h2><?php echo 'Testimonial'  ?></h2>
                         <p><?php echo $testimonial['content'] ?></p> 
@@ -29,6 +29,16 @@
             <div class="col-md-6">
                  <span class="image-slider__dots js-slider__dots"></span>
             </div>
+        </div>
+        <div class="row align-items-center">
+           <div class="col-12">
+                <?php if ($section['link_text']) {
+                    $class = $section['link_class'];
+                    echo '<a href="'.$section['link'].'" class="alp-btn btn alp-btn-blue btn-effect '.$class.'">'.
+                        $section['link_text'].
+                    '</a>';
+                } ?>
+           </div>
         </div>
 
     </div>
@@ -84,6 +94,22 @@
         color: transparent; 
         background-color: #2384DD;
         opacity: 1;
+    }
+    @media (max-width: 767px) {
+        .alp-testi {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        .bg-grey-absolute:after {
+            content: ' ';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
     }
 
 </style>

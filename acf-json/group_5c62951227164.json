@@ -112,6 +112,13 @@
                 "operator": "==",
                 "value": "template-landing-fb.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "daftar_harga"
+            }
         ]
     ],
     "menu_order": 0,
@@ -122,5 +129,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1554110670
+    "modified": 1563438694
 }

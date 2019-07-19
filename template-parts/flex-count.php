@@ -1,4 +1,14 @@
  <!-- Count Section -->
+<?php 
+function alp_count_section($text, $counter) {
+	$count = '';
+	if (strpos($text, '{count}') !== false) {
+		$cplus = $counter + 1;
+	    $count = str_replace('{count}', $cplus, $text);
+	}
+	return $count;
+}
+?>
 <div class="alp-count container">
 	<div class="row align-items-center">
 		<div class="col-md-4 col-12">
@@ -13,7 +23,15 @@
 		<div class="col-md-1 col-12"></div>
 		<div class="col-md-7 col-12">
 			<h2><?php echo $section['title'] ?></h2>
-			<p><?php echo $section['description'] ?></p>
+			<p>
+				<?php echo $section['description'] ?>
+				<?php if ($section['link_text']) {
+					$class = $section['link_class'];
+					echo '<a href="'.$section['link'].'" class="text-link '.$class.'">'.
+						alp_count_section($section['link_text'], $section['counter']).
+					'</a>';
+				} ?>
+			</p>
 		</div>
 	</div>
 </div>
@@ -44,6 +62,13 @@
 		position: relative;
 	    margin-top: 40px;
 	    margin-bottom: 130px;
+	}
+	.text-link {
+		color: #2384DD;
+	}
+	.text-link:hover {
+		color: #2384DD;
+		text-decoration: underline;
 	}
 </style>
 

@@ -191,6 +191,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/post-type-produk.php';
 
 /**
+ * Daftar Harga
+ */
+require get_template_directory() . '/inc/post-type-daftar-harga.php';
+
+/**
  * How to
  */
 require get_template_directory() . '/inc/post-type-cara.php';

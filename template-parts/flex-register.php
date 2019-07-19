@@ -4,7 +4,7 @@
 <?php  
     if ($section['theme'] == 2) {
         $theme['num_img']   = 'regbg@2x.png';
-        $theme['cta']       = false;
+        $theme['cta']       = 2;
     } else {
         $theme['num_img']   = 'btn-reg1@2x.png';
         $theme['cta']       = true;
@@ -71,7 +71,12 @@
             <?php endforeach ?>
 		</ul>
 
-        <?php if ($theme['cta']): ?> 
+        <?php if ($theme['cta'] == 2): ?> 
+            <a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect cta-download cta-download-<?php echo $post->post_name ?>-desktop-tengah">
+                <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/android.svg' ?>">
+                Download Sekarang
+            </a>
+        <?php else: ?>
             <a href="<?php the_field('cta_link') ?>" class="cta-download cta-download-homepage-desktop-tengah">
                 <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/android.svg' ?>">
                 Download Sekarang

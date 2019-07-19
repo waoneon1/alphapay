@@ -21,7 +21,7 @@ function alp_count_section($text, $counter) {
 			</div>
 		</div>
 		<div class="col-md-1 col-12"></div>
-		<div class="col-md-7 col-12">
+		<div class="col-md-7 col-12 alp-count-text">
 			<h2><?php echo $section['title'] ?></h2>
 			<p>
 				<?php echo $section['description'] ?>
@@ -69,6 +69,15 @@ function alp_count_section($text, $counter) {
 	.text-link:hover {
 		color: #2384DD;
 		text-decoration: underline;
+	}
+	@media (max-width: 767px) {
+	    .alp-count--dot {
+	    	display: none;
+	    }
+	    .alp-count-text {
+	    	text-align: center;
+	    }
+
 	}
 </style>
 

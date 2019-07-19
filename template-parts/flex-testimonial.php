@@ -110,6 +110,9 @@
             left: 0;
             z-index: -1;
         }
+        .slick-prev:before, .slick-next:before {
+            color:#2884dd;
+        }
     }
 
 </style>

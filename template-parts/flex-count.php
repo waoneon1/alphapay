@@ -25,13 +25,13 @@ function alp_count_section($text, $counter) {
 			<h2><?php echo $section['title'] ?></h2>
 			<p>
 				<?php echo $section['description'] ?>
-				<?php if ($section['link_text']) {
-					$class = $section['link_class'];
-					echo '<a href="'.$section['link'].'" class="text-link '.$class.'">'.
-						alp_count_section($section['link_text'], $section['counter']).
-					'</a>';
-				} ?>
 			</p>
+			<?php if ($section['link_text']) {
+				$class = $section['link_class'];
+				echo '<a href="'.$section['link'].'" class="alp-btn btn alp-btn-blue btn-effect '.$class.'">'.
+					alp_count_section($section['link_text'], $section['counter']).
+				'</a>';
+			} ?>
 		</div>
 	</div>
 </div>

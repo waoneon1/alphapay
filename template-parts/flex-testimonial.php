@@ -8,7 +8,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <h2><?php echo 'Testimonial'  ?></h2>
-                        <p><?php echo $testimonial['content'] ?></p> 
+                        <p class="alp-paragraph"><?php echo $testimonial['content'] ?></p> 
                         <h4><?php echo $testimonial['name'] ?></h4>
                     </div>
                     <div class="col-md-6">

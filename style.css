@@ -30,6 +30,14 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 .alp-icon-24-hours:before {
     content: url(assets/img/icon-24-hours.svg);
 }
+.alp-title p, 
+.alp-benefit--title p, 
+.alp-subsc--left p, 
+.alp-cta--desc p,
+p.alp-paragraph {
+    color: #19345E;
+    font-size: 20px;
+}
 @media (max-width: 1199px) {
 
 }

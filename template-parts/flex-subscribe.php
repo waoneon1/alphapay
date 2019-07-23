@@ -9,7 +9,16 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-6 col-12 alp-subsc--right d-none d-md-block">
+	<?php if ($section['image']): ?>
+		<div class="col-md-6 col-12 d-none d-md-block" style="
+			background-image: url(<?php echo $section['image']['url'] ?>);
+			background-size: cover;
+			padding-left: 0;
+			padding-right: 0;
+		">
+	<?php else: ?>
+		<div class="col-md-6 col-12 d-none d-md-block alp-subsc--right">
+	<?php endif ?>
 		&nbsp;
 	</div>
 </div>

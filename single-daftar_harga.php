@@ -17,10 +17,6 @@
 <?php $product_page = get_field('produk_page', 'option'); ?>
 
 <?php  
-    $product_list = get_terms([
-        'taxonomy' => 'jenis_produk',
-        'hide_empty' => false,
-    ]);
     $current_id = $post->ID;
 
     $flex_content_front = get_field('flexible_section', get_option('page_on_front'));
@@ -60,7 +56,9 @@
                 <?php 
                 $inner_query = new WP_Query(array(
                     'post_type' => 'daftar_harga',
-                    'post_per_page' => -1
+                    'post_per_page' => -1,
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC'
                 )); ?>
 
                 <ul class="list-group showpc">
@@ -81,18 +79,56 @@
                 <?php if (get_field('content_title')): ?>
                     <h2><?php the_field('content_title') ?></h2>
                 <?php endif ?>
-                <?php the_content() ?>
-                <?php include get_template_directory() . '/template-parts/part-table.php' ?>
+                <?php echo the_field('wysiwyg'); ?>
+
+                <?php $alp_lock_filter = alp_lock_filter() ?>
+                <?php if ($alp_lock_filter): ?>
+                    <?php if (get_field('table_product')): ?>
+                            <?php foreach (get_field('choose_product') as $key => $post): ?>
+                                <?php setup_postdata($post);  ?>
+                                <?php include get_template_directory() . '/template-parts/part-table.php' ?>
+                                <?php break; ?>
+                            <?php endforeach; ?>
+                            <?php wp_reset_query(); ?>
+                    <?php else: ?>
+                        <?php include get_template_directory() . '/template-parts/part-table.php' ?>
+                    <?php endif ?>
+                <?php else: ?>
+                    <?php echo 'LOCKED' ?>
+                <?php endif ?>
             </div>
         </div>
     </div>
 
     <?php 
-        echo '<div class="fullwidth-content bg-grey">';
-            include get_template_directory() . '/template-parts/flex-download.php';
-        echo '</div>';  
+        // echo '<div class="fullwidth-content bg-grey">';
+        //     include get_template_directory() . '/template-parts/flex-download.php';
+        // echo '</div>';  
     ?>
 
 </div>
 
+<?php 
+function alp_lock_filter() {
+
+    if (isset($_GET['app']) && $_GET['app']) {
+        // open all category (from mobile)
+        return true;
+    } else {
+        /* Its locked we will edit here (from web)
+            - Unlock Product terlalir 
+            - Lock All Category
+        */
+        if (get_field('lock_page')) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    
+    
+    // if true = from mobile
+    
+}
+?>
 <?php get_footer() ?>

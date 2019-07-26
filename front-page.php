@@ -8,7 +8,6 @@
     	<div class="row">
 	    	<div class="alp-cta--desc col-md-5 col-12 alp-col">
 	    		<h1><?php the_field('title') ?></h1>
-	    		<?php print_r(get_field('subtitle')) ?>
 	    		
 	    		<!-- Mobile -->
 	    		<a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect d-md-none cta-download-mobile-atas">

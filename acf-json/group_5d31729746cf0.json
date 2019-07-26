@@ -3,6 +3,25 @@
     "title": "Daftar Harga",
     "fields": [
         {
+            "key": "field_5d3ac6c79e942",
+            "label": "Lock Page",
+            "name": "lock_page",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Lock",
+            "ui_off_text": "Unlock"
+        },
+        {
             "key": "field_5d31729ea0cf6",
             "label": "WYSIWYG",
             "name": "wysiwyg",
@@ -90,5 +109,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563522685
+    "modified": 1564133747
 }

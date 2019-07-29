@@ -71,7 +71,6 @@
             <?php endforeach ?>
 		</ul>
 
-        <?php var_dump($theme['cta']);?>
         <?php if ($theme['cta'] === 2): ?> 
             <a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect cta-download cta-download-<?php echo $post->post_name ?>-desktop-tengah">
                 <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/android.svg' ?>">

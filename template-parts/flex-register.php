@@ -32,11 +32,9 @@
 
 		<?php if ($section['description']): ?>
             <span><?php echo $section['description'] ?></span>
-        <?php else: ?>
-            <p></p>
         <?php endif ?>
        
-
+        <div style="margin-top: 30px;"></div>
 		<!-- On PC -->
 		<ul class="alp-reg--lists d-none d-md-block">
             <?php foreach ($section['Items'] as $key => $item): ?>
@@ -73,7 +71,8 @@
             <?php endforeach ?>
 		</ul>
 
-        <?php if ($theme['cta'] == 2): ?> 
+        <?php var_dump($theme['cta']);?>
+        <?php if ($theme['cta'] === 2): ?> 
             <a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect cta-download cta-download-<?php echo $post->post_name ?>-desktop-tengah">
                 <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/android.svg' ?>">
                 Download Sekarang

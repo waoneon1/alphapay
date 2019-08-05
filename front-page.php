@@ -9,15 +9,18 @@
 	    	<div class="alp-cta--desc col-md-5 col-12 alp-col">
 	    		<h1><?php the_field('title') ?></h1>
 	    		<?php echo the_field('subtitle'); ?>
-	    		<!-- Mobile -->
-	    		<a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect d-md-none cta-download-mobile-atas">
-	    			<?php the_field('cta') ?>
-	    		</a>
+	    		
+	    		<div class="alp-cta--inner">
+	    			<!-- Mobile -->
+	    			<a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect cta-download-mobile-atas">
+	    				<?php the_field('cta') ?>
+	    			</a>
 
-	    		<!-- PC -->
-	    		<a href="#alp-register" class="alp-btn btn alp-btn-blue btn-effect d-none d-md-inline-block">
-	    			Cara Jadi Agen
-	    		</a>
+	    			<!-- PC -->
+	    			<a href="#alp-register" class="alp-btn btn alp-btn-blue btn-effect d-none d-md-inline-block">
+	    				Cara Jadi Agen
+	    			</a>
+	    		</div>
 
 	    	</div>
 	    	<div class="alp-cta--imgwrap col-md-7 col-12 alp-col">

@@ -2147,7 +2147,8 @@ ul.children {list-style:none;padding-left:0px; margin-left:0px;}
     display: inline-block;
 }
 .alp-fb-landing .alp-fb-blue {
-    padding: 20px 0 100px;
+    /*padding: 20px 0 100px;*/
+    padding: 40px 0 40px;
     background-color: rgba(27, 117, 187, 0.06);
 }
 .alp-fb-landing .alp-pheader--desc a {

@@ -7,10 +7,8 @@
 					
 					<a href="<?php echo get_permalink() ?>">
 						<div class="alp-product--box">
-							<div class="alp-product--box_title">
-								<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/'.$term_vals ?>">
-	    						<h3><?php echo the_title() ?></h3>
-							</div>
+							<!-- <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/'.$term_vals ?>"> -->
+    						<h3><?php echo the_title() ?></h3>	
 	    				</div>
 					</a>
 

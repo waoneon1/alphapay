@@ -52,7 +52,7 @@
 		</ul>
 
 		<!-- ON Mobile -->
-		<ul class="reg-slider d-md-none">
+		<ul class="reg-slider<?php echo $flex_count ?> d-md-none">
             <?php foreach ($section['Items'] as $key => $item): ?>
                 <?php $i = $key + 1 ?>
         		<li>
@@ -118,12 +118,12 @@
 
 <script type="text/javascript">
    jQuery(document).ready(function($){
-      $('.reg-slider').slick({
+      $('.reg-slider<?php echo $flex_count ?>').slick({
         dots: false,
         infinite: false,
         speed: 300,
         slidesToShow: 1,
         adaptiveHeight: false
-      });
+      });      
     });
 </script>

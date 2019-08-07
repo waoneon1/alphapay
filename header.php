@@ -140,6 +140,7 @@
 									</a>
 								</li>
 							<?php endif ?>
+
 	                    	<?php foreach ($primary_parent as $key => $pparent): ?>
 	                    		<?php if(isset($primary[$pparent->ID]) 
 	                    		|| $pparent->title == 'Panduan'

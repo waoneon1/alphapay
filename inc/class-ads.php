@@ -20,22 +20,25 @@ function alp_insert_after_paragraph( $desktop, $mobile, $content ) {
     $closing_p = '</p>';
     $paragraphs = explode( $closing_p, $content );
 
-    foreach ($desktop as $key => $desk) {
-    	foreach ($paragraphs as $index => $paragraph) {
-    	 
-    	        if ( trim( $paragraph ) ) {
-    	            $paragraphs[$index] .= $closing_p;
-    	        }
-    	 
-    	        if ( $desk['paragraph'] == $index + 1 ) {
+    if ($desktop) {
+        foreach ($desktop as $key => $desk) {
+            foreach ($paragraphs as $index => $paragraph) {
+             
+                    if ( trim( $paragraph ) ) {
+                        $paragraphs[$index] .= $closing_p;
+                    }
+             
+                    if ( $desk['paragraph'] == $index + 1 ) {
 
-    	        	if ('image' == 'image') {
-    	        		$paragraphs[$index] .= '<img src="'.$desk['image']['url'].'" />';
-    	        	}
-    	          
-    	        }
-    	    }
+                        if ('image' == 'image') {
+                            $paragraphs[$index] .= '<img src="'.$desk['image']['url'].'" />';
+                        }
+                      
+                    }
+                }
+        }
     }
+    
      
     return implode( '', $paragraphs );
 }

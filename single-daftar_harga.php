@@ -23,97 +23,102 @@
     $flex_content       = get_field('flexible_section');
 ?>
 
+<?php 
+$inner_query = new WP_Query(array(
+    'post_type' => 'daftar_harga',
+    'post_per_page' => -1,
+    'orderby' => 'menu_order',
+    'order' => 'ASC'
+)); ?>
+
 <div class="alp-wrapper">
 
-    <!-- Product Header Section -->
-    <div class="alp-pheader container alp-section">
-        <div class="row">
-            <div class="alp-pheader--desc col-md-5 col-12 alp-col">
-                <?php echo (get_field('header_title')) ? '<h1>'.get_field('header_title').'</h1>' : '' ?>
-                <?php echo (get_field('subtitle')) ? '<h2>'.get_field('subtitle').'</h2>' : '' ?>
-
-                <a href="<?php echo $section['android_url'] ?>" target="_blank">
-                    <picture class="alp-pheader--android">
-                        <img 
-                        src="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge.png" 
-                        srcset="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge@2x.png 2x" alt="download alphapay">
-                    </picture>
-                </a>
-
-            </div>
-            <div class="alp-pheader--imgwrap col-md-7 col-12 alp-col">
-                <img src="<?php echo get_field('image')['url'] ?>" class="alp-cta--image">
-                <!-- <img src="<?php echo get_template_directory_uri() . '/assets/img/prod_banner.png' ?>" class="alp-cta--image"> -->
-                <!-- <img src="<?php echo get_template_directory_uri() . '/assets/img/prod_banner.png' ?>" class="alp-cta--homebg"> -->
-            </div>
-        </div>
-    </div>
-
     <!-- Content Section -->
-    <div class="alp-pcontent container alp-section">
+    <div class="container alp-section">
         <div class="row">
-            <div class="alp-pcontent--side col-md-4 col-12">
-                <?php 
-                $inner_query = new WP_Query(array(
-                    'post_type' => 'daftar_harga',
-                    'post_per_page' => -1,
-                    'orderby' => 'menu_order',
-                    'order' => 'ASC'
-                )); ?>
 
-                <ul class="list-group showpc">
-                    <li class="list-group-item active alp-pcontent--sidetitle">Kategori</li>
-                    <?php while ($inner_query->have_posts()) :
-                        $inner_query->the_post(); ?>
-                        <li class="list-group-item">
-                            <?php echo ($post->ID) ? '<a href="'.get_permalink($post->ID).'">' : '' ?>
-                                <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/'.$term_vals ?>">
-                                <span><?php the_title() ?></span>   
-                            <?php echo ($post->ID) ? '</a>' : '' ?>
-                        </li>
-                    <?php endwhile; ?>
-                    <?php wp_reset_query(); ?>
-                </ul>
-            </div>
-            <div class="alp-pcontent--main col-md-8 col-12">
+            <div class="col-md-5 col-12">
                 <?php if (get_field('content_title')): ?>
                     <h2><?php the_field('content_title') ?></h2>
                 <?php endif ?>
+                <!-- the content -->
                 <?php echo the_field('wysiwyg'); ?>
+                <?php if (get_field('table_product')): ?>
+                    <!-- if using table product -->
+                    <?php $post_start = get_field('choose_product') ?>
+                <?php else: ?>
+                    <!-- if using table pricelist -->
+                    <?php $post_start = $post ?>
+                <?php endif ?>
 
+                <?php include get_template_directory() . '/template-parts/part-table-pricelist-nav.php' ?>
+            </div>
+
+            <div class="alp-pcontent--bg-lightblue
+            alp-pcontent--bg-radius-right
+            col-md-7 col-12" style="min-height: 400px">
                 <?php $alp_lock_filter = alp_lock_filter() ?>
                 <?php if ($alp_lock_filter): ?>
                     <?php if (get_field('table_product')): ?>
                             <?php foreach (get_field('choose_product') as $key => $post): ?>
                                 <?php setup_postdata($post);  ?>
-                                <?php include get_template_directory() . '/template-parts/part-table.php' ?>
+                                <?php include get_template_directory() . '/template-parts/part-table-pricelist.php' ?>
                                 <?php break; ?>
                             <?php endforeach; ?>
                             <?php wp_reset_query(); ?>
                     <?php else: ?>
-                        <?php include get_template_directory() . '/template-parts/part-table.php' ?>
+                        <?php include get_template_directory() . '/template-parts/part-table-pricelist.php' ?>
                     <?php endif ?>
                 <?php else: ?>
-                    <?php echo 'LOCKED' ?>
+                    <?php include get_template_directory() . '/template-parts/part-table-locked.php' ?>
                 <?php endif ?>
             </div>
+
         </div>
+
     </div>
 
     <?php 
-        // echo '<div class="fullwidth-content bg-grey">';
-        //     include get_template_directory() . '/template-parts/flex-download.php';
-        // echo '</div>';  
+        $section['title'] = get_field('daftar_harga_lain', 'option')['title'];
+        $section['description'] = '<p>'.get_field('daftar_harga_lain', 'option')['description'].'</p>';
+        $i = 0;
+        while ($inner_query->have_posts()) :
+            $inner_query->the_post();
+            $section['Items'][$i] = $post;
+            $i++;
+        endwhile;
+        wp_reset_query();
+        // using list type : part-price-list.php
+        $section['list_type'] = 'price';
     ?>
+    <?php include get_template_directory() . '/template-parts/flex-product.php' ?>
 
+    <div class="container text-center alp-section">
+        <p><?php echo get_field('daftar_harga_lain', 'option')['bottom_description'] ?></p>
+
+        <a href="<?php echo get_field('cta_daftar_harga', 'option') ?>" target="_blank">
+            <picture>
+              <img class="cta-download-daftarharga-bawah" 
+                src="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge.png" 
+                srcset="<?php echo get_template_directory_uri() ?>/assets/img/gplay-badge@2x.png 2x" alt="download alphapay"
+                style="width: 150px;">
+            </picture>
+        </a>
+    </div>
+   
 </div>
 
 <?php 
 function alp_lock_filter() {
 
     if (isset($_GET['app']) && $_GET['app']) {
-        // open all category (from mobile)
-        return true;
+        if (get_field('locked_key', 'option')) {
+            if (get_field('locked_key', 'option') == $_GET['app']) {
+                return true;
+            }
+        } else {
+            return false;
+        }
     } else {
         /* Its locked we will edit here (from web)
             - Unlock Product terlalir 

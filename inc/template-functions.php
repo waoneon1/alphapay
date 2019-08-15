@@ -132,7 +132,7 @@ function alpay_product_theader($product, $pr = true) {
 	if ($pr) {
 		$return = '<tr>';
 			foreach ($data as $key => $value) {
-				$return .= '<th>'.$value.'</th>';
+				$return .= '<th class="td-'.$key.'">'.$value.'</th>';
 			}
 		$return .= '</tr>';
 		echo $return;

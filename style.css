@@ -1,4 +1,4 @@
-/*!
+	/*!
 Theme Name: Alphapay
 Theme URI: http://underscores.me/
 Author: Dharmawan Sukma
@@ -108,17 +108,21 @@ p.alp-paragraph {
     color: #FFF;
     border-radius: 16px;
     overflow: hidden;
+    -webkit-box-shadow: 2px 5px 6px 0px rgba(35,132,221,0.15);
+    -moz-box-shadow: 2px 5px 6px 0px rgba(35,132,221,0.15);
+    box-shadow: 2px 5px 6px 0px rgba(35,132,221,0.15);
 }
 .alp-table__in thead {
-    text-align: center;
+    text-align: left;
 }
 .alp-table__in tbody {
     background-color: #fff;
     color: #19345E;
-    text-align: center;
+    text-align: left;
 }
 .alp-table__td--harga {
     color: #4BC4A3;
+    font-weight: 700;
 }
 .alp-table__triangle {
 	position: absolute;
@@ -127,6 +131,14 @@ p.alp-paragraph {
 	right: -10px;
 	top: 30%;
 }
+.alp-table td, .alp-table th {
+	padding: 12px 20px;
+}
+.alp-table .td-2,
+.alp-table__td--keterangan {
+	text-align: center;
+}
+
 
 @media (max-width: 1199px) {
 

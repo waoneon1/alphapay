@@ -15,13 +15,18 @@
                         </thead>
                         <?php foreach ($prod['items'] as $key => $items): ?>
                            <tr>
-                                <?php foreach ($items as $key => $item): ?>
-                                    <td class="<?php echo 'alp-table__td--'.$key ?>">
+                                <?php foreach ($items as $k => $item): ?>
+                                    <td class="<?php echo 'alp-table__td--'.$k ?>">
                                         <?php echo $item ?>
                                     </td>
                                 <?php endforeach ?>
                            </tr>
                         <?php endforeach ?>
+                            <tr>
+                                <td colspan="3">
+                                    <small style="color: #a5a5a5"><span style="color: red"> * </span>Harga dapat berubah sewaktu-waktu tanpa pemberitahuan</small>
+                                </td>
+                            </tr>
                     </table>
                 </div>
             <?php endforeach ?>

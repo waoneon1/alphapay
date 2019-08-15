@@ -1360,6 +1360,13 @@
                 "operator": "==",
                 "value": "template-landing-fb.php"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "template-embed.php"
+            }
         ]
     ],
     "menu_order": 1,
@@ -1370,5 +1377,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1564471503
+    "modified": 1565163993
 }

@@ -39,27 +39,36 @@ get_header();
             </ol>
             
             <div class =" carousel-inner">
-              <?php
-            	$inner_query = new WP_Query(array(
-            	    'post_type' => 'post',
-            	    'posts_per_page' => 3
-            	));
-            	$i = 1;
-            	while ( $inner_query->have_posts() ) :
-            		$inner_query->the_post(); ?>
-            		<?php $image = get_field('banner_image') ?>
+              	<?php
 
-            		<div class = "carousel-item <?php echo ($i == 1) ? 'active' : '' ?>">
-						<picture>
-							<source media="(min-width: 1200px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_1240x540') ?>">
-							<source media="(min-width: 768px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_991x434') ?>">
-							<source media="(min-width: 0px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_787x344') ?>">
-							<img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_1240x540') ?>" alt="">
-						</picture>
-            		</div>
-            		<?php $i++; ?>
-            	<?php endwhile; // End of the loop.
-            	wp_reset_query();
+              	$categories = get_the_category();
+
+              	if ($categories) {
+              		$category_id = $categories[0]->cat_ID;
+
+	            	$inner_query = new WP_Query(array(
+	            	    'post_type' => 'post',
+	            	    'posts_per_page' => 3,
+	            	    'cat' => $category_id	
+	            	));
+	            	$i = 1;
+	            	while ( $inner_query->have_posts() ) :
+	            		$inner_query->the_post(); ?>
+	            		<?php $image = get_field('banner_image') ?>
+
+	            		<div class = "carousel-item <?php echo ($i == 1) ? 'active' : '' ?>">
+							<picture>
+								<source media="(min-width: 1200px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_1240x540') ?>">
+								<source media="(min-width: 768px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_991x434') ?>">
+								<source media="(min-width: 0px)" srcset="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_787x344') ?>">
+								<img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url( $inner_query->post->ID, 'alpay_1240x540') ?>" alt="">
+							</picture>
+	            		</div>
+	            		<?php $i++; ?>
+	            	<?php endwhile; // End of the loop.
+	            	wp_reset_query();
+              	}
+              	
             ?>
             </div>
 

@@ -139,7 +139,213 @@ p.alp-paragraph {
 	text-align: center;
 }
 
+/* ======= TESTIMONIAL ======= */
+.alp-testi {
+    padding: 20px;
+    position: relative;
+}
+.bg-grey-absolute:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    background-color: #f1f7fa;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -50px;
+    z-index: -1;
+}
+.testimonial-slider {
+    text-align: left;
+}
+.testimonial-slider.slick-dotted.slick-slider {
+    margin-bottom: 5px;
+}
+.testimonial-slider .row.slick-slide {
+    display: flex;
+    padding-right: 30px;
+    outline: none;
+}
 
+
+.image-slider__dots .slick-dots { 
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    width: auto;
+    text-align: left;
+}
+.image-slider__dots .slick-dots li { margin: 0 }
+.image-slider__dots .slick-dots li button:before { 
+    color: transparent;
+    background-color: #CCE7FF;
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.image-slider__dots .slick-dots li.slick-active button:before {
+    color: transparent; 
+    background-color: #2384DD;
+    opacity: 1;
+}
+@media (max-width: 767px) {
+    .alp-testi {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .bg-grey-absolute:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .slick-prev:before, .slick-next:before {
+        color:#2884dd;
+    }
+}
+
+
+
+/* ========================= */
+/*  AGENT                    */
+/* ========================= */
+.alp-nav-item {
+    display: flex!important;
+    outline: none;
+}
+.alp-agent-by-mounth {
+    outline: none;
+}
+.alp-agent-right,
+.alp-agent-left {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.alp-agent-right {
+    padding-left: 40px;
+}
+.alp-nav-item .alp-nav-title {
+    margin-left: 20px;
+}
+.alp-nav-title {
+    font-size: 30px;
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 700;
+}
+.agent-nav-slider {
+    margin-bottom: 0!important;
+    margin: 10px auto;
+}
+.alp-agent-img { position: relative; }
+.alp-agent-item {
+    max-width: 170px;
+    margin: 40px auto 40px;
+} 
+.alp-agent-item img.alp-agent-iimg {
+    position: relative;
+    width: 120px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.alp-agent-item svg.alp-agent-bg {
+    top: 0;
+    position: absolute;
+    z-index: -1;
+}
+.alp-agent-item-1 svg.alp-agent-bg {
+    left: -5px;
+    transform: rotate(-226deg);
+}
+.alp-agent-item-2 svg.alp-agent-bg {
+    left: -11px;
+    transform: rotate(-100deg);
+    top: -11px;
+}
+.alp-agent-item-3 svg.alp-agent-bg {
+    left: -5px;
+    transform: rotate(-236deg);
+}
+
+.alp-agent-item .alp-agent-num {
+    position: absolute;
+    width: auto;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 32px;
+}
+.alp-agent-item-1 .alp-agent-num {
+    top: -10px;
+    left: 10px;
+}
+.alp-agent-item-1 .alp-agent-num:before {
+    content: '';
+    background-image: url(assets/img/bubble@2x.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 58px;
+    height: 58px;
+    background-size: contain;
+    position: absolute;
+    top: -7px;
+    left: -24px;
+    z-index: -1;
+}
+.alp-agent-item-2 .alp-agent-num {
+    bottom: 20px;
+    left: -20px;
+}
+.alp-agent-item-2 .alp-agent-num:before {
+    content: '';
+    background-image: url(assets/img/bubble@2x.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 58px;
+    height: 58px;
+    background-size: contain;
+    position: absolute;
+    bottom: -5px;
+    left: -19px;
+    z-index: -1;
+    transform: rotate(-173deg);
+}
+.alp-agent-item-3 .alp-agent-num {
+    top: -20px;
+    right: 50px;
+}
+.alp-agent-item-3 .alp-agent-num:before {
+    content: '';
+    background-image: url(assets/img/bubble@2x.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 58px;
+    height: 58px;
+    background-size: contain;
+    position: absolute;
+    top: -5px;
+    left: -19px;
+    z-index: -1;
+    transform: rotate(-252deg);
+}
+
+
+.alp-agent .bg-grey:before {
+    content: '';
+    position: absolute;
+    background-color: #f1f7fa;
+    left: -290px;
+    top: 0;
+    height: 100%;
+    width: 300px;
+}
+
+/* ========================= */
 @media (max-width: 1199px) {
 
 }

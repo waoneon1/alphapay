@@ -121,6 +121,13 @@
                 "operator": "==",
                 "value": "template-regional-page.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-outlet-profiling.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -134,5 +141,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563260902
+    "modified": 1566276506
 }

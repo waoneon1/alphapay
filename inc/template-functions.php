@@ -51,9 +51,7 @@ function alpay_layout($section, $full = false, $classes = []) {
 			break;
 
 		case 'download_section':
-			echo '<div class="fullwidth-content bg-grey">';
-				include get_template_directory() . '/template-parts/flex-download.php';
-			echo '</div>';
+			include get_template_directory() . '/template-parts/flex-download.php';
 			break;
 
 		case 'product_section':
@@ -104,8 +102,12 @@ function alpay_layout($section, $full = false, $classes = []) {
 			echo '</div>';
 			break;
 
-		case 'wysiwyg_section':
-			include get_template_directory() . '/template-parts/flex-wysiwyg.php';
+		case 'agent_section':
+			include get_template_directory() . '/template-parts/flex-agent.php';
+			break;
+
+		case 'agent_lvl_section':
+			include get_template_directory() . '/template-parts/flex-agent-lvl.php';
 			break;
 
 		default:

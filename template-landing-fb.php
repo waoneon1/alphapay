@@ -42,56 +42,13 @@
         </div>
     </div>
 
-    <!-- Content Section -->
-    <div class="alp-pcontent container alp-subloc">
-        <div class="row">
-           <div class="col-md-6 col-12">
-               <div class="alp-boxnshadow">
-                    <picture>
-                        <img 
-                        src="<?php echo get_template_directory_uri() ?>/assets/img/ben_sub.png"
-                        srcset="<?php echo get_template_directory_uri() ?>/assets/img/ben_sub.png" >
-                    </picture>
-                    <h4>Berlangganan Newsletter AlphaPay</h4>
-                    <p>Jadilah yang pertama untuk mengetahui info terkini bisnis pulsa dan PPOB dari AlphaPay dengan berlangganan newsletter secara GRATIS.</p>
-                    <div class="alp-form-wrap">
-                        <div class="alp-form">
-                            <?php echo do_shortcode(get_field('shortcode')) ?>
-                        </div>
-                    </div>
-               </div>
-           </div>
-           <div class="col-md-6 col-12">
-                <div class="alp-boxnshadow">
-                    <picture>
-                        <img 
-                        src="<?php echo get_template_directory_uri() ?>/assets/img/ben_loc.png"
-                        srcset="<?php echo get_template_directory_uri() ?>/assets/img/ben_loc@2x.png 2x" >
-                    </picture>
-                    <h4>Kantor Cabang AlphaPay di Kota Anda</h4>
-                    <p style="margin-bottom: 25px;">Kunjungi kantor cabang AlphaPay terdekat di kota Anda untuk mendapatkan informasi yang dibutuhkan.</p>
-                    <div class="alp-form-wrap">
-                        <div class="alp-form form-group">
-                            <select class="form-control" id="alp-city">
-                                <option value=""> Pilih Kota </option>
-                                <?php foreach (get_field('list_alamat') as $key => $list_alamat) : ?>
-                                    <option value="<?php echo strtolower($list_alamat['city']) ?>">
-                                        <?php echo $list_alamat['city'] ?>    
-                                    </option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                    </div>
-                   
-                    <?php foreach (get_field('list_alamat') as $key => $list_alamat): ?>
-                        <p class="alp-loc" id="<?php echo strtolower($list_alamat['city']) ?>">
-                            <?php echo $list_alamat['address'] ?>     
-                        </p>
-                    <?php endforeach ?>
-                </div>
-           </div>
-        </div>
-    </div>
+    <!-- Flexible Content -->
+    <?php $flex_count = 1; ?>
+    <?php foreach ($flex_content as $key => $flex): ?>
+        <?php alpay_layout($flex, false, array(), $flex_count) ?>
+        <?php $flex_count++ ?>
+    <?php endforeach ?>
+
 
 </div>
 

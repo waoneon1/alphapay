@@ -220,6 +220,11 @@ function alp_post_type_faq( $query ) {
 add_filter( 'pre_get_posts', 'alp_post_type_faq' );
 
 /**
+ * Outlet Profiling
+ */
+require get_template_directory() . '/inc/post-type-outlet.php';
+
+/**
  * Taxonomy META
  */ 
 require get_template_directory() . '/inc/class-taxonomy-meta.php';

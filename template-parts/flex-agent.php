@@ -5,12 +5,27 @@
 <?php 
 	$date = get_field('month', false, false);
 	$date = new DateTime($date);
+	$indoDate = [
+		'none',
+		'Januari',
+		'Februari',
+		'Maret',
+		'April',
+		'Mei',
+		'Juni',
+		'Juli',
+		'Agustus',
+		'September',
+		'Oktober',
+		'November',
+		'Desember'
+	]
 ?>
 <div class="alp-agent">
 	<div class="container">
 		<div class="row">
 			<div class="alp-agent-left col-md-6 bg-grey">
-				<h2><?php echo $section['title'] ?> <?php echo $date->format('F');  ?></h2>
+				<h2><?php echo $section['title'] ?> <?php echo $indoDate[$date->format('n')];  ?></h2>
 				<div class="row align-items-center">
 					<div class="col-1">
 						<span class="dashicons dashicons-arrow-left-alt2 agent-nav-next"></span>

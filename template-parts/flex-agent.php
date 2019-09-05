@@ -48,6 +48,7 @@
 					<?php $agent_types = ['agen_pejuang', 'agen_unggulan', 'agen_jawara'] ?>
 					<?php foreach ($agent_types  as $key => $agent_type): ?>	
 						<?php $agent = get_field($agent_type) ?>
+						
 						<div class="alp-agent-by-month">
 							<div class="row align-items-center">
 								<div class="col-md-6">
@@ -58,7 +59,7 @@
 											<span class="alp-agent-num">1</span>
 										</div>
 										<div><span><?php echo $agent[0]['name'] ?></span></div>
-										<div><small><?php echo $agent[0]['trans_count'] ?> transaksi</small></div>
+										<!-- <div><small><?php echo $agent[0]['trans_count'] ?> transaksi</small></div> -->
 										<div><strong><?php echo $agent[0]['prize'] ?></strong></div>
 									</div>
 									<?php if (count($agent) >= 3): ?>
@@ -69,7 +70,7 @@
 												<span class="alp-agent-num">3</span>
 											</div>
 											<div><span><?php echo $agent[2]['name'] ?></span></div>
-											<div><small><?php echo $agent[2]['trans_count'] ?> transaksi</small></div>
+											<!-- <div><small><?php echo $agent[2]['trans_count'] ?> transaksi</small></div> -->
 											<div><strong><?php echo $agent[2]['prize'] ?></strong></div>
 										</div>
 									<?php endif ?>
@@ -83,7 +84,7 @@
 												<span class="alp-agent-num">2</span>
 											</div>
 											<div><span><?php echo $agent[1]['name'] ?></span></div>
-											<div><small><?php echo $agent[1]['trans_count'] ?> transaksi</small></div>
+											<!-- <div><small><?php echo $agent[1]['trans_count'] ?> transaksi</small></div> -->
 											<div><strong><?php echo $agent[1]['prize'] ?></strong></div>
 										</div>
 									<?php endif ?>
@@ -103,6 +104,8 @@
 <?php break; ?>
 <?php endforeach; ?>
 <?php wp_reset_query(); ?>
+
+<?php include 'part-agent-modal.php'; ?>
 
 <style type="text/css">
 	

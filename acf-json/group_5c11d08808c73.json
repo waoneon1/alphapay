@@ -628,6 +628,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_5d70ed703f09e",
+                            "label": "Header Subtitle",
+                            "name": "header_subtitle",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_5c11e6ff541c8",
                             "label": "Title",
                             "name": "title",
@@ -1893,5 +1912,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1567483152
+    "modified": 1567681922
 }

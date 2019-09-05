@@ -11,6 +11,7 @@
 	<div class="container" style="margin-top: 70px; margin-bottom: 60px;">
 		<div class="col-12 alp-row text-center">
 	    	<h2><?php echo $section['header']; ?></h2>
+	    	<p><?php echo $section['header_subtitle']; ?></p>
 	    </div>
 	</div>
 <?php endif ?>

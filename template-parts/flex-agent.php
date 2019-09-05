@@ -9,7 +9,7 @@
 <div class="alp-agent">
 	<div class="container">
 		<div class="row">
-			<div class="alp-agent-left col-6 bg-grey">
+			<div class="alp-agent-left col-md-6 bg-grey">
 				<h2><?php echo $section['title'] ?> <?php echo $date->format('F');  ?></h2>
 				<div class="row align-items-center">
 					<div class="col-1">
@@ -35,15 +35,16 @@
 						<span class="dashicons dashicons-arrow-right-alt2 agent-nav-prev"></span>
 					</div>
 				</div>
+			
 				<div class="alp-subsc--form alp-form">
-					<div class="wysiwyg" style="margin-top: 30px;">
+					<div class="wysiwyg d-none d-md-block" style="margin-top: 30px;">
 						<?php echo $wysiwyg ?>
 					</div>
 				</div>
 				<span class="image-slider__dots js-slider__dots"></span>
 			</div>
 				
-			<div class="alp-agent-right col-6">
+			<div class="alp-agent-right col-md-6">
 				<div class="agent-slider">
 					<?php $agent_types = ['agen_pejuang', 'agen_unggulan', 'agen_jawara'] ?>
 					<?php foreach ($agent_types  as $key => $agent_type): ?>	
@@ -67,11 +68,11 @@
 											<div class="alp-agent-img">
 												<img class="alp-agent-iimg" src="<?php echo $agent[2]['image']['sizes']['thumbnail'] ?>" />
 												<img class="svg alp-agent-bg" src="<?php echo get_template_directory_uri() . '/assets/img/bubble.svg' ?>" />
-												<span class="alp-agent-num">3</span>
+												<span class="alp-agent-num">2</span>
 											</div>
-											<div><span><?php echo $agent[2]['name'] ?></span></div>
-											<!-- <div><small><?php echo $agent[2]['trans_count'] ?> transaksi</small></div> -->
-											<div><strong><?php echo $agent[2]['prize'] ?></strong></div>
+											<div><span><?php echo $agent[1]['name'] ?></span></div>
+											<!-- <div><small><?php echo $agent[1]['trans_count'] ?> transaksi</small></div> -->
+											<div><strong><?php echo $agent[1]['prize'] ?></strong></div>
 										</div>
 									<?php endif ?>
 								</div>
@@ -81,11 +82,11 @@
 											<div class="alp-agent-img">
 												<img class="alp-agent-iimg" src="<?php echo $agent[1]['image']['sizes']['thumbnail'] ?>" />
 												<img class="svg alp-agent-bg" src="<?php echo get_template_directory_uri() . '/assets/img/bubble.svg' ?>" />
-												<span class="alp-agent-num">2</span>
+												<span class="alp-agent-num">3</span>
 											</div>
-											<div><span><?php echo $agent[1]['name'] ?></span></div>
-											<!-- <div><small><?php echo $agent[1]['trans_count'] ?> transaksi</small></div> -->
-											<div><strong><?php echo $agent[1]['prize'] ?></strong></div>
+											<div><span><?php echo $agent[2]['name'] ?></span></div>
+											<!-- <div><small><?php echo $agent[2]['trans_count'] ?> transaksi</small></div> -->
+											<div><strong><?php echo $agent[2]['prize'] ?></strong></div>
 										</div>
 									<?php endif ?>
 								</div>
@@ -96,6 +97,11 @@
 				</div>
 			</div>
 				
+			<div class="alp-subsc--form alp-form">
+				<div class="wysiwyg d-sm-none" style="margin-top: 30px;">
+					<?php echo $wysiwyg ?>
+				</div>
+			</div>
 
 		</div>
 	</div>
@@ -108,7 +114,12 @@
 <?php include 'part-agent-modal.php'; ?>
 
 <style type="text/css">
-	
+	@media (max-width: 767px) {
+		.alp-agent-left .slick-dots {
+			margin-top: 30px;
+			text-align: center;
+		}
+	}
 </style>
 <script type="text/javascript">
    	jQuery(document).ready(function($){

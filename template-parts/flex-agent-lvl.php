@@ -8,83 +8,83 @@
     			<p><?php echo $section['description'] ?></p>
     		</div>
     	</div>
-
-		<div class="alp-agentlvl__table">
-			<table>
-				<thead>
-					<tr>
-						<th style="width: 12%">Level Agen</th>
-						<td style="width: 22%">
-							<div class="alp-agentlvl__pemula">
-								<span class="alp-agentlvl__label">Agen Pemula</span>
-								<span class="alp-agentlvl__icon">
-									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic_agenpemula.svg' ?>" />
-								</span>
-							</div>
-						</td>
-						<td style="width: 22%">
-							<div class="alp-agentlvl__pejuang">
-								<span class="alp-agentlvl__label">Agen Pejuang</span>
-								<span class="alp-agentlvl__icon">
-									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic_agenpejuang.svg' ?>" />
-								</span>
-							</div>
-						</td>
-						<td style="width: 22%">
-							<div class="alp-agentlvl__unggulan">
-								<span class="alp-agentlvl__label">Agen Unggulan</span>
-								<span class="alp-agentlvl__icon">
-									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic_agenunggulan.svg' ?>" />
-								</span>
-							</div>
-						</td>
-						<td style="width: 22%">
-							<div class="alp-agentlvl__jawara">
-								<span class="alp-agentlvl__label">Agen Jawara</span>
-								<span class="alp-agentlvl__icon">
-									<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic_agenjawara.svg' ?>" />
-								</span>
-							</div>
-						</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th style="width: 12%">Transaksi</th>
-						<td style="width: 22%"><?php echo $section['agen_pemula']['transaction'] ?></td>
-						<td style="width: 22%"><?php echo $section['agen_pejuang']['transaction'] ?></td>
-						<td style="width: 22%"><?php echo $section['agen_unggulan']['transaction'] ?></td>
-						<td style="width: 22%"><?php echo $section['agen_jawara']['transaction'] ?></td>
-					</tr>
-					<tr>
-						<th style="width: 12%">Juara 1</th>
-						<td style="width: 22%" rowspan="3" class="p-0">
-							<div class="grey-box">
-								<?php echo $section['agen_pemula']['description']  ?>
-							</div>
-						</td>
-						<td style="width: 22%"><?php echo $section['agen_pejuang']['juara_1'] ?></td>
-						<td style="width: 22%"><?php echo $section['agen_unggulan']['juara_1'] ?></td>
-						<td style="width: 22%"><?php echo $section['agen_jawara']['juara_1'] ?></td>
-					</tr>
-					<tr>
-						<th style="width: 12%">Juara 2</th>
-						<td style="width: 22%"><?php echo $section['agen_pejuang']['juara_2'] ?></td>
-						<td style="width: 22%"><?php echo $section['agen_unggulan']['juara_2'] ?></td>
-						<td style="width: 22%"><?php echo $section['agen_jawara']['juara_2'] ?></td>
-					</tr>
-					<tr>
-						<th style="width: 12%">Juara 3</th>
-						<td style="width: 22%"><?php echo $section['agen_pejuang']['juara_3'] ?></td>
-						<td style="width: 22%"><?php echo $section['agen_unggulan']['juara_3'] ?></td>
-						<td style="width: 22%"><?php echo $section['agen_jawara']['juara_3'] ?></td>
-					</tr>
-				</tbody>
-			</table>
-			
-			<?php echo $section['footer_desc'] ?>
+    	<div class="alp-dfd">
+			<div class="alp-agentlvl__table">
+				<table>
+					<thead>
+						<tr>
+							<th style="width: 12%">Level Agen</th>
+							<td style="width: 22%">
+								<div class="alp-agentlvl__pemula">
+									<span class="alp-agentlvl__label">Agen Pemula</span>
+									<span class="alp-agentlvl__icon">
+										<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic_agenpemula.svg' ?>" />
+									</span>
+								</div>
+							</td>
+							<td style="width: 22%">
+								<div class="alp-agentlvl__pejuang">
+									<span class="alp-agentlvl__label">Agen Pejuang</span>
+									<span class="alp-agentlvl__icon">
+										<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic_agenpejuang.svg' ?>" />
+									</span>
+								</div>
+							</td>
+							<td style="width: 22%">
+								<div class="alp-agentlvl__unggulan">
+									<span class="alp-agentlvl__label">Agen Unggulan</span>
+									<span class="alp-agentlvl__icon">
+										<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic_agenunggulan.svg' ?>" />
+									</span>
+								</div>
+							</td>
+							<td style="width: 22%">
+								<div class="alp-agentlvl__jawara">
+									<span class="alp-agentlvl__label">Agen Jawara</span>
+									<span class="alp-agentlvl__icon">
+										<img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/ic_agenjawara.svg' ?>" />
+									</span>
+								</div>
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th style="width: 12%">Transaksi</th>
+							<td style="width: 22%"><?php echo $section['agen_pemula']['transaction'] ?></td>
+							<td style="width: 22%"><?php echo $section['agen_pejuang']['transaction'] ?></td>
+							<td style="width: 22%"><?php echo $section['agen_unggulan']['transaction'] ?></td>
+							<td style="width: 22%"><?php echo $section['agen_jawara']['transaction'] ?></td>
+						</tr>
+						<tr>
+							<th style="width: 12%">Juara 1</th>
+							<td style="width: 22%" rowspan="3" class="p-0">
+								<div class="grey-box">
+									<?php echo $section['agen_pemula']['description']  ?>
+								</div>
+							</td>
+							<td style="width: 22%"><?php echo $section['agen_pejuang']['juara_1'] ?></td>
+							<td style="width: 22%"><?php echo $section['agen_unggulan']['juara_1'] ?></td>
+							<td style="width: 22%"><?php echo $section['agen_jawara']['juara_1'] ?></td>
+						</tr>
+						<tr>
+							<th style="width: 12%">Juara 2</th>
+							<td style="width: 22%"><?php echo $section['agen_pejuang']['juara_2'] ?></td>
+							<td style="width: 22%"><?php echo $section['agen_unggulan']['juara_2'] ?></td>
+							<td style="width: 22%"><?php echo $section['agen_jawara']['juara_2'] ?></td>
+						</tr>
+						<tr>
+							<th style="width: 12%">Juara 3</th>
+							<td style="width: 22%"><?php echo $section['agen_pejuang']['juara_3'] ?></td>
+							<td style="width: 22%"><?php echo $section['agen_unggulan']['juara_3'] ?></td>
+							<td style="width: 22%"><?php echo $section['agen_jawara']['juara_3'] ?></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<?php echo $section['footer_desc'] ?>
+			</div>
 		</div>
-
 	</div>
 </div>
 
@@ -156,5 +156,26 @@
 		border-radius: 8px;
 		padding: 15px;
 		padding: 40px;
+	}
+
+	@media (max-width: 767px) {
+		.alp-agentlvl__table {
+		    margin-top: 80px;
+		    background-color: #fff;
+		    border-radius: 9px;
+		    border: 7px solid #ecf2fc;
+		    padding: 20px;
+		    padding-top: 100px;
+		    overflow-x: auto;
+		    -webkit-box-shadow: 3px 2px 8px 0px rgba(35,132,221,0.10);
+		    -moz-box-shadow: 3px 2px 8px 0px rgba(35,132,221,0.10);
+		    box-shadow: 3px 2px 8px 0px rgba(35,132,221,0.10);
+		}
+		.grey-box {
+			padding: 20px;
+		}
+		.alp-agentlvl__table table {
+			min-width: 700px;
+		}
 	}
 </style>

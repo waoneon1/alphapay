@@ -1,6 +1,6 @@
 <?php /* Template Name: Landing - Facebook */ ?>
 
-<?php get_header() ?>
+<?php get_header('embed') ?>
 
 <?php $front_id = get_option( 'page_on_front' ); ?>
 <?php $product_page = get_field('produk_page', 'option'); ?>
@@ -52,4 +52,4 @@
 
 </div>
 
-<?php get_footer() ?>
+<?php get_footer('embed') ?>

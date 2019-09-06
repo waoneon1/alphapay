@@ -40,7 +40,8 @@ add_action( 'wp_head', 'alpay_pingback_header');
  * Layout generator
  */
 
-function alpay_layout($section, $full = false, $classes = []) {
+// $flex_count for doble element
+function alpay_layout($section, $full = false, $classes = [], $flex_count) {
 	global $post;
 
 	echo ($full) ? '<div class="fullwidth-content '.implode(" ", $classes).'">' : '';

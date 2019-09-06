@@ -102,6 +102,10 @@ function alpay_layout($section, $full = false, $classes = []) {
 			echo '</div>';
 			break;
 
+		case 'wysiwyg_section':
+			include get_template_directory() . '/template-parts/flex-wysiwyg.php';
+			break;
+
 		case 'agent_section':
 			include get_template_directory() . '/template-parts/flex-agent.php';
 			break;

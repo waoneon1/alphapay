@@ -24,11 +24,11 @@
                 <div class="row">
                     <div class="alp-pheader--desc col-md-7 col-12 alp-col">
                         <h1><?php the_field('header_title') ?></h1>
-                        <?php the_field('subtitle') ?>
+                        <p><?php the_field('subtitle') ?></p>
 
-                        <a href="<?php the_field('google_play_link') ?>" class="alp-btn btn alp-btn-blue btn-effect cta-download-facebook-atas" target="_blank">
+                        <p><a href="<?php the_field('google_play_link') ?>" class="alp-btn btn alp-btn-blue btn-effect cta-download-facebook-atas" target="_blank" style="display: inline-block;">
                             Download
-                        </a>
+                        </a></p>
 
                     </div>
                     <div class="alp-pheader--imgwrap col-md-5 col-12 alp-col">

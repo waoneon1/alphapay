@@ -12,7 +12,7 @@
 ?>
 	</div> <!-- .app-container -->
 
-	<footer id="colophon" class="alp-footer" style="height: 0px; min-height: 0px; padding: 20px 0 0 0;    background: #f1f7fa;">
+	<footer id="colophon" class="alp-footer" style="height: 0px; min-height: 0px;">
 	</footer>
 </div><!-- #app -->
 

@@ -41,7 +41,7 @@ add_action( 'wp_head', 'alpay_pingback_header');
  */
 
 // $flex_count for doble element
-function alpay_layout($section, $full = false, $classes = [], $flex_count) {
+function alpay_layout($section, $full = false, $classes = [], $flex_count = 0) {
 	global $post;
 
 	echo ($full) ? '<div class="fullwidth-content '.implode(" ", $classes).'">' : '';

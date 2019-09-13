@@ -48,7 +48,7 @@
 
 
     <script>
-        $('.alp-btn').attr("onClick", "fbq('track', 'Conversion');");
+        $('.js-fbpixle').attr("onClick", "fbq('track', 'Conversion');");
     </script>
 
 </div>

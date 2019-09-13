@@ -48,7 +48,8 @@
 
 
     <script>
-        $('.js-fbpixle').attr("onClick", "fbq('track', 'Conversion');");
+        $('.js-fbpixle').attr("onClick", "fbq('track', 'Purchase');");
+        $('.js-fbpixle-custom').attr("onClick", "fbq('trackCustom', 'ConversionAlphapay');");
     </script>
 
 </div>

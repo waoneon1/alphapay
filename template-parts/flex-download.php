@@ -32,7 +32,7 @@
 				<p><?php echo $section['subtitle'] ?></p>
 				
 				<?php if ($section['android_url']): ?>
-					<a href="<?php echo $section['android_url'] ?>" target="_blank" class="js-fbpixle">
+					<a href="<?php echo $section['android_url'] ?>" target="_blank" class="js-fbpixle-custom">
 						<picture>
 						  <img 
 						  	class="<?php echo $cta_class ?>"

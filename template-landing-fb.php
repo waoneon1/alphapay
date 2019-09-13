@@ -16,6 +16,7 @@
     $flex_content       = get_field('flexible_section');
 ?>
 
+<?php var_dump(get_field('cta_link')) ?>
 <div class="alp-wrapper alp-fb-landing">
     <?php if (get_field('header_title')): ?>
         <div class="alp-fb-blue">
@@ -26,7 +27,7 @@
                         <h1><?php the_field('header_title') ?></h1>
                         <p><?php the_field('subtitle') ?></p>
 
-                        <p><a href="<?php the_field('google_play_link') ?>" class="alp-btn btn alp-btn-blue btn-effect cta-download-facebook-atas" target="_blank" style="display: inline-block;">
+                        <p><a href="<?php the_field('cta_link') ?>" class="js-fbpixle alp-btn btn alp-btn-blue btn-effect cta-download-facebook-atas" target="_blank" style="display: inline-block;">
                             <?php echo get_field('cta_text') ? get_field('cta_text') : 'Download' ?>
                         </a></p>
 
@@ -46,6 +47,10 @@
         <?php $flex_count++ ?>
     <?php endforeach ?>
 
+
+    <script>
+        $('.alp-btn').attr("onClick", "fbq('track', 'Conversion');");
+    </script>
 
 </div>
 

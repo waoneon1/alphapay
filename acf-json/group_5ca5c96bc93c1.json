@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_5ca5c98ce2fae",
-            "label": "Google Play Link",
-            "name": "google_play_link",
+            "label": "CTA Link",
+            "name": "cta_link",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -74,5 +74,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1568348775
+    "modified": 1568389948
 }

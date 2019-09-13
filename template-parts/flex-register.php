@@ -72,12 +72,12 @@
 		</ul>
 
         <?php if ($theme['cta'] === 2): ?> 
-            <a href="<?php the_field('cta_link') ?>" class="alp-btn btn alp-btn-blue btn-effect cta-download cta-download-<?php echo $post->post_name ?>-desktop-tengah">
+            <a href="<?php the_field('cta_link') ?>" class="js-fbpixle alp-btn btn alp-btn-blue btn-effect cta-download cta-download-<?php echo $post->post_name ?>-desktop-tengah">
                 <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/android.svg' ?>">
                 Download Sekarang
             </a>
         <?php else: ?>
-            <a href="<?php the_field('cta_link') ?>" class="cta-download cta-download-homepage-desktop-tengah">
+            <a href="<?php the_field('cta_link') ?>" class="js-fbpixle cta-download cta-download-homepage-desktop-tengah">
                 <img class="svg" src="<?php echo get_template_directory_uri() . '/assets/img/android.svg' ?>">
                 Download Sekarang
             </a>

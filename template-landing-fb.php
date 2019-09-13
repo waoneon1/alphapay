@@ -27,7 +27,7 @@
                         <p><?php the_field('subtitle') ?></p>
 
                         <p><a href="<?php the_field('google_play_link') ?>" class="alp-btn btn alp-btn-blue btn-effect cta-download-facebook-atas" target="_blank" style="display: inline-block;">
-                            Download
+                            <?php echo get_field('cta_text') ? get_field('cta_text') : 'Download' ?>
                         </a></p>
 
                     </div>

@@ -16,7 +16,6 @@
     $flex_content       = get_field('flexible_section');
 ?>
 
-<?php var_dump(get_field('cta_link')) ?>
 <div class="alp-wrapper alp-fb-landing">
     <?php if (get_field('header_title')): ?>
         <div class="alp-fb-blue">

@@ -46,10 +46,6 @@
         <?php $flex_count++ ?>
     <?php endforeach ?>
 
-    <?php if( current_user_can('edit_others_pages') ) {  ?>
-        <button onClick="fbq('track', 'Purchase');">Button Text</button>
-    <?php } ?>
-
     <script>
         //$('.js-fbpixle').attr("onClick", "fbq('track', 'Purchase', {value: 5000.00, currency: 'IDR'});");
         //$('.js-fbpixle-custom').attr("onClick", "fbq('track', 'Purchase', {value: 5000.00, currency: 'IDR'});");

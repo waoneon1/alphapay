@@ -47,7 +47,13 @@
     <?php endforeach ?>
 
     <?php if( current_user_can('edit_others_pages') ) {  ?>
-        <button onClick="fbq('track', 'Purchase');">Button Text</button>
+        <button onClick="fbq('track', 'Purchase');">Button 1</button>
+
+        <button onClick="fbq('track', 'Purchase');">Button 2</button>
+
+        <a href="http://google.com" onClick="fbq('track', 'Purchase');">Button 3</button>
+
+
     <?php } ?>
 
     <script>

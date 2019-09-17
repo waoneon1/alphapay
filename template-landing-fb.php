@@ -47,20 +47,21 @@
     <?php endforeach ?>
 
     <?php if( current_user_can('edit_others_pages') ) {  ?>
-        <button onClick="fbq('track', 'Purchase');">Button 1</button>
+    <!--     <button onClick="fbq('track', 'Purchase');">Button 1</button>
 
         <button onClick="fbq('track', 'Purchase');">Button 2</button>
 
-        <button onClick="fbClick()">Button 3</button>
-
-
+        <button onClick="fbClickPurchase()">Button 3</button> -->
     <?php } ?>
 
     <script>
-        function fbClick() {
+        //function fbClickPurchase() {};
+        $(".js-fbpixle").on('click', function(e) {
+            e.preventDefault();
+            var link = $(this).attr('href');
             fbq('track', 'Purchase');
-            window.location = "http://www.google.com";
-        };
+            window.location = link;
+        });
         //$('.js-fbpixle').attr("onClick", "fbq('track', 'Purchase', {value: 5000.00, currency: 'IDR'});");
         //$('.js-fbpixle-custom').attr("onClick", "fbq('track', 'Purchase', {value: 5000.00, currency: 'IDR'});");
     </script>

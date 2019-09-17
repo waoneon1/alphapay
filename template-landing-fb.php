@@ -51,12 +51,16 @@
 
         <button onClick="fbq('track', 'Purchase');">Button 2</button>
 
-        <a href="http://google.com" onClick="fbq('track', 'Purchase');">Button 3</button>
+        <button onClick="fbClick()">Button 3</button>
 
 
     <?php } ?>
 
     <script>
+        function fbClick() {
+            fbq('track', 'Purchase');
+            window.location = "http://www.google.com";
+        };
         //$('.js-fbpixle').attr("onClick", "fbq('track', 'Purchase', {value: 5000.00, currency: 'IDR'});");
         //$('.js-fbpixle-custom').attr("onClick", "fbq('track', 'Purchase', {value: 5000.00, currency: 'IDR'});");
     </script>

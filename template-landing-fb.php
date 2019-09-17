@@ -56,12 +56,16 @@
 
     <script>
         //function fbClickPurchase() {};
-        $(".js-fbpixle").on('click', function(e) {
-            e.preventDefault();
-            var link = $(this).attr('href');
-            fbq('track', 'Purchase');
-            window.location = link;
+        
+        jQuery(document).ready(function($) {
+            $(".js-fbpixle").on('click', function(e) {
+                e.preventDefault();
+                var link = $(this).attr('href');
+                fbq('track', 'Purchase');
+                window.location = link;
+            });
         });
+
         //$('.js-fbpixle').attr("onClick", "fbq('track', 'Purchase', {value: 5000.00, currency: 'IDR'});");
         //$('.js-fbpixle-custom').attr("onClick", "fbq('track', 'Purchase', {value: 5000.00, currency: 'IDR'});");
     </script>

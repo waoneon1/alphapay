@@ -48,8 +48,8 @@
 
 
     <script>
-        $('.js-fbpixle').attr("onClick", "fbq('track', 'Purchase', {value: 5000, currency: 'IDR'});");
-        $('.js-fbpixle-custom').attr("onClick", "fbq('track', 'Purchase', {value: 5000, currency: 'IDR'});");
+        $('.js-fbpixle').attr("onClick", "fbq('track', 'Purchase', {value: 5000.00, currency: 'IDR'});");
+        $('.js-fbpixle-custom').attr("onClick", "fbq('track', 'Purchase', {value: 5000.00, currency: 'IDR'});");
     </script>
 
 </div>

@@ -56,9 +56,9 @@
 
     <script>
         //function fbClickPurchase() {};
-        
+
         jQuery(document).ready(function($) {
-            $(".js-fbpixle").on('click', function(e) {
+            $(".js-fbpixle, .js-fbpixle-custom").on('click', function(e) {
                 e.preventDefault();
                 var link = $(this).attr('href');
                 fbq('track', 'Purchase');

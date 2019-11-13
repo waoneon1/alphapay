@@ -33,7 +33,7 @@ get_header();
 					</div>
 				</div>
 
-				<div class="inner-content">
+				<div class="inner-content" style="margin-bottom: 30px;">
 					<?php yoast_breadcrumb( '<nav aria-label="breadcrumb" class="alp-breadcrump">','</nav>' ); ?>
 
 					<h1 class="promo-h1"><?php the_title() ?></h1>

@@ -2,7 +2,6 @@
 <?php $flex_content = get_field('flexible_section') ?>
 
 <div class="alp-wrapper">
-    
     <!-- CTA Download Section -->
     <div class="alp-cta container alp-section">
     	<div class="row">

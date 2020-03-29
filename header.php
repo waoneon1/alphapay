@@ -117,6 +117,9 @@
 					<style type="text/css">
 						.navbar-nav {
 							position: relative;
+							min-width: 600px;
+							text-align: right;
+							justify-content: flex-end;
 						}
 						.wrap-nav-megamenu {
 							position: unset;
